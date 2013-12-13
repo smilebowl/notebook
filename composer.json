@@ -1,0 +1,10 @@
+{
+	"name": "notebook",
+	"license": "MIT",
+    "require": {
+        "slywalker/boost_cake": "*"
+        ,"cakephp/debug_kit": "*"
+        ,"cakedc/search": "*"
+        ,"twitter/bootstrap": "3.*"
+    }
+}
