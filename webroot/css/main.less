@@ -1,0 +1,99 @@
+@import "common";
+
+body {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif,"Meiryo UI", "メイリオ";
+	margin-bottom: 30px;
+}
+
+p.gotop{
+	position: fixed;
+	right: 20px;
+	margin-bottom: 0;
+	bottom: 0;
+	background-color: #ccc;
+	text-align: center;
+	.border-radius-top(8px);
+	#gradient > .vertical(@start-color: #cee; @end-color: #aac; @start-percent: 0%; @end-percent: 100%);
+//	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(232,232,255,1)), color-stop(100%,rgba(162,162,242,1)));
+//	.gradient();
+	a {
+		width: 3em;
+		height: 2em;
+		display: block;
+		line-height: 2em;
+	}
+}
+
+
+/* view */
+.view dd,
+.view dt {
+	line-height: 1.7em;
+	border-bottom: 1px solid #eee;
+}
+
+.nopadding {
+	padding: 0!important;
+}
+
+/* widget */
+div.widget {
+	border: 1px solid #CDCDCD;
+	background: none repeat scroll 0 0 #fafafa;
+	.border-radius(6px);
+//	clear: both;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	padding:0;
+	margin: 0.5em 0;
+//	margin-top:1em;
+//	margin-bottom:1em;
+//	margin: 1em 0.5em;
+	position: relative;
+	i {
+		font-size: 12px;
+	}
+	.actions i {
+		cursor: pointer;
+	}
+//		float: left;
+	.widget-header {
+		@height: 32px;
+		height: @height;
+		background-color: #fafafa;
+		padding:0;
+		#gradient > .vertical(@start-color: #fafafa; @end-color: #f2f2f2; @start-percent: 0%; @end-percent: 100%);
+		border-bottom: 1px solid #CDCDCD;
+		box-shadow: 0 1px 0 #ffffff inset;
+//		.box-shadow( 0; 1px; 0; #ffffff);
+//		-webkit-box-shadow: 0 1px 0 #ffffff inset;
+		.border-radius-top(6px);
+		.icon {
+//			padding: 8px 10px 8px 11px;
+//			margin: auto 1em;
+			text-align: center;
+			width:@height;
+//			padding-right: 1em;
+			line-height: @height;
+			border-right: 1px solid #cdcdcd;
+			box-shadow: 1px 0 0 0 #ffffff;
+		}
+		.actions {
+//			width:100%;
+			line-height: @height;
+			float: right;
+			margin-right: 0.5em;
+		}
+		span.title {
+			font-weight: bold;
+		}
+		input[type="checkbox"] {
+			vertical-align: -2px;
+//			vertical-align: middle;
+//			margin:0;
+		}
+	}
+	.widget-content {
+		padding :0.5em;
+		box-shadow: 0 1px 0 #ffffff inset;
+	}
+}
