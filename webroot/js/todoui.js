@@ -218,15 +218,7 @@ $(document).ready(function () {
 				'id': todo.attr('id').replace('todo-', ''),
 				'title': $(this).text()
 			}
-//			function () {
-//				$(newitem).hide().prependTo('.todolist').fadeIn();
-//				$(this).closest('div.widget').find('.todolist').prepend(newitem);
-//				$(newitem).hide().prependTo(category.find('.todolist')).fadeIn();
 		);
-
-		if ($(this).text() !== $(this).data('before')) {
-			log($(this).text());
-		}
 		$(this).text($(this).text()).removeData('before');
 	});
 

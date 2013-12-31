@@ -71,21 +71,4 @@
 
 	<?php endforeach; ?>
 
-	<div class="todo col-sm-6">
-		<div class="widget">
-			<div class="widget-header">
-				<i class="icon glyphicon glyphicon-th"></i>
-				<span>Todo hello</span>
-			</div>
-			<div class="widget-content">
-				<div id="log"></div>
-				Sample content
-				<p>hello</p>
-				this is
-				<code>code a;</code>
-			</div>
-		</div>
-	</div>
-
 </div>
-
