@@ -27,7 +27,7 @@ $(document).ready(function () {
 		update: function () {
 			var arr = $(this).sortable('toArray');
 			$.post(
-				'ajaxreorder',
+				'ajax_reorder',
 				{
 					idlist:	arr
 				}
@@ -43,7 +43,7 @@ $(document).ready(function () {
 		update: function () {
 			var arr = $(this).sortable('toArray');
 			$.post(
-				'ajaxreorder_category',
+				'ajax_reorder_category',
 				{
 					idlist:	arr
 				}
@@ -56,7 +56,7 @@ $(document).ready(function () {
 	$('div.widget').on('click', 'i.insert', function () {
 		var category = $(this).closest("[id^=category-]");
 		$.post(
-			'ajaxadd',
+			'ajax_add',
 			{
 				'title': 'New Item.',
 				'todocategory_id': category.attr('id').replace('category-', '')
@@ -75,7 +75,7 @@ $(document).ready(function () {
 		}
 		todo.find('td.text').toggleClass('high-priority');
 		$.post(
-			'ajaxedit',
+			'ajax_edit',
 			{
 				'id': todo.attr('id').replace('todo-', ''),
 				'priority': flag
@@ -90,7 +90,7 @@ $(document).ready(function () {
 		}
 		var todo = $(this).closest("[id^=todo-]");
 		$.post(
-			'ajaxdelete',
+			'ajax_delete',
 			{
 				'id': todo.attr('id').replace('todo-', '')
 			},
@@ -115,7 +115,7 @@ $(document).ready(function () {
 		}
 		todo.toggleClass('completed');
 		$.post(
-			'ajaxedit',
+			'ajax_edit',
 			{
 				'id': todo.attr('id').replace('todo-', ''),
 				'completed': completed
@@ -149,7 +149,7 @@ $(document).ready(function () {
 			$(this).remove();
 		});
 		$.post(
-			'ajaxdeleteitems',
+			'ajax_deleteitems',
 			{
 				'items': idlist
 			}
@@ -169,7 +169,7 @@ $(document).ready(function () {
 			$(this).addClass('completed');
 		});
 		$.post(
-			'ajaxcompleteitems',
+			'ajax_completeitems',
 			{
 				'items': idlist,
 				'completed': completed
@@ -193,7 +193,7 @@ $(document).ready(function () {
 		});
 		if (idlist.length === 0) { return false; }
 		$.post(
-			'ajax2allhistory',
+			'ajax_2allhistory',
 			{
 				'items': idlist
 			}
@@ -213,7 +213,7 @@ $(document).ready(function () {
 
 		var todo = $(this).closest("[id^=todo-]");
 		$.post(
-			'ajaxedit',
+			'ajax_edit',
 			{
 				'id': todo.attr('id').replace('todo-', ''),
 				'title': $(this).text()

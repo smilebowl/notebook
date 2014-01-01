@@ -23,6 +23,27 @@ p.gotop a {
   display: block;
   line-height: 2em;
 }
+div.infobox {
+  margin: 2px;
+  padding: 0;
+  line-height: 2em;
+  text-align: center;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background-color: #9ad268;
+}
+div.infobox a {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+}
+div.infobox a:hover {
+  background-image: -webkit-linear-gradient(top, #dddddd 0%, #cccccc 100%);
+  background-image: linear-gradient(to bottom, #dddddd 0%, #cccccc 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdddddd', endColorstr='#ffcccccc', GradientType=0);
+}
 /* view */
 .view dd,
 .view dt {

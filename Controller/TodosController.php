@@ -19,7 +19,7 @@ class TodosController extends AppController {
 
 	// add
 
-	public function ajaxadd() {
+	public function ajax_add() {
 		Configure::write('debug', 0);
 		$this->autoRender = false;
 		$this->layout = "ajax";
@@ -39,7 +39,7 @@ class TodosController extends AppController {
 
 	// history
 
-	public function ajax2allhistory() {
+	public function ajax_2allhistory() {
 		Configure::write('debug', 0);
 		$this->autoRender = false;
 
@@ -57,7 +57,7 @@ class TodosController extends AppController {
 
 	// update
 
-	public function ajaxedit() {
+	public function ajax_edit() {
 		Configure::write('debug', 0);
 		$this->autoRender = false;
 
@@ -65,7 +65,7 @@ class TodosController extends AppController {
 	}
 
 
-	public function ajaxdelete() {
+	public function ajax_delete() {
 		Configure::write('debug', 0);
 		$this->autoRender = false;
 		$this->layout = "ajax";
@@ -73,7 +73,7 @@ class TodosController extends AppController {
 		echo "1";
 	}
 
-	public function ajaxdeleteitems() {
+	public function ajax_deleteitems() {
 		Configure::write('debug', 0);
 		$this->autoRender = false;
 		$items = $this->request->data['items'];
@@ -82,7 +82,7 @@ class TodosController extends AppController {
 		}
 	}
 
-	public function ajaxcompleteitems() {
+	public function ajax_completeitems() {
 		Configure::write('debug', 0);
 		$this->autoRender = false;
 		$items = $this->request->data['items'];
@@ -92,7 +92,7 @@ class TodosController extends AppController {
 		}
 	}
 
-	public function ajaxreorder() {
+	public function ajax_reorder() {
 		Configure::write('debug', 0);
 
 //		$this->log($this->request->data);
@@ -110,7 +110,7 @@ class TodosController extends AppController {
 		}
 	}
 
-	public function ajaxreorder_category() {
+	public function ajax_reorder_category() {
 		Configure::write('debug', 0);
 
 //		$this->log($this->request->data);

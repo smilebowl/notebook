@@ -19,20 +19,26 @@
 
 <h3><?php echo __( 'Todo'); ?></h3>
 
-<ul class="nav nav-pills well well-sm">
+<!--<ul class="nav nav-pills well well-sm">
 	<?php foreach($todos as $todoset) : ?>
 	<li>
 		<a href="#tc<?php echo $todoset['Todocategory']['id']?>"><?php echo $todoset['Todocategory']['name']; ?></a>
 	</li>
 	<?php endforeach; ?>
-</ul>
+</ul>-->
+<div class="row">
+	<?php foreach($todos as $todoset) : ?>
+	<div class="infobox col-sm-2">
+		<a href="#category-<?php echo $todoset['Todocategory']['id']?>"><?php echo $todoset['Todocategory']['name']; ?></a>
+	</div>
+	<?php endforeach; ?>
+</div>
 
 <div class="todoui">
 
 	<?php foreach($todos as $todoset) : ?>
 
 	<div class="todo col-sm-6" id="category-<?php echo $todoset['Todocategory']['id'] ?>">
-		<a name="tc<?php echo $todoset['Todocategory']['id']?>"></a>
 		<div class="widget">
 			<div class="widget-header">
 				<i class="icon glyphicon glyphicon-th" title="ドッラグで移動"></i>
