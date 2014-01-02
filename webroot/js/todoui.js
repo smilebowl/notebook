@@ -11,7 +11,8 @@ $(document).ready(function () {
 		$('#log').prepend('<div>' + cnt + ':' + val + '</div>');
 	}
 	/*---------- debug -----------*/
-	$('.widget i').tooltip();
+	$('.widget i, span.toolbox i').tooltip();
+//	$('.widget .toolbox').hide();
 
 
 	$('body').niceScroll({
@@ -34,7 +35,8 @@ $(document).ready(function () {
 			);
 		}
 	});
-	$('.todolist span.actions').disableSelection();
+//	$('.todolist span.actions').disableSelection();
+	$('.widget-content td[contenteditable!=true]').disableSelection();
 	$('.widget-header').disableSelection();
 
 	$(".todoui").sortable({
@@ -212,13 +214,15 @@ $(document).ready(function () {
 		// changed
 
 		var todo = $(this).closest("[id^=todo-]");
-		$.post(
-			'ajax_edit',
-			{
-				'id': todo.attr('id').replace('todo-', ''),
-				'title': $(this).text()
-			}
-		);
+		if ($(this).data('before') !== $(this).text()) {
+			$.post(
+				'ajax_edit',
+				{
+					'id': todo.attr('id').replace('todo-', ''),
+					'title': $(this).text()
+				}
+			);
+		}
 		$(this).text($(this).text()).removeData('before');
 	});
 

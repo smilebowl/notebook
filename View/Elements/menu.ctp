@@ -7,6 +7,7 @@
 			<a href="<?php echo $this->Html->url(array('controller'=>'todos', 'action'=>'ui')); ?>">
 				<i class="glyphicon glyphicon-home"></i>Dashboard</a>
 		</li>
+		<!-- Todo -->
 		<li>
 			<a href="<?php echo $this->Html->url(array('controller' => 'todos', 'action' => 'ui')); ?>">
 				<i class="glyphicon glyphicon-list-alt"></i><?php echo __('Todo') ?>
@@ -25,13 +26,14 @@
 				</li>
 			</ul>
 		</li>
+		<!-- Note -->
 		<li>
-			<a href="<?php echo $this->Html->url(array('controller'=>'todos', 'action'=>'ui')); ?>"><i class="glyphicon glyphicon-list-alt"></i>Todo</a>
+			<a href="<?php echo $this->Html->url(array('controller'=>'notes', 'action'=>'ui')); ?>"><i class="glyphicon glyphicon-book"></i>Note</a>
 		</li>
 		<li>
 			<ul>
 				<li>
-					<a href="#"><?php echo __('Mentenance');?></a>
+					<?php echo $this->Html->link(__('Mentenance'), array('controller' => 'notes', 'action' => 'index')); ?>
 				</li>
 			</ul>
 		</li>

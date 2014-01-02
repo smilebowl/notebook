@@ -5,35 +5,30 @@ body {
 }
 p.gotop {
   position: fixed;
-  right: 20px;
-  margin-bottom: 0;
-  bottom: 0;
-  background-color: #ccc;
+  right: 0px;
+  top: 200px;
+  background-color: rgba(232, 232, 255, 0.6);
   text-align: center;
-  border-top-right-radius: 8px;
   border-top-left-radius: 8px;
-  background-image: -webkit-linear-gradient(top, #cceeee 0%, #aaaacc 100%);
-  background-image: linear-gradient(to bottom, #cceeee 0%, #aaaacc 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcceeee', endColorstr='#ffaaaacc', GradientType=0);
+  border-bottom-left-radius: 8px;
 }
 p.gotop a {
   width: 3em;
-  height: 2em;
+  height: 3em;
   display: block;
-  line-height: 2em;
+  line-height: 3em;
 }
 div.infobox {
-  margin: 2px;
-  padding: 0;
+  margin: 0;
+  padding: 2px;
   line-height: 2em;
   text-align: center;
+}
+div.infobox a {
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   background-color: #9ad268;
-}
-div.infobox a {
   color: #fff;
   display: block;
   text-decoration: none;

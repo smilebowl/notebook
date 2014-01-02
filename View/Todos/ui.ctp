@@ -26,7 +26,8 @@
 	</li>
 	<?php endforeach; ?>
 </ul>-->
-<div class="row">
+<!--<div class="col-sm-12">-->
+<div class="clearfix">
 	<?php foreach($todos as $todoset) : ?>
 	<div class="infobox col-sm-2">
 		<a href="#category-<?php echo $todoset['Todocategory']['id']?>"><?php echo $todoset['Todocategory']['name']; ?></a>
@@ -34,7 +35,7 @@
 	<?php endforeach; ?>
 </div>
 
-<div class="todoui">
+<div class="todoui ">
 
 	<?php foreach($todos as $todoset) : ?>
 

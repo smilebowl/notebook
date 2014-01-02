@@ -69,10 +69,10 @@
   background-color: #222;
 }
 .sidebar-nav > li > ul > li {
-  background-image: -webkit-linear-gradient(top, #3e3b41 0%, #222222 70%);
-  background-image: linear-gradient(to bottom, #3e3b41 0%, #222222 70%);
+  background-image: -webkit-linear-gradient(top, #333333 0%, #222222 70%);
+  background-image: linear-gradient(to bottom, #333333 0%, #222222 70%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3e3b41', endColorstr='#ff222222', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff333333', endColorstr='#ff222222', GradientType=0);
   text-indent: 40px;
 }
 @media (max-width: 767px) {
