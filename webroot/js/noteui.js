@@ -79,11 +79,6 @@ $(document).ready(function () {
 	$('a.addnote').click(function () {
 		var z, category = $('#noteui').find("[id^=category-]");
 		if (category.length === 0) { return false; }
-//		if ($(this).find('.widgit').length === 0) {
-//			z = 0;
-//		} else {
-//			z = 0;
-//		}
 		$.post(
 			'ajax_add',
 			{
@@ -167,7 +162,6 @@ $(document).ready(function () {
 				'text': notetext.text()
 			}
 		);
-
 	});
 
 	// keyboard
@@ -179,6 +173,8 @@ $(document).ready(function () {
 			$(this).html($(this).data('before'));
 		}
 	});
+
+	// change title
 
 	$('#noteui').on('blur', 'span.title', function () {
 		var note = $(this).closest("[id^=note-]");

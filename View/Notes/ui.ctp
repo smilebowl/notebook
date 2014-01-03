@@ -21,14 +21,3 @@ echo $this->Html->script('noteui', array('inline' => false));
 </div>
 
 <div id="noteui"></div>
-
-
-<!--<?php foreach($notes as $noteset) : ?>
-
-<div class="noteui" id="category-<?php echo $noteset['Notecategory']['id'];?>">
-	<?php foreach($noteset['Note'] as $note) : ?>
-	<?php	echo $this->element('../Notes/ui_element', array('note'=>$note)); ?>
-	<?php endforeach; ?>
-</div>
-
-<?php endforeach; ?>-->

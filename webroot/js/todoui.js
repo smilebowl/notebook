@@ -41,7 +41,7 @@ $(document).ready(function () {
 
 	$(".todoui").sortable({
 		handle: "i.icon",
-		placeholder: 'sortable-placeholder',
+//		placeholder: 'sortable-placeholder',
 		update: function () {
 			var arr = $(this).sortable('toArray');
 			$.post(

@@ -1,6 +1,12 @@
 <?php
 class DATABASE_CONFIG {
 
+//	public $default = array(
+//		'datasource' => 'Database/Sqlite',
+//		'persistent' => false,
+//		'database' => 'cake2_notebook.db',
+//	);
+
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
