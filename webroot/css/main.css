@@ -39,6 +39,9 @@ div.infobox a:hover {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdddddd', endColorstr='#ffcccccc', GradientType=0);
 }
+div.infobox a.active {
+  background-color: #67a331;
+}
 /* view */
 .view dd,
 .view dt {

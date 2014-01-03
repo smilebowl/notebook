@@ -1,0 +1,435 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2014-01-03 18:49+0900\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: Controller/MemocategoriesController.php:37;69;94
+#, fuzzy
+msgid "Invalid memocategory"
+msgstr "Todo分類"
+
+#: Controller/MemocategoriesController.php:52;73
+msgid "The memocategory has been saved."
+msgstr ""
+
+#: Controller/MemocategoriesController.php:55;76
+msgid "The memocategory could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/MemocategoriesController.php:98
+msgid "The memocategory has been deleted."
+msgstr ""
+
+#: Controller/MemocategoriesController.php:100
+msgid "The memocategory could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/MemosController.php:126;160;187
+msgid "Invalid memo"
+msgstr ""
+
+#: Controller/MemosController.php:141;164
+msgid "The memo has been saved."
+msgstr ""
+
+#: Controller/MemosController.php:144;167
+msgid "The memo could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/MemosController.php:191
+msgid "The memo has been deleted."
+msgstr ""
+
+#: Controller/MemosController.php:193
+msgid "The memo could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/TodocategoriesController.php:37;69;94
+msgid "Invalid todocategory"
+msgstr ""
+
+#: Controller/TodocategoriesController.php:52;73
+msgid "The todocategory has been saved."
+msgstr ""
+
+#: Controller/TodocategoriesController.php:55;76
+msgid "The todocategory could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/TodocategoriesController.php:98
+msgid "The todocategory has been deleted."
+msgstr ""
+
+#: Controller/TodocategoriesController.php:100
+msgid "The todocategory could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/TodohistoriesController.php:37;71;98
+msgid "Invalid todohistory"
+msgstr ""
+
+#: Controller/TodohistoriesController.php:52;75
+msgid "The todohistory has been saved."
+msgstr ""
+
+#: Controller/TodohistoriesController.php:55;78
+msgid "The todohistory could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/TodohistoriesController.php:102
+msgid "The todohistory has been deleted."
+msgstr ""
+
+#: Controller/TodohistoriesController.php:104
+msgid "The todohistory could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/TodosController.php:161;195;222
+msgid "Invalid todo"
+msgstr ""
+
+#: Controller/TodosController.php:176;199
+msgid "The todo has been saved."
+msgstr ""
+
+#: Controller/TodosController.php:179;202
+msgid "The todo could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/TodosController.php:226
+msgid "The todo has been deleted."
+msgstr ""
+
+#: Controller/TodosController.php:228
+msgid "The todo could not be deleted. Please, try again."
+msgstr ""
+
+#: Plugin/BoostCake/Controller/BoostCakeController.php:18
+msgid "Debug setting does not allow access to this url."
+msgstr ""
+
+#: Plugin/BoostCake/Controller/BoostCakeController.php:27
+#: Plugin/BoostCake/View/Elements/bootstrap2/alerts.ctp:6
+msgid "Alert notice message testing..."
+msgstr ""
+
+#: Plugin/BoostCake/Controller/BoostCakeController.php:30;41
+#: Plugin/BoostCake/View/Elements/bootstrap2/alerts.ctp:10
+#: Plugin/BoostCake/View/Elements/bootstrap3/alerts.ctp:6
+msgid "Alert success message testing..."
+msgstr ""
+
+#: Plugin/BoostCake/Controller/BoostCakeController.php:34
+#: Plugin/BoostCake/View/Elements/bootstrap2/alerts.ctp:15
+msgid "Alert error message testing..."
+msgstr ""
+
+#: Plugin/BoostCake/Controller/BoostCakeController.php:45
+#: Plugin/BoostCake/View/Elements/bootstrap3/alerts.ctp:11
+msgid "Alert info message testing..."
+msgstr ""
+
+#: Plugin/BoostCake/Controller/BoostCakeController.php:49
+#: Plugin/BoostCake/View/Elements/bootstrap3/alerts.ctp:16
+msgid "Alert warning message testing..."
+msgstr ""
+
+#: Plugin/BoostCake/Controller/BoostCakeController.php:53
+#: Plugin/BoostCake/View/Elements/bootstrap3/alerts.ctp:21
+msgid "Alert danger message testing..."
+msgstr ""
+
+#: View/Elements/menu.ctp:13 View/Todos/ui.ctp:20 View/Todos/view.ctp:13
+msgid "Todo"
+msgstr ""
+
+#: View/Elements/menu.ctp:19;36
+msgid "Mentenance"
+msgstr "メンテナンス"
+
+#: View/Elements/menu.ctp:22 View/Todocategories/index.ctp:10
+msgid "Todocategories"
+msgstr "Todo分類"
+
+#: View/Elements/menu.ctp:25 View/Todohistories/index.ctp:10
+msgid "Todohistories"
+msgstr "Todo履歴"
+
+#: View/Helper/IconHelper.php:20;24 View/Memocategories/index.ctp:28
+#: View/Memos/index.ctp:31 View/Todocategories/index.ctp:28
+#: View/Todohistories/index.ctp:31 View/Todos/index.ctp:30
+msgid "View"
+msgstr ""
+
+#: View/Helper/IconHelper.php:26;29 View/Memocategories/index.ctp:29
+#: View/Memos/index.ctp:32 View/Todocategories/index.ctp:29
+#: View/Todohistories/index.ctp:32 View/Todos/index.ctp:31
+msgid "Edit"
+msgstr ""
+
+#: View/Helper/IconHelper.php:37;40 View/Memocategories/edit.ctp:5
+#: View/Memocategories/index.ctp:30 View/Memos/edit.ctp:5
+#: View/Memos/index.ctp:33 View/Todocategories/edit.ctp:5
+#: View/Todocategories/index.ctp:30 View/Todohistories/edit.ctp:5
+#: View/Todohistories/index.ctp:33 View/Todos/edit.ctp:5
+#: View/Todos/index.ctp:32
+msgid "Delete"
+msgstr ""
+
+#: View/Memocategories/add.ctp:2 View/Memocategories/edit.ctp:2
+#: View/Memocategories/index.ctp:2;19 View/Memocategories/view.ctp:2
+#: View/Memos/add.ctp:2 View/Memos/edit.ctp:2 View/Memos/index.ctp:2;19
+#: View/Memos/view.ctp:2 View/Todocategories/add.ctp:2
+#: View/Todocategories/edit.ctp:2 View/Todocategories/index.ctp:2;19
+#: View/Todocategories/view.ctp:2 View/Todohistories/add.ctp:2
+#: View/Todohistories/edit.ctp:2 View/Todohistories/index.ctp:2;19
+#: View/Todohistories/view.ctp:2 View/Todos/add.ctp:2 View/Todos/edit.ctp:2
+#: View/Todos/index.ctp:2;19 View/Todos/ui.ctp:5 View/Todos/view.ctp:2
+msgid "Actions"
+msgstr ""
+
+#: View/Memocategories/add.ctp:5 View/Memocategories/edit.ctp:6
+#: View/Memocategories/view.ctp:6 View/Memos/add.ctp:6 View/Memos/edit.ctp:7
+#: View/Memos/index.ctp:5 View/Memos/view.ctp:8
+#, fuzzy
+msgid "List Memocategories"
+msgstr "ノート分類"
+
+#: View/Memocategories/add.ctp:6 View/Memocategories/edit.ctp:7
+#: View/Memocategories/index.ctp:5 View/Memocategories/view.ctp:8
+#: View/Memos/add.ctp:5 View/Memos/edit.ctp:6 View/Memos/view.ctp:6
+msgid "List Memos"
+msgstr ""
+
+#: View/Memocategories/add.ctp:7 View/Memocategories/edit.ctp:8
+#: View/Memocategories/index.ctp:6 View/Memocategories/view.ctp:9
+#: View/Memos/index.ctp:4 View/Memos/view.ctp:7
+msgid "New Memo"
+msgstr ""
+
+#: View/Memocategories/add.ctp:22
+#, fuzzy
+msgid "Add Memocategory"
+msgstr "Todo分類"
+
+#: View/Memocategories/add.ctp:28 View/Memocategories/edit.ctp:30
+#: View/Memos/add.ctp:31 View/Memos/edit.ctp:33 View/Todocategories/add.ctp:28
+#: View/Todocategories/edit.ctp:30 View/Todohistories/add.ctp:31
+#: View/Todohistories/edit.ctp:33 View/Todos/add.ctp:30 View/Todos/edit.ctp:32
+msgid "Submit"
+msgstr ""
+
+#: View/Memocategories/edit.ctp:5 View/Memocategories/index.ctp:30
+#: View/Memocategories/view.ctp:5 View/Memos/edit.ctp:5
+#: View/Memos/index.ctp:33 View/Memos/view.ctp:5
+#: View/Todocategories/edit.ctp:5 View/Todocategories/index.ctp:30
+#: View/Todocategories/view.ctp:5 View/Todohistories/edit.ctp:5
+#: View/Todohistories/index.ctp:33 View/Todohistories/view.ctp:5
+#: View/Todos/edit.ctp:5 View/Todos/index.ctp:32 View/Todos/view.ctp:5
+msgid "Are you sure you want to delete # %s?"
+msgstr ""
+
+#: View/Memocategories/edit.ctp:23 View/Memocategories/view.ctp:4
+#, fuzzy
+msgid "Edit Memocategory"
+msgstr "Todo分類"
+
+#: View/Memocategories/index.ctp:4 View/Memocategories/view.ctp:7
+#: View/Memos/add.ctp:7 View/Memos/edit.ctp:8 View/Memos/index.ctp:6
+#: View/Memos/view.ctp:9
+#, fuzzy
+msgid "New Memocategory"
+msgstr "ノート分類"
+
+#: View/Memocategories/index.ctp:10
+msgid "Memocategories"
+msgstr "Memo分類"
+
+#: View/Memocategories/index.ctp:14 View/Memos/index.ctp:14
+#: View/Todocategories/index.ctp:14 View/Todohistories/index.ctp:14
+#: View/Todos/index.ctp:14
+msgid ""
+"Page {:page} of {:pages}, showing {:current} records out of {:count} total, "
+"starting on record {:start}, ending on {:end}"
+msgstr ""
+
+#: View/Memocategories/view.ctp:5
+#, fuzzy
+msgid "Delete Memocategory"
+msgstr "ノート分類"
+
+#: View/Memocategories/view.ctp:13 View/Memos/view.ctp:20
+msgid "Memocategory"
+msgstr "Memo分類"
+
+#: View/Memocategories/view.ctp:15 View/Memos/view.ctp:15
+#: View/Todocategories/view.ctp:15 View/Todohistories/view.ctp:15
+#: View/Todos/view.ctp:15
+msgid "Id"
+msgstr ""
+
+#: View/Memocategories/view.ctp:20 View/Memos/view.ctp:25
+#: View/Todocategories/view.ctp:20
+msgid "Name"
+msgstr ""
+
+#: View/Memocategories/view.ctp:25 View/Todocategories/view.ctp:25
+#: View/Todohistories/view.ctp:30 View/Todos/view.ctp:30
+msgid "Position"
+msgstr ""
+
+#: View/Memocategories/view.ctp:30 View/Memos/view.ctp:45
+#: View/Todocategories/view.ctp:30 View/Todohistories/view.ctp:40
+#: View/Todos/view.ctp:35
+msgid "Created"
+msgstr ""
+
+#: View/Memos/add.ctp:22
+msgid "Add Memo"
+msgstr ""
+
+#: View/Memos/edit.ctp:23 View/Memos/view.ctp:4
+msgid "Edit Memo"
+msgstr ""
+
+#: View/Memos/index.ctp:10
+msgid "Memos"
+msgstr ""
+
+#: View/Memos/ui.ctp:7 View/Memos/view.ctp:13
+msgid "Memo"
+msgstr ""
+
+#: View/Memos/view.ctp:5
+msgid "Delete Memo"
+msgstr ""
+
+#: View/Memos/view.ctp:30
+msgid "Text"
+msgstr ""
+
+#: View/Memos/view.ctp:35
+msgid "Xyz"
+msgstr ""
+
+#: View/Memos/view.ctp:40
+msgid "Wh"
+msgstr ""
+
+#: View/Todocategories/add.ctp:5 View/Todocategories/edit.ctp:6
+#: View/Todocategories/view.ctp:6 View/Todohistories/add.ctp:6
+#: View/Todohistories/edit.ctp:7 View/Todohistories/index.ctp:5
+#: View/Todohistories/view.ctp:8 View/Todos/add.ctp:6 View/Todos/edit.ctp:7
+#: View/Todos/index.ctp:5 View/Todos/ui.ctp:13 View/Todos/view.ctp:8
+msgid "List Todocategories"
+msgstr ""
+
+#: View/Todocategories/add.ctp:6 View/Todocategories/edit.ctp:7
+#: View/Todocategories/index.ctp:5 View/Todocategories/view.ctp:8
+#: View/Todos/add.ctp:5 View/Todos/edit.ctp:6 View/Todos/view.ctp:6
+msgid "List Todos"
+msgstr ""
+
+#: View/Todocategories/add.ctp:7 View/Todocategories/edit.ctp:8
+#: View/Todocategories/index.ctp:6 View/Todocategories/view.ctp:9
+#: View/Todos/index.ctp:4 View/Todos/ui.ctp:9 View/Todos/view.ctp:7
+msgid "New Todo"
+msgstr ""
+
+#: View/Todocategories/add.ctp:22
+msgid "Add Todocategory"
+msgstr ""
+
+#: View/Todocategories/edit.ctp:23 View/Todocategories/view.ctp:4
+msgid "Edit Todocategory"
+msgstr ""
+
+#: View/Todocategories/index.ctp:4 View/Todocategories/view.ctp:7
+#: View/Todohistories/add.ctp:7 View/Todohistories/edit.ctp:8
+#: View/Todohistories/index.ctp:6 View/Todohistories/view.ctp:9
+#: View/Todos/add.ctp:7 View/Todos/edit.ctp:8 View/Todos/index.ctp:6
+#: View/Todos/ui.ctp:15 View/Todos/view.ctp:9
+msgid "New Todocategory"
+msgstr ""
+
+#: View/Todocategories/view.ctp:5
+msgid "Delete Todocategory"
+msgstr ""
+
+#: View/Todocategories/view.ctp:13 View/Todohistories/view.ctp:25
+#: View/Todos/view.ctp:25
+msgid "Todocategory"
+msgstr "Todo分類"
+
+#: View/Todohistories/add.ctp:5 View/Todohistories/edit.ctp:6
+#: View/Todohistories/view.ctp:6 View/Todos/ui.ctp:11
+msgid "List Todohistories"
+msgstr ""
+
+#: View/Todohistories/add.ctp:22
+msgid "Add Todohistory"
+msgstr ""
+
+#: View/Todohistories/edit.ctp:23 View/Todohistories/view.ctp:4
+msgid "Edit Todohistory"
+msgstr ""
+
+#: View/Todohistories/index.ctp:4 View/Todohistories/view.ctp:7
+msgid "New Todohistory"
+msgstr ""
+
+#: View/Todohistories/view.ctp:5
+msgid "Delete Todohistory"
+msgstr ""
+
+#: View/Todohistories/view.ctp:13
+msgid "Todohistory"
+msgstr "Todo履歴"
+
+#: View/Todohistories/view.ctp:20 View/Todos/view.ctp:20
+msgid "Title"
+msgstr ""
+
+#: View/Todohistories/view.ctp:35
+msgid "Priority"
+msgstr ""
+
+#: View/Todohistories/view.ctp:45 View/Todos/view.ctp:40
+msgid "Completed"
+msgstr ""
+
+#: View/Todos/add.ctp:22
+msgid "Add Todo"
+msgstr ""
+
+#: View/Todos/edit.ctp:23 View/Todos/view.ctp:4
+msgid "Edit Todo"
+msgstr ""
+
+#: View/Todos/index.ctp:10
+msgid "Todos"
+msgstr ""
+
+#: View/Todos/view.ctp:5
+msgid "Delete Todo"
+msgstr ""
+
+#: Model/Memo.php:validation for field name Model/Memocategory.php:validation
+#: Model/Todocategory.php:validation Model/Todohistory.php:validation title
+msgid "notEmpty"
+msgstr ""
+
+#: Model/Memocategory.php:validation for field position
+#: Model/Todocategory.php:validation
+msgid "numeric"
+msgstr ""

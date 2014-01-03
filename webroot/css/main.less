@@ -26,14 +26,17 @@ div.infobox {
 	line-height: 2em;
 	text-align: center;
 	a {
-	.border-radius(4px);
-	background-color: rgb(154, 210, 104);
+		.border-radius(4px);
+		background-color: rgb(154, 210, 104);
 		color: #fff;
 		display: block;
 		text-decoration: none;
 		&:hover {
 			#gradient > .vertical(@start-color: #ddd; @end-color: #ccc; @start-percent: 0%; @end-percent: 100%);
 		}
+	}
+	a.active {
+		background-color: darken(rgb(154, 210, 104), 20%);
 	}
 }
 //div.infobox {

@@ -16,10 +16,10 @@
 		<li>
 			<ul>
 				<li>
-					<?php echo $this->Html->link(__('Mentenance'), array('controller' => 'todos', 'action' => 'index')); ?>
+					<?php echo $this->Html->link(__('Todocategories'), array('controller' => 'todocategories', 'action' => 'index')); ?>
 				</li>
 				<li>
-					<?php echo $this->Html->link(__('Todocategories'), array('controller' => 'todocategories', 'action' => 'index')); ?>
+					<?php echo $this->Html->link(__('Mentenance'), array('controller' => 'todos', 'action' => 'index')); ?>
 				</li>
 				<li>
 					<?php echo $this->Html->link(__('Todohistories'), array('controller' => 'todohistories', 'action' => 'index')); ?>
@@ -32,6 +32,9 @@
 		</li>
 		<li>
 			<ul>
+				<li>
+					<?php echo $this->Html->link(__('Memocategories'), array('controller' => 'memocategories', 'action' => 'index')); ?>
+				</li>
 				<li>
 					<?php echo $this->Html->link(__('Mentenance'), array('controller' => 'memos', 'action' => 'index')); ?>
 				</li>
