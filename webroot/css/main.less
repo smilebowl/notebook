@@ -85,8 +85,7 @@ div.widget {
 	}
 //		float: left;
 	.widget-header {
-		@height: 32px;
-		height: @height;
+		height: @widget-header-height;
 		background-color: #fafafa;
 		padding:0;
 		#gradient > .vertical(@start-color: #fafafa; @end-color: #f2f2f2; @start-percent: 0%; @end-percent: 100%);
@@ -99,15 +98,15 @@ div.widget {
 //			padding: 8px 10px 8px 11px;
 //			margin: auto 1em;
 			text-align: center;
-			width:@height;
+			width: @widget-header-height;
 //			padding-right: 1em;
-			line-height: @height;
+			line-height: @widget-header-height;
 			border-right: 1px solid #cdcdcd;
 			box-shadow: 1px 0 0 0 #ffffff;
 		}
 		.actions {
 //			width:100%;
-			line-height: @height;
+			line-height: @widget-header-height;
 			float: right;
 			margin-right: 0.5em;
 		}

@@ -1,0 +1,44 @@
+@import "common";
+
+div.infobox {
+	a.addnote {
+		background-color: #333;
+	}
+	a.active {
+		background-color: darken(rgb(154, 210, 104), 20%);
+	}
+}
+
+//.notewidget {
+//	position: absolute;
+//}
+.norwwrapper {
+	position: absolute;
+}
+
+.widget {
+//	position: relative;
+//	#gradient > .vertical(#efefff, #e0e0f0, 0%, 100%) !important;
+	.widget-header {
+		span.title {
+			line-height: @widget-header-height;
+		}
+		i.remove {
+			color: @brand-danger;
+		}
+	}
+	.widget-content {
+
+		div[contenteditable=true] {
+//			overflow: hidden;
+			padding: 5px;
+
+		}
+	}
+}
+
+.sortable-placeholder {
+//	height: 2em;
+//	background: none repeat scroll 0% 0% rgba(50, 153, 187, 0.6);
+//	border: 1px solid rgb(50, 153, 187);
+}

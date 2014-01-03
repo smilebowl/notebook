@@ -19,13 +19,7 @@
 
 <h3><?php echo __( 'Todo'); ?></h3>
 
-<!--<ul class="nav nav-pills well well-sm">
-	<?php foreach($todos as $todoset) : ?>
-	<li>
-		<a href="#tc<?php echo $todoset['Todocategory']['id']?>"><?php echo $todoset['Todocategory']['name']; ?></a>
-	</li>
-	<?php endforeach; ?>
-</ul>-->
+
 <!--<div class="col-sm-12">-->
 <div class="clearfix">
 	<?php foreach($todos as $todoset) : ?>
@@ -51,9 +45,9 @@
 					<i class="toggletool glyphicon glyphicon-wrench"></i>
 					<span class="toolbox" style="display:none;">
 						<input type="checkbox" class="tooglecheckall" />
-						<i class="donechecked glyphicon glyphicon-ok" class="チェック分を完了"></i>
-						<i class="historychecked glyphicon glyphicon-share" class="チェック分を履歴へ"></i>
-						<i class="removechecked glyphicon glyphicon-remove" class="チェック分を削除"></i>
+						<i class="donechecked glyphicon glyphicon-ok" title="チェック分を完了"></i>
+						<i class="historychecked glyphicon glyphicon-share" title="チェック分を履歴へ"></i>
+						<i class="removechecked glyphicon glyphicon-remove" title="チェック分を削除"></i>
 					</span>
 					<i class="off glyphicon glyphicon-off" title="Todo一覧を非表示"></i>
 				</span>
