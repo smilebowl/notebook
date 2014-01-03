@@ -26,14 +26,14 @@
 				</li>
 			</ul>
 		</li>
-		<!-- Note -->
+		<!-- Memo -->
 		<li>
-			<a href="<?php echo $this->Html->url(array('controller'=>'notes', 'action'=>'ui')); ?>"><i class="glyphicon glyphicon-book"></i>Note</a>
+			<a href="<?php echo $this->Html->url(array('controller'=>'memos', 'action'=>'ui')); ?>"><i class="glyphicon glyphicon-book"></i>Memo</a>
 		</li>
 		<li>
 			<ul>
 				<li>
-					<?php echo $this->Html->link(__('Mentenance'), array('controller' => 'notes', 'action' => 'index')); ?>
+					<?php echo $this->Html->link(__('Mentenance'), array('controller' => 'memos', 'action' => 'index')); ?>
 				</li>
 			</ul>
 		</li>

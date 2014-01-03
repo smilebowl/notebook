@@ -1,11 +1,11 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Note Model
+ * Memo Model
  *
- * @property Notecategory $Notecategory
+ * @property Memocategory $Memocategory
  */
-class Note extends AppModel {
+class Memo extends AppModel {
 
 /**
  * Validation rules
@@ -33,9 +33,9 @@ class Note extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Notecategory' => array(
-			'className' => 'Notecategory',
-			'foreignKey' => 'notecategory_id',
+		'Memocategory' => array(
+			'className' => 'Memocategory',
+			'foreignKey' => 'memocategory_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

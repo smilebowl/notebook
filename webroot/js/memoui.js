@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 	$(".categories").sortable({
 //		handle: "i.icon",
-		cancel: 'a.addnote',
+		cancel: 'a.addmemo',
 //		placeholder: 'sortable-placeholder',
 		update: function () {
 			var arr = $(this).sortable('toArray');
@@ -22,17 +22,17 @@ $(document).ready(function () {
 
 	function reset() {
 
-		$('#noteui .widget').draggable({
+		$('#memoui .widget').draggable({
 //			handle: 'div.widget-header',
 			handle: 'i.icon',
 			stack: 'div.widget',
 			stop: function (event, ui) {
-				var allxyz = [], note_id, pos, curxyz;
+				var allxyz = [], memo_id, pos, curxyz;
 				$('.widget').each(function () {
-					note_id = $(this).attr('id').replace('note-', '');
+					memo_id = $(this).attr('id').replace('memo-', '');
 					pos = $(this).position();
 					curxyz = pos.left + '.' + pos.top + '.' + $(this).zIndex();
-					allxyz.push({ 'id': note_id, 'xyz': curxyz });
+					allxyz.push({ 'id': memo_id, 'xyz': curxyz });
 				});
 				$.post('ajax_allpositon', { 'allxyz': allxyz });
 			}
@@ -43,7 +43,7 @@ $(document).ready(function () {
 			minWidth: 160,
 			stop: function (event, ui) {
 				$.post('ajax_edit',	{
-					'id':	$(this).attr('id').replace('note-', ''),
+					'id':	$(this).attr('id').replace('memo-', ''),
 					'wh':	(ui.size.width + 1) + '.' + (ui.size.height + 1)
 				});
 			}
@@ -60,12 +60,12 @@ $(document).ready(function () {
 		var category_id = $(this).closest("[id^=nc-]").attr('id').replace('nc-', ''),
 			me = $(this);
 		$.post(
-			'getNotes',
+			'getMemos',
 			{
-				'notecategory_id': category_id
+				'memocategory_id': category_id
 			},
 			function (html) {
-				$('#noteui').html(html);
+				$('#memoui').html(html);
 				reset();
 
 				$('div.infobox a').removeClass('active');
@@ -76,17 +76,17 @@ $(document).ready(function () {
 
 	// insert new item
 
-	$('a.addnote').click(function () {
-		var z, category = $('#noteui').find("[id^=category-]");
+	$('a.addmemo').click(function () {
+		var z, category = $('#memoui').find("[id^=category-]");
 		if (category.length === 0) { return false; }
 		$.post(
 			'ajax_add',
 			{
-				'name': 'Note',
-				'text': 'New Item.',
+				'name': 'Memo',
+				'text': 'New memo.',
 				'xyz': '0.0.10',
 				'wh': '280.150',
-				'notecategory_id': category.attr('id').replace('category-', '')
+				'memocategory_id': category.attr('id').replace('category-', '')
 			},
 			function (newitem) {
 				$(newitem).hide().prependTo(category).fadeIn();
@@ -102,21 +102,21 @@ $(document).ready(function () {
 
 	// remove item
 
-	$('#noteui').on('click', 'i.remove', function () {
+	$('#memoui').on('click', 'i.remove', function () {
 		if (!window.confirm('削除しますか？')) {
 			return false;
 		}
-		var note = $(this).closest("[id^=note-]");
+		var memo = $(this).closest("[id^=memo-]");
 		$.post(
 			'ajax_delete',
 			{
-				'id': note.attr('id').replace('note-', '')
+				'id': memo.attr('id').replace('memo-', '')
 			},
 			function (result) {
 				if (result === "1") {
-					note.fadeOut(
+					memo.fadeOut(
 						'normal',
-						function () {	note.remove('fast');	}
+						function () {	memo.remove('fast');	}
 					);
 				}
 			}
@@ -125,19 +125,19 @@ $(document).ready(function () {
 
 	// td.text handling
 
-	$('#noteui').on('focus', 'div[contenteditable]', function () {
+	$('#memoui').on('focus', 'div[contenteditable]', function () {
 		$(this).data('before', $(this).html());
 	});
 
 	// save text
 
-	$('#noteui').on('blur', 'div[contenteditable]', function () {
-		var note = $(this).closest("[id^=note-]");
+	$('#memoui').on('blur', 'div[contenteditable]', function () {
+		var memo = $(this).closest("[id^=memo-]");
 		if ($(this).data('before') !== $(this).html()) {
 			$.post(
 				'ajax_edit',
 				{
-					'id': note.attr('id').replace('note-', ''),
+					'id': memo.attr('id').replace('memo-', ''),
 					'text': $(this).html()
 				}
 			);
@@ -148,25 +148,25 @@ $(document).ready(function () {
 
 	// reset format
 
-	$('#noteui').on('click', 'i.formatreset', function () {
+	$('#memoui').on('click', 'i.formatreset', function () {
 		if (!window.confirm('書式をクリアしますか？')) {
 			return false;
 		}
-		var note = $(this).closest("[id^=note-]"), notetext;
-		notetext = note.find('.text');
-		notetext.text(notetext.text());
+		var memo = $(this).closest("[id^=memo-]"), memotext;
+		memotext = memo.find('.text');
+		memotext.text(memotext.text());
 		$.post(
 			'ajax_edit',
 			{
-				'id': note.attr('id').replace('note-', ''),
-				'text': notetext.text()
+				'id': memo.attr('id').replace('memo-', ''),
+				'text': memotext.text()
 			}
 		);
 	});
 
 	// keyboard
 
-	$('#noteui').on('keydown', 'div.text', function (e) {
+	$('#memoui').on('keydown', 'div.text', function (e) {
 		// escape
 		if (e.which === 27) {
 			e.preventDefault();
@@ -176,12 +176,12 @@ $(document).ready(function () {
 
 	// change title
 
-	$('#noteui').on('blur', 'span.title', function () {
-		var note = $(this).closest("[id^=note-]");
+	$('#memoui').on('blur', 'span.title', function () {
+		var memo = $(this).closest("[id^=memo-]");
 		$.post(
 			'ajax_edit',
 			{
-				'id': note.attr('id').replace('note-', ''),
+				'id': memo.attr('id').replace('memo-', ''),
 				'name': $(this).text()
 			}
 		);

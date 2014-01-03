@@ -1,11 +1,11 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Notecategory Model
+ * Memocategory Model
  *
- * @property Note $Note
+ * @property Memo $Memo
  */
-class Notecategory extends AppModel {
+class Memocategory extends AppModel {
 
 /**
  * Validation rules
@@ -43,9 +43,9 @@ class Notecategory extends AppModel {
  * @var array
  */
 	public $hasMany = array(
-		'Note' => array(
-			'className' => 'Note',
-			'foreignKey' => 'notecategory_id',
+		'Memo' => array(
+			'className' => 'Memo',
+			'foreignKey' => 'memocategory_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',

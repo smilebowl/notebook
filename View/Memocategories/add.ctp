@@ -2,13 +2,13 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul class="nav nav-pills well well-sm">
 
-		<li><?php echo $this->Html->link(__('List Notecategories'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Notes'), array('controller' => 'notes', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Note'), array('controller' => 'notes', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Memocategories'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List Memos'), array('controller' => 'memos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Memo'), array('controller' => 'memos', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
-<div class="notecategories form">
-<?php echo $this->Form->create('Notecategory', array(
+<div class="memocategories form">
+<?php echo $this->Form->create('Memocategory', array(
 	'inputDefaults' => array(
 		'div' => 'form-group',
 		'label' => array('class' => 'col col-sm-3 control-label'),
@@ -19,7 +19,7 @@
 	'novalidate' => true,
 )); ?>
 	<fieldset>
-		<legend><?php echo __('Add Notecategory'); ?></legend>
+		<legend><?php echo __('Add Memocategory'); ?></legend>
 	<?php
 		echo $this->Form->input('name');
 		echo $this->Form->input('position');
