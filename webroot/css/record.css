@@ -8,39 +8,42 @@
 .widget-header i.historychecked {
   color: #f0ad4e;
 }
-table.todolist tr {
+table.recordlist tr {
   border-bottom: 1px solid #cdcdcd;
 }
-table.todolist td {
+table.recordlist tr.active {
+  background-color: #eaf6ea;
+}
+table.recordlist td {
   padding: 6px;
 }
-table.todolist td.text {
+table.recordlist td.text {
   line-height: 1.4em;
   width: 94%;
 }
-table.todolist td.high-priority {
-  color: red;
+table.recordlist td.high-priority {
+  color: #d9534f;
 }
-table.todolist td[contenteditable="true"]:focus {
+table.recordlist td[contenteditable="true"]:focus {
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-table.todolist i.glyphicon {
+table.recordlist i.glyphicon {
   font-size: 14px;
 }
-table.todolist i.remove {
+table.recordlist i.remove {
   color: #d9534f;
 }
-table.todolist i.done {
+table.recordlist i.done {
   color: #5cb85c;
 }
-tr.completed {
-  background-color: #eeeeee;
+table.recordlist .inputdate {
+  border-style: none;
+  background-color: transparent;
 }
-.sortable-placeholder {
-  background-color: #80c780;
-  border: 1px solid #3299bb;
+div#ui-datepicker-div {
+  display: none;
 }

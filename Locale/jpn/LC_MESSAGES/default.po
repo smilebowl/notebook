@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2014-01-03 18:49+0900\n"
+"POT-Creation-Date: 2014-01-04 16:40+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -52,6 +52,48 @@ msgstr ""
 
 #: Controller/MemosController.php:193
 msgid "The memo could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/RecordcategoriesController.php:37;69;94
+#, fuzzy
+msgid "Invalid recordcategory"
+msgstr "Todo分類"
+
+#: Controller/RecordcategoriesController.php:52;73
+msgid "The recordcategory has been saved."
+msgstr ""
+
+#: Controller/RecordcategoriesController.php:55;76
+msgid "The recordcategory could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/RecordcategoriesController.php:98
+msgid "The recordcategory has been deleted."
+msgstr ""
+
+#: Controller/RecordcategoriesController.php:100
+msgid "The recordcategory could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/RecordsController.php:135;169;196
+#, fuzzy
+msgid "Invalid record"
+msgstr "Todo分類"
+
+#: Controller/RecordsController.php:150;173
+msgid "The record has been saved."
+msgstr ""
+
+#: Controller/RecordsController.php:153;176
+msgid "The record could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/RecordsController.php:200
+msgid "The record has been deleted."
+msgstr ""
+
+#: Controller/RecordsController.php:202
+msgid "The record could not be deleted. Please, try again."
 msgstr ""
 
 #: Controller/TodocategoriesController.php:37;69;94
@@ -153,33 +195,49 @@ msgstr ""
 msgid "Todo"
 msgstr ""
 
-#: View/Elements/menu.ctp:19;36
-msgid "Mentenance"
-msgstr "メンテナンス"
-
-#: View/Elements/menu.ctp:22 View/Todocategories/index.ctp:10
+#: View/Elements/menu.ctp:19 View/Todocategories/index.ctp:10
 msgid "Todocategories"
 msgstr "Todo分類"
+
+#: View/Elements/menu.ctp:22;40;55
+msgid "Mentenance"
+msgstr "メンテナンス"
 
 #: View/Elements/menu.ctp:25 View/Todohistories/index.ctp:10
 msgid "Todohistories"
 msgstr "Todo履歴"
 
+#: View/Elements/menu.ctp:37 View/Memocategories/index.ctp:10
+msgid "Memocategories"
+msgstr "Memo分類"
+
+#: View/Elements/menu.ctp:47 View/Records/ui.ctp:7 View/Records/view.ctp:13
+msgid "Record"
+msgstr ""
+
+#: View/Elements/menu.ctp:52 View/Recordcategories/index.ctp:10
+msgid "Recordcategories"
+msgstr "Record分類"
+
 #: View/Helper/IconHelper.php:20;24 View/Memocategories/index.ctp:28
-#: View/Memos/index.ctp:31 View/Todocategories/index.ctp:28
+#: View/Memos/index.ctp:31 View/Recordcategories/index.ctp:28
+#: View/Records/index.ctp:31 View/Todocategories/index.ctp:28
 #: View/Todohistories/index.ctp:31 View/Todos/index.ctp:30
 msgid "View"
 msgstr ""
 
 #: View/Helper/IconHelper.php:26;29 View/Memocategories/index.ctp:29
-#: View/Memos/index.ctp:32 View/Todocategories/index.ctp:29
+#: View/Memos/index.ctp:32 View/Recordcategories/index.ctp:29
+#: View/Records/index.ctp:32 View/Todocategories/index.ctp:29
 #: View/Todohistories/index.ctp:32 View/Todos/index.ctp:31
 msgid "Edit"
 msgstr ""
 
 #: View/Helper/IconHelper.php:37;40 View/Memocategories/edit.ctp:5
 #: View/Memocategories/index.ctp:30 View/Memos/edit.ctp:5
-#: View/Memos/index.ctp:33 View/Todocategories/edit.ctp:5
+#: View/Memos/index.ctp:33 View/Recordcategories/edit.ctp:5
+#: View/Recordcategories/index.ctp:30 View/Records/edit.ctp:5
+#: View/Records/index.ctp:33 View/Todocategories/edit.ctp:5
 #: View/Todocategories/index.ctp:30 View/Todohistories/edit.ctp:5
 #: View/Todohistories/index.ctp:33 View/Todos/edit.ctp:5
 #: View/Todos/index.ctp:32
@@ -189,49 +247,57 @@ msgstr ""
 #: View/Memocategories/add.ctp:2 View/Memocategories/edit.ctp:2
 #: View/Memocategories/index.ctp:2;19 View/Memocategories/view.ctp:2
 #: View/Memos/add.ctp:2 View/Memos/edit.ctp:2 View/Memos/index.ctp:2;19
-#: View/Memos/view.ctp:2 View/Todocategories/add.ctp:2
-#: View/Todocategories/edit.ctp:2 View/Todocategories/index.ctp:2;19
-#: View/Todocategories/view.ctp:2 View/Todohistories/add.ctp:2
-#: View/Todohistories/edit.ctp:2 View/Todohistories/index.ctp:2;19
-#: View/Todohistories/view.ctp:2 View/Todos/add.ctp:2 View/Todos/edit.ctp:2
-#: View/Todos/index.ctp:2;19 View/Todos/ui.ctp:5 View/Todos/view.ctp:2
+#: View/Memos/view.ctp:2 View/Recordcategories/add.ctp:2
+#: View/Recordcategories/edit.ctp:2 View/Recordcategories/index.ctp:2;19
+#: View/Recordcategories/view.ctp:2 View/Records/add.ctp:2
+#: View/Records/edit.ctp:2 View/Records/index.ctp:2;19 View/Records/view.ctp:2
+#: View/Todocategories/add.ctp:2 View/Todocategories/edit.ctp:2
+#: View/Todocategories/index.ctp:2;19 View/Todocategories/view.ctp:2
+#: View/Todohistories/add.ctp:2 View/Todohistories/edit.ctp:2
+#: View/Todohistories/index.ctp:2;19 View/Todohistories/view.ctp:2
+#: View/Todos/add.ctp:2 View/Todos/edit.ctp:2 View/Todos/index.ctp:2;19
+#: View/Todos/ui.ctp:5 View/Todos/view.ctp:2
 msgid "Actions"
 msgstr ""
 
 #: View/Memocategories/add.ctp:5 View/Memocategories/edit.ctp:6
 #: View/Memocategories/view.ctp:6 View/Memos/add.ctp:6 View/Memos/edit.ctp:7
 #: View/Memos/index.ctp:5 View/Memos/view.ctp:8
-#, fuzzy
 msgid "List Memocategories"
-msgstr "ノート分類"
+msgstr "Memo分類一覧"
 
 #: View/Memocategories/add.ctp:6 View/Memocategories/edit.ctp:7
 #: View/Memocategories/index.ctp:5 View/Memocategories/view.ctp:8
 #: View/Memos/add.ctp:5 View/Memos/edit.ctp:6 View/Memos/view.ctp:6
 msgid "List Memos"
-msgstr ""
+msgstr "Memo一覧"
 
 #: View/Memocategories/add.ctp:7 View/Memocategories/edit.ctp:8
 #: View/Memocategories/index.ctp:6 View/Memocategories/view.ctp:9
 #: View/Memos/index.ctp:4 View/Memos/view.ctp:7
 msgid "New Memo"
-msgstr ""
+msgstr "Memo追加"
 
 #: View/Memocategories/add.ctp:22
-#, fuzzy
 msgid "Add Memocategory"
-msgstr "Todo分類"
+msgstr "Memo分類追加"
 
 #: View/Memocategories/add.ctp:28 View/Memocategories/edit.ctp:30
-#: View/Memos/add.ctp:31 View/Memos/edit.ctp:33 View/Todocategories/add.ctp:28
-#: View/Todocategories/edit.ctp:30 View/Todohistories/add.ctp:31
-#: View/Todohistories/edit.ctp:33 View/Todos/add.ctp:30 View/Todos/edit.ctp:32
+#: View/Memos/add.ctp:31 View/Memos/edit.ctp:33
+#: View/Recordcategories/add.ctp:28 View/Recordcategories/edit.ctp:30
+#: View/Records/add.ctp:31 View/Records/edit.ctp:33
+#: View/Todocategories/add.ctp:28 View/Todocategories/edit.ctp:30
+#: View/Todohistories/add.ctp:31 View/Todohistories/edit.ctp:33
+#: View/Todos/add.ctp:30 View/Todos/edit.ctp:32
 msgid "Submit"
 msgstr ""
 
 #: View/Memocategories/edit.ctp:5 View/Memocategories/index.ctp:30
 #: View/Memocategories/view.ctp:5 View/Memos/edit.ctp:5
 #: View/Memos/index.ctp:33 View/Memos/view.ctp:5
+#: View/Recordcategories/edit.ctp:5 View/Recordcategories/index.ctp:30
+#: View/Recordcategories/view.ctp:5 View/Records/edit.ctp:5
+#: View/Records/index.ctp:33 View/Records/view.ctp:5
 #: View/Todocategories/edit.ctp:5 View/Todocategories/index.ctp:30
 #: View/Todocategories/view.ctp:5 View/Todohistories/edit.ctp:5
 #: View/Todohistories/index.ctp:33 View/Todohistories/view.ctp:5
@@ -240,55 +306,53 @@ msgid "Are you sure you want to delete # %s?"
 msgstr ""
 
 #: View/Memocategories/edit.ctp:23 View/Memocategories/view.ctp:4
-#, fuzzy
 msgid "Edit Memocategory"
-msgstr "Todo分類"
+msgstr "Memo分類編集"
 
 #: View/Memocategories/index.ctp:4 View/Memocategories/view.ctp:7
 #: View/Memos/add.ctp:7 View/Memos/edit.ctp:8 View/Memos/index.ctp:6
 #: View/Memos/view.ctp:9
-#, fuzzy
 msgid "New Memocategory"
-msgstr "ノート分類"
-
-#: View/Memocategories/index.ctp:10
-msgid "Memocategories"
-msgstr "Memo分類"
+msgstr "Memo分類追加"
 
 #: View/Memocategories/index.ctp:14 View/Memos/index.ctp:14
+#: View/Recordcategories/index.ctp:14 View/Records/index.ctp:14
 #: View/Todocategories/index.ctp:14 View/Todohistories/index.ctp:14
 #: View/Todos/index.ctp:14
 msgid ""
 "Page {:page} of {:pages}, showing {:current} records out of {:count} total, "
 "starting on record {:start}, ending on {:end}"
 msgstr ""
+"Page {:page} / {:pages}, record {:start} - {:end} / total {:count} records"
 
 #: View/Memocategories/view.ctp:5
-#, fuzzy
 msgid "Delete Memocategory"
-msgstr "ノート分類"
+msgstr "Memo分類削除"
 
 #: View/Memocategories/view.ctp:13 View/Memos/view.ctp:20
 msgid "Memocategory"
 msgstr "Memo分類"
 
 #: View/Memocategories/view.ctp:15 View/Memos/view.ctp:15
+#: View/Recordcategories/view.ctp:15 View/Records/view.ctp:15
 #: View/Todocategories/view.ctp:15 View/Todohistories/view.ctp:15
 #: View/Todos/view.ctp:15
 msgid "Id"
 msgstr ""
 
 #: View/Memocategories/view.ctp:20 View/Memos/view.ctp:25
-#: View/Todocategories/view.ctp:20
+#: View/Recordcategories/view.ctp:20 View/Todocategories/view.ctp:20
 msgid "Name"
 msgstr ""
 
-#: View/Memocategories/view.ctp:25 View/Todocategories/view.ctp:25
+#: View/Memocategories/view.ctp:25 View/Recordcategories/view.ctp:25
+#: View/Records/view.ctp:35 View/Todocategories/view.ctp:25
 #: View/Todohistories/view.ctp:30 View/Todos/view.ctp:30
 msgid "Position"
 msgstr ""
 
 #: View/Memocategories/view.ctp:30 View/Memos/view.ctp:45
+#: View/Recordcategories/view.ctp:30 View/Records/view.ctp:45
 #: View/Todocategories/view.ctp:30 View/Todohistories/view.ctp:40
 #: View/Todos/view.ctp:35
 msgid "Created"
@@ -296,15 +360,15 @@ msgstr ""
 
 #: View/Memos/add.ctp:22
 msgid "Add Memo"
-msgstr ""
+msgstr "Memo追加"
 
 #: View/Memos/edit.ctp:23 View/Memos/view.ctp:4
 msgid "Edit Memo"
-msgstr ""
+msgstr "Memo編集"
 
 #: View/Memos/index.ctp:10
 msgid "Memos"
-msgstr ""
+msgstr "Memo"
 
 #: View/Memos/ui.ctp:7 View/Memos/view.ctp:13
 msgid "Memo"
@@ -312,7 +376,7 @@ msgstr ""
 
 #: View/Memos/view.ctp:5
 msgid "Delete Memo"
-msgstr ""
+msgstr "Memo削除"
 
 #: View/Memos/view.ctp:30
 msgid "Text"
@@ -326,19 +390,88 @@ msgstr ""
 msgid "Wh"
 msgstr ""
 
+#: View/Recordcategories/add.ctp:5 View/Recordcategories/edit.ctp:6
+#: View/Recordcategories/view.ctp:6 View/Records/add.ctp:6
+#: View/Records/edit.ctp:7 View/Records/index.ctp:5 View/Records/view.ctp:8
+msgid "List Recordcategories"
+msgstr "Record分類一覧"
+
+#: View/Recordcategories/add.ctp:6 View/Recordcategories/edit.ctp:7
+#: View/Recordcategories/index.ctp:5 View/Recordcategories/view.ctp:8
+#: View/Records/add.ctp:5 View/Records/edit.ctp:6 View/Records/view.ctp:6
+msgid "List Records"
+msgstr "Record一覧"
+
+#: View/Recordcategories/add.ctp:7 View/Recordcategories/edit.ctp:8
+#: View/Recordcategories/index.ctp:6 View/Recordcategories/view.ctp:9
+#: View/Records/index.ctp:4 View/Records/view.ctp:7
+msgid "New Record"
+msgstr "Record追加"
+
+#: View/Recordcategories/add.ctp:22
+msgid "Add Recordcategory"
+msgstr "Record分類追加"
+
+#: View/Recordcategories/edit.ctp:23 View/Recordcategories/view.ctp:4
+msgid "Edit Recordcategory"
+msgstr "Record分類編集"
+
+#: View/Recordcategories/index.ctp:4 View/Recordcategories/view.ctp:7
+#: View/Records/add.ctp:7 View/Records/edit.ctp:8 View/Records/index.ctp:6
+#: View/Records/view.ctp:9
+msgid "New Recordcategory"
+msgstr "Record分類追加"
+
+#: View/Recordcategories/view.ctp:5
+msgid "Delete Recordcategory"
+msgstr "Record分類削除"
+
+#: View/Recordcategories/view.ctp:13 View/Records/view.ctp:20
+msgid "Recordcategory"
+msgstr "Record分類"
+
+#: View/Records/add.ctp:22
+msgid "Add Record"
+msgstr "Record追加"
+
+#: View/Records/edit.ctp:23 View/Records/view.ctp:4
+msgid "Edit Record"
+msgstr "Record編集"
+
+#: View/Records/index.ctp:10
+msgid "Records"
+msgstr ""
+
+#: View/Records/view.ctp:5
+msgid "Delete Record"
+msgstr "Record削除"
+
+#: View/Records/view.ctp:25
+msgid "Eventdate"
+msgstr ""
+
+#: View/Records/view.ctp:30 View/Todohistories/view.ctp:20
+#: View/Todos/view.ctp:20
+msgid "Title"
+msgstr ""
+
+#: View/Records/view.ctp:40 View/Todohistories/view.ctp:35
+msgid "Priority"
+msgstr ""
+
 #: View/Todocategories/add.ctp:5 View/Todocategories/edit.ctp:6
 #: View/Todocategories/view.ctp:6 View/Todohistories/add.ctp:6
 #: View/Todohistories/edit.ctp:7 View/Todohistories/index.ctp:5
 #: View/Todohistories/view.ctp:8 View/Todos/add.ctp:6 View/Todos/edit.ctp:7
 #: View/Todos/index.ctp:5 View/Todos/ui.ctp:13 View/Todos/view.ctp:8
 msgid "List Todocategories"
-msgstr ""
+msgstr "Todo分類一覧"
 
 #: View/Todocategories/add.ctp:6 View/Todocategories/edit.ctp:7
 #: View/Todocategories/index.ctp:5 View/Todocategories/view.ctp:8
 #: View/Todos/add.ctp:5 View/Todos/edit.ctp:6 View/Todos/view.ctp:6
 msgid "List Todos"
-msgstr ""
+msgstr "Todo一覧"
 
 #: View/Todocategories/add.ctp:7 View/Todocategories/edit.ctp:8
 #: View/Todocategories/index.ctp:6 View/Todocategories/view.ctp:9
@@ -348,11 +481,11 @@ msgstr ""
 
 #: View/Todocategories/add.ctp:22
 msgid "Add Todocategory"
-msgstr ""
+msgstr "Todo分類追加"
 
 #: View/Todocategories/edit.ctp:23 View/Todocategories/view.ctp:4
 msgid "Edit Todocategory"
-msgstr ""
+msgstr "Todo分類編集"
 
 #: View/Todocategories/index.ctp:4 View/Todocategories/view.ctp:7
 #: View/Todohistories/add.ctp:7 View/Todohistories/edit.ctp:8
@@ -360,11 +493,11 @@ msgstr ""
 #: View/Todos/add.ctp:7 View/Todos/edit.ctp:8 View/Todos/index.ctp:6
 #: View/Todos/ui.ctp:15 View/Todos/view.ctp:9
 msgid "New Todocategory"
-msgstr ""
+msgstr "Todo分類追加"
 
 #: View/Todocategories/view.ctp:5
 msgid "Delete Todocategory"
-msgstr ""
+msgstr "Todo分類削除"
 
 #: View/Todocategories/view.ctp:13 View/Todohistories/view.ctp:25
 #: View/Todos/view.ctp:25
@@ -374,35 +507,27 @@ msgstr "Todo分類"
 #: View/Todohistories/add.ctp:5 View/Todohistories/edit.ctp:6
 #: View/Todohistories/view.ctp:6 View/Todos/ui.ctp:11
 msgid "List Todohistories"
-msgstr ""
+msgstr "Todo履歴一覧"
 
 #: View/Todohistories/add.ctp:22
 msgid "Add Todohistory"
-msgstr ""
+msgstr "Todo履歴追加"
 
 #: View/Todohistories/edit.ctp:23 View/Todohistories/view.ctp:4
 msgid "Edit Todohistory"
-msgstr ""
+msgstr "Todo履歴編集"
 
 #: View/Todohistories/index.ctp:4 View/Todohistories/view.ctp:7
 msgid "New Todohistory"
-msgstr ""
+msgstr "Todo履歴追加"
 
 #: View/Todohistories/view.ctp:5
 msgid "Delete Todohistory"
-msgstr ""
+msgstr "Todo履歴削除"
 
 #: View/Todohistories/view.ctp:13
 msgid "Todohistory"
 msgstr "Todo履歴"
-
-#: View/Todohistories/view.ctp:20 View/Todos/view.ctp:20
-msgid "Title"
-msgstr ""
-
-#: View/Todohistories/view.ctp:35
-msgid "Priority"
-msgstr ""
 
 #: View/Todohistories/view.ctp:45 View/Todos/view.ctp:40
 msgid "Completed"
@@ -410,11 +535,11 @@ msgstr ""
 
 #: View/Todos/add.ctp:22
 msgid "Add Todo"
-msgstr ""
+msgstr "Todo追加"
 
 #: View/Todos/edit.ctp:23 View/Todos/view.ctp:4
 msgid "Edit Todo"
-msgstr ""
+msgstr "Todo編集"
 
 #: View/Todos/index.ctp:10
 msgid "Todos"
@@ -422,14 +547,19 @@ msgstr ""
 
 #: View/Todos/view.ctp:5
 msgid "Delete Todo"
-msgstr ""
+msgstr "Todo削除"
 
 #: Model/Memo.php:validation for field name Model/Memocategory.php:validation
-#: Model/Todocategory.php:validation Model/Todohistory.php:validation title
+#: Model/Record.php:validation title Model/Recordcategory.php:validation
+#: Model/Todocategory.php:validation Model/Todohistory.php:validation
 msgid "notEmpty"
 msgstr ""
 
 #: Model/Memocategory.php:validation for field position
-#: Model/Todocategory.php:validation
+#: Model/Recordcategory.php:validation Model/Todocategory.php:validation
 msgid "numeric"
+msgstr ""
+
+#: Model/Record.php:validation for field eventdate
+msgid "date"
 msgstr ""

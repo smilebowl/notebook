@@ -12,6 +12,7 @@ p.gotop{
 	background-color: rgba(232,232,255,0.6);
 	text-align: center;
 	.border-radius-left(8px);
+	z-index: 10000;
 	a {
 		width: 3em;
 		height: 3em;
@@ -32,7 +33,8 @@ div.infobox {
 		display: block;
 		text-decoration: none;
 		&:hover {
-			#gradient > .vertical(@start-color: #ddd; @end-color: #ccc; @start-percent: 0%; @end-percent: 100%);
+			background-color: darken(rgb(154, 210, 104),30%);
+//			#gradient > .vertical(@start-color: #ddd; @end-color: #ccc; @start-percent: 0%; @end-percent: 100%);
 		}
 	}
 	a.active {

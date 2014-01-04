@@ -26,6 +26,7 @@
 				</li>
 			</ul>
 		</li>
+
 		<!-- Memo -->
 		<li>
 			<a href="<?php echo $this->Html->url(array('controller'=>'memos', 'action'=>'ui')); ?>"><i class="glyphicon glyphicon-book"></i>Memo</a>
@@ -40,22 +41,21 @@
 				</li>
 			</ul>
 		</li>
+
+		<!-- Record -->
 		<li>
-			<a href="#">Shortcuts</a>
+			<a href="<?php echo $this->Html->url(array('controller'=>'records', 'action'=>'ui')); ?>"><i class="glyphicon glyphicon-play"></i><?php echo __('Record');?></a>
 		</li>
 		<li>
 			<ul>
 				<li>
-					<a href="#">Overview</a>
+					<?php echo $this->Html->link(__('Recordcategories'), array('controller' => 'recordcategories', 'action' => 'index')); ?>
+				</li>
+				<li>
+					<?php echo $this->Html->link(__('Mentenance'), array('controller' => 'records', 'action' => 'index')); ?>
 				</li>
 			</ul>
 		</li>
-		<li>
-			<a href="#" class="btnxxxx">
-				<i class="glyphicon glyphicon-wrench"></i>設定</a>
-		</li>
-		<li>
-			<a href="#">About</a>
-		</li>
+
 	</ul>
 </div>

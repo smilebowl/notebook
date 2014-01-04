@@ -69,10 +69,10 @@
   background-color: #222;
 }
 .sidebar-nav > li > ul > li {
-  background-image: -webkit-linear-gradient(top, #333333 0%, #222222 70%);
-  background-image: linear-gradient(to bottom, #333333 0%, #222222 70%);
+  background-image: -webkit-linear-gradient(top, #444444 0%, #333333 70%);
+  background-image: linear-gradient(to bottom, #444444 0%, #333333 70%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff333333', endColorstr='#ff222222', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff333333', GradientType=0);
   text-indent: 40px;
 }
 @media (max-width: 767px) {

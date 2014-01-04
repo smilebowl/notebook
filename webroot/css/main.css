@@ -11,6 +11,7 @@ p.gotop {
   text-align: center;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
+  z-index: 10000;
 }
 p.gotop a {
   width: 3em;
@@ -34,10 +35,7 @@ div.infobox a {
   text-decoration: none;
 }
 div.infobox a:hover {
-  background-image: -webkit-linear-gradient(top, #dddddd 0%, #cccccc 100%);
-  background-image: linear-gradient(to bottom, #dddddd 0%, #cccccc 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdddddd', endColorstr='#ffcccccc', GradientType=0);
+  background-color: #4e7c25;
 }
 div.infobox a.active {
   background-color: #67a331;
