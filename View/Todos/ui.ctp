@@ -1,4 +1,7 @@
-<?php echo $this->Html->css('todo', null, array('inline' => false)); echo $this->Html->script('todoui', array('inline' => false)); ?>
+<?php
+	echo $this->Html->css('todo', null, array('inline' => false));
+	echo $this->Html->script('todoui', array('inline' => false));
+?>
 <!--
 <div class="actions">
 	<h3>

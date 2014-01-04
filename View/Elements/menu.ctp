@@ -10,7 +10,7 @@
 		<!-- Todo -->
 		<li>
 			<a href="<?php echo $this->Html->url(array('controller' => 'todos', 'action' => 'ui')); ?>">
-				<i class="glyphicon glyphicon-list-alt"></i><?php echo __('Todo') ?>
+				<i class="glyphicon glyphicon-tasks"></i><?php echo __('Todo') ?>
 			</a>
 		</li>
 		<li>
@@ -53,6 +53,21 @@
 				</li>
 				<li>
 					<?php echo $this->Html->link(__('Mentenance'), array('controller' => 'records', 'action' => 'index')); ?>
+				</li>
+			</ul>
+		</li>
+
+		<!-- Calendar -->
+		<li>
+			<a href="<?php echo $this->Html->url(array('controller'=>'calendars', 'action'=>'ui')); ?>"><i class="glyphicon glyphicon-calendar"></i><?php echo __('Calendar');?></a>
+		</li>
+		<li>
+			<ul>
+				<li>
+					<?php echo $this->Html->link(__('Calendarcategories'), array('controller' => 'calendarcategories', 'action' => 'index')); ?>
+				</li>
+				<li>
+					<?php echo $this->Html->link(__('Mentenance'), array('controller' => 'calendars', 'action' => 'index')); ?>
 				</li>
 			</ul>
 		</li>

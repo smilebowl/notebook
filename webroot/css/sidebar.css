@@ -52,8 +52,12 @@
 }
 .sidebar-nav .sidebar-brand {
   height: 65px;
-  line-height: 60px;
+  line-height: 65px;
   font-size: 18px;
+  background-image: -webkit-linear-gradient(top, #322f34 0%, #2a282c 100%);
+  background-image: linear-gradient(to bottom, #322f34 0%, #2a282c 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff322f34', endColorstr='#ff2a282c', GradientType=0);
 }
 .sidebar-nav > li {
   line-height: 40px;

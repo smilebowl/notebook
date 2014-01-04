@@ -37,7 +37,7 @@ table.recordlist i.glyphicon {
 table.recordlist i.remove {
   color: #d9534f;
 }
-table.recordlist i.done {
+table.recordlist i.handle {
   color: #5cb85c;
 }
 table.recordlist .inputdate {
