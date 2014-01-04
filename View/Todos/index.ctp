@@ -32,7 +32,7 @@
 			<?php echo $this->Icon->postLink(__('Delete'), array('action' => 'delete', $todo['Todo']['id']), null, __('Are you sure you want to delete # %s?', $todo['Todo']['id'])); ?>
 		</td>
 		<td><?php echo h($todo['Todo']['id']); ?>&nbsp;</td>
-		<td><?php echo h($todo['Todo']['title']); ?>&nbsp;</td>
+		<td><?php echo String::truncate(h($todo['Todo']['title']),20); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($todo['Todocategory']['name'], array('controller' => 'todocategories', 'action' => 'view', $todo['Todocategory']['id'])); ?>
 		</td>

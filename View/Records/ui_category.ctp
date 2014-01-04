@@ -1,4 +1,4 @@
-<div class="record col-sm-11" id="category-<?php echo $recordcategory_id; ?>">
+<div class="record col-sm-12" id="category-<?php echo $recordcategory_id; ?>">
 	<div class="widget">
 		<div class="widget-header">
 			<i class="icon glyphicon glyphicon-th"></i>

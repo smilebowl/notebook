@@ -168,6 +168,23 @@ $(document).ready(function () {
 		$(this).closest('.widget').find('.checkmark').prop('checked', cv);
 	});
 
+	// reset format
+
+	$('#recordui').on('click', 'i.formatreset', function () {
+		if (!window.confirm('書式をクリアしますか？')) {
+			return false;
+		}
+		var record = $(this).closest("[id^=record-]"), title;
+		title = record.find('.text');
+		title.text(title.text());
+		$.post(
+			'ajax_edit',
+			{
+				'id': record.attr('id').replace('record-', ''),
+				'title': title.text()
+			}
+		);
+	});
 	// remove checked item
 
 	$('#recordui').on('click', 'i.removechecked', function () {
@@ -220,35 +237,36 @@ $(document).ready(function () {
 		reset_datepicker();
 	});
 
+	// focus event
+
+	$('#recordui').on('focus', 'td.text', function () {
+		$(this).data('before', $(this).html());
+		//	log($(this).text());
+	});
+
 	// td.text handling
 
 	$('#recordui').on('blur', 'td.text', function () {
 		// changed
 		var record = $(this).closest("[id^=record-]");
-		if ($(this).data('before') !== $(this).text()) {
+		if ($(this).data('before') !== $(this).html()) {
 			$.post(
 				'ajax_edit',
 				{
 					'id': record.attr('id').replace('record-', ''),
-					'title': $(this).text()
+					'title': $(this).html()
 				}
 			);
 		}
-		$(this).text($(this).text()).removeData('before');
-	});
-
-	// focus title
-
-	$('#recordui').on('focus', 'td.text', function () {
-		$(this).data('before', $(this).text()).selectText();
-		//	log($(this).text());
+		$(this).removeData('before');
 	});
 
 	// keyboard
 
 	$('#recordui').on('keydown', 'td.text', function (e) {
 		// down, enter
-		if (e.which === 13 || e.which === 40) {
+//		if (e.which === 13 || e.which === 40) {
+		if (e.which === 40) {
 			e.preventDefault();
 			$(this).closest('tr').next().find('.text').focus();
 		}
