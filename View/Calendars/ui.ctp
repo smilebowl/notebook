@@ -1,17 +1,18 @@
 <?php
 echo $this->Html->css('calendar', null, array('inline' => false));
 echo $this->Html->css('/js/vendar/fullcalendar/fullcalendar', null, array('inline' => false));
-echo $this->Html->script('calendarui', array('inline' => false));
+echo $this->Html->script('vendar/jqueryui/i18n/jquery.ui.datepicker-ja.min', array('inline' => false));
 echo $this->Html->script('vendar/fullcalendar/fullcalendar.min', array('inline' => false));
 echo $this->Html->script('vendar/fullcalendar/gcal', array('inline' => false));
+echo $this->Html->script('calendarui', array('inline' => false));
 ?>
 
 <h3><?php echo __('Calendar'); ?></h3>
 
 <div class="categories clearfix">
 	<?php foreach($calendarcategories as $calendarcategory) : ?>
-	<div class="infobox col-sm-2" id="nc-<?php echo $calendarcategory['Calendarcategory']['id']?>">
-		<a href="#" class="categoryselector">
+	<div class="infobox col-sm-2">
+		<a href="#" class="categoryselector" id="cal-<?php echo $calendarcategory['Calendarcategory']['id']?>">
 			<?php echo $calendarcategory['Calendarcategory']['name']; ?>
 		</a>
 	</div>
@@ -19,6 +20,9 @@ echo $this->Html->script('vendar/fullcalendar/gcal', array('inline' => false));
 </div>
 
 <div id="calendarui"></div>
+
+
+
 
 <div id="dialog-event" title="Event" style="display: none;">
 <!--	<p>イベントを追加</p>-->

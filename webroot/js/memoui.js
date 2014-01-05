@@ -3,10 +3,9 @@
 $(document).ready(function () {
 	'use strict';
 
+
 	$(".categories").sortable({
-//		handle: "i.icon",
 		cancel: 'a.addmemo',
-//		placeholder: 'sortable-placeholder',
 		update: function () {
 			var arr = $(this).sortable('toArray');
 			$.post(
@@ -23,7 +22,6 @@ $(document).ready(function () {
 	function reset() {
 
 		$('#memoui .widget').draggable({
-//			handle: 'div.widget-header',
 			handle: 'i.icon',
 			stack: 'div.widget',
 			stop: function (event, ui) {
@@ -49,9 +47,7 @@ $(document).ready(function () {
 			}
 		});
 
-//		$('.widget-header').disableSelection();
 		$('.widget i').tooltip();
-//		$('div.text').niceScroll();
 	}
 
 	// select category
@@ -95,9 +91,8 @@ $(document).ready(function () {
 		);
 	});
 
+	// load first
 	$('.categoryselector').eq(0).click();
-
-
 
 
 	// remove item

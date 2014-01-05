@@ -87,6 +87,7 @@ $(document).ready(function () {
 	});
 
 	//edit title
+
 	$('#recordui').on('focus', 'span.title', function () {
 		$(this).data('before', $(this).text());
 	});
@@ -185,6 +186,7 @@ $(document).ready(function () {
 			}
 		);
 	});
+
 	// remove checked item
 
 	$('#recordui').on('click', 'i.removechecked', function () {
@@ -214,6 +216,9 @@ $(document).ready(function () {
 	});
 
 	$('#recordui').on('change', '.inputdate', function () {
+		if (!window.confirm('日付を変更しますか？')) {
+			return false;
+		}
 		var record = $(this).closest("[id^=record-]");
 
 		$('tr').removeClass('active');

@@ -22,6 +22,8 @@
 		echo $this->Html->css('/js/vendar/bootstrap/css/bootstrap.min');
 		echo $this->Html->css('/js/vendar/jqueryui/themes/base/jquery-ui.min');
 //		echo $this->Html->css('/js/vendar/jqueryui/themes/cupertino/jquery-ui.min');
+//		echo $this->Html->css('/js/vendar/jqueryui/themes/cupertino/jquery-ui-1.10.3.custom');
+
 	?>
 
 	<?php echo $this->Html->css('main'); ?>

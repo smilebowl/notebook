@@ -8,6 +8,7 @@ $(document).ready(function () {
 		$('#wrapper').toggleClass('active');
 	});
 
+
 	$(".gotop").hide();
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 100) {
