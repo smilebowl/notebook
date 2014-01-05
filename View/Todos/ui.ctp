@@ -24,7 +24,7 @@
 
 
 <!--<div class="col-sm-12">-->
-<div class="clearfix">
+<div class="categories clearfix">
 	<?php foreach($todos as $todoset) : ?>
 	<div class="infobox col-sm-2">
 		<a href="#category-<?php echo $todoset['Todocategory']['id']?>"><?php echo $todoset['Todocategory']['name']; ?></a>
@@ -40,9 +40,7 @@
 		<div class="widget">
 			<div class="widget-header">
 				<i class="icon glyphicon glyphicon-th" title="ドッラグで移動"></i>
-				<span class="title">
-					<?php echo $todoset[ 'Todocategory'][ 'name']; ?>
-				</span>
+				<span class="title" contenteditable="true"><?php echo $todoset[ 'Todocategory'][ 'name']; ?></span>
 				<span class="actions">
 					<i class="insert glyphicon glyphicon-plus" title="アイテム追加"></i>&nbsp;
 					<i class="toggletool glyphicon glyphicon-wrench"></i>

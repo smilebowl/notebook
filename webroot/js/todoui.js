@@ -3,17 +3,7 @@
 $(document).ready(function () {
 	'use strict';
 
-	/*---------- debug -----------*/
-	var cnt = 0;
-
-	function log(val) {
-		cnt++;
-		$('#log').prepend('<div>' + cnt + ':' + val + '</div>');
-	}
-	/*---------- debug -----------*/
-	$('.widget i, span.toolbox i').tooltip();
-//	$('.widget .toolbox').hide();
-
+//	$('.widget i, span.toolbox i').tooltip();
 
 	$('body').niceScroll({
 		scrollspeed: 100,
@@ -37,7 +27,7 @@ $(document).ready(function () {
 	});
 //	$('.todolist span.actions').disableSelection();
 	$('.widget-content td[contenteditable!=true]').disableSelection();
-	$('.widget-header').disableSelection();
+	$('.widget span.actions').disableSelection();
 
 	$(".todoui").sortable({
 		handle: "i.icon",
@@ -125,6 +115,8 @@ $(document).ready(function () {
 		);
 	});
 
+	// toggle toolbox
+
 	$('div.widget').on('click', 'i.toggletool', function () {
 		var visible = $(this).next('.toolbox').toggle().is(':visible');
 		if (visible) {
@@ -134,10 +126,14 @@ $(document).ready(function () {
 		}
 	});
 
+	// toolbox / checkbox
+
 	$('div.widget').on('click', 'input.tooglecheckall', function () {
 		var cv = $(this).prop('checked');
 		$(this).closest('.widget').find('.checkmark').prop('checked', cv);
 	});
+
+	// remove checked items
 
 	$('div.widget').on('click', 'i.removechecked', function () {
 		if (!window.confirm('チェックしたアイテムを本当に削除しますか？')) {
@@ -159,6 +155,8 @@ $(document).ready(function () {
 		$(this).closest('.actions').find('i.toggletool').click();
 	});
 
+	// complete checked items
+
 	$('div.widget').on('click', 'i.donechecked', function () {
 		if (!window.confirm('チェックしたアイテムを完了としますか？')) {
 			return false;
@@ -179,6 +177,8 @@ $(document).ready(function () {
 		);
 		$(this).closest('.actions').find('i.toggletool').click();
 	});
+
+	// to history checked items
 
 	$('div.widget').on('click', 'i.historychecked', function () {
 		if (!window.confirm('チェックしたアイテムを履歴に移動（完了分のみ）しますか？')) {
@@ -203,6 +203,36 @@ $(document).ready(function () {
 		$(this).closest('.actions').find('i.toggletool').click();
 	});
 
+	//edit category
+
+	$('div.widget').on('focus', 'span.title', function () {
+		$(this).data('before', $(this).text());
+	});
+
+	$('div.widget').on('blur', 'span.title', function () {
+		if ($(this).text() === $(this).data('before')) { return; }
+		var title = $(this).text(),
+			category_hash = $(this).closest("[id^=category-]").attr('id'),
+			category_id = category_hash.replace('category-', ''),
+			target;
+		if (title.length === 0) {
+			window.alert('Not allow blunk.');
+			$(this).text($(this).data('before')).removeData('before');
+			return;
+		}
+		$(this).removeData('before');
+		target = ".categories [href=#" + category_hash + "]";
+		$(target).text(title);
+//		$('.categories').text(title);
+
+		$.post(
+			'ajax_edit_category',
+			{
+				'id': category_id,
+				'name': title
+			}
+		);
+	});
 
 
 
@@ -229,7 +259,6 @@ $(document).ready(function () {
 
 	$('div.widget').on('focus', 'td.text', function () {
 		$(this).data('before', $(this).text()).selectText();
-		//	log($(this).text());
 	});
 
 

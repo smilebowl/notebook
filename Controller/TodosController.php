@@ -128,6 +128,15 @@ class TodosController extends AppController {
 		}
 	}
 
+	// update category
+
+	public function ajax_edit_category() {
+		Configure::write('debug', 0);
+		$this->autoRender = false;
+
+		$this->Todo->Todocategory->save($this->request->data);
+	}
+
 	public function ui() {
 //		$this->Todo->Todocategory->recursive = 0;
 //		$this->set('todos', $this->Todo->find('all'));
