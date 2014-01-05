@@ -1,16 +1,42 @@
+<?php
+$act_todo=''; $act_memo=''; $act_calendar=''; $act_record='';
+switch ($this->name) {
+	case "Todos":
+	case "Todocategories":
+	case "Todohistories":
+		$act_todo = "active";
+		break;
+	case "Memos":
+	case "Memocategories":
+		$act_memo = "active";
+		break;
+	case "Calendars":
+	case "Calendarcategories":
+		$act_calendar = "active";
+		break;
+	case "Records":
+	case "Recordcategories":
+		$act_record = "active";
+		break;
+};
+?>
+
 <div id="sidebar-wrapper">
 	<ul class="sidebar-nav">
 		<li class="sidebar-brand">
 			<a href="#">NOTEBOOK</a>
 		</li>
+
+		<!-- Dashboard -->
 		<li>
 			<a href="<?php echo $this->Html->url(array('controller'=>'todos', 'action'=>'ui')); ?>">
 				<i class="glyphicon glyphicon-home"></i>Dashboard</a>
 		</li>
+
 		<!-- Todo -->
 		<li>
 			<a href="<?php echo $this->Html->url(array('controller' => 'todos', 'action' => 'ui')); ?>">
-				<i class="glyphicon glyphicon-tasks"></i><?php echo __('Todo') ?>
+				<i class="glyphicon glyphicon-tasks <?php echo $act_todo; ?>"></i><?php echo __('Todo') ?>
 			</a>
 		</li>
 		<li>
@@ -29,7 +55,8 @@
 
 		<!-- Memo -->
 		<li>
-			<a href="<?php echo $this->Html->url(array('controller'=>'memos', 'action'=>'ui')); ?>"><i class="glyphicon glyphicon-book"></i>Memo</a>
+			<a href="<?php echo $this->Html->url(array('controller'=>'memos', 'action'=>'ui')); ?>">
+				<i class="glyphicon glyphicon-book <?php echo $act_memo; ?>"></i>Memo</a>
 		</li>
 		<li>
 			<ul>
@@ -44,7 +71,8 @@
 
 		<!-- Record -->
 		<li>
-			<a href="<?php echo $this->Html->url(array('controller'=>'records', 'action'=>'ui')); ?>"><i class="glyphicon glyphicon-play"></i><?php echo __('Record');?></a>
+			<a href="<?php echo $this->Html->url(array('controller'=>'records', 'action'=>'ui')); ?>">
+				<i class="glyphicon glyphicon-play <?php echo $act_record; ?>"></i><?php echo __('Record');?></a>
 		</li>
 		<li>
 			<ul>
@@ -59,7 +87,8 @@
 
 		<!-- Calendar -->
 		<li>
-			<a href="<?php echo $this->Html->url(array('controller'=>'calendars', 'action'=>'ui')); ?>"><i class="glyphicon glyphicon-calendar"></i><?php echo __('Calendar');?></a>
+			<a href="<?php echo $this->Html->url(array('controller'=>'calendars', 'action'=>'ui')); ?>">
+				<i class="glyphicon glyphicon-calendar <?php echo $act_calendar; ?>"></i><?php echo __('Calendar');?></a>
 		</li>
 		<li>
 			<ul>

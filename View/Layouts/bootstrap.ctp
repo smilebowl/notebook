@@ -20,9 +20,9 @@
 <!--	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/themes/redmond/jquery-ui.css" type="text/css" media="all" />-->
 	<?php
 		echo $this->Html->css('/js/vendar/bootstrap/css/bootstrap.min');
-		echo $this->Html->css('/js/vendar/jqueryui/themes/base/jquery-ui.min');
+//		echo $this->Html->css('/js/vendar/jqueryui/themes/base/jquery-ui.min');
+		echo $this->Html->css('/js/vendar/jqueryui/themes/redmond/jquery-ui.min');
 //		echo $this->Html->css('/js/vendar/jqueryui/themes/cupertino/jquery-ui.min');
-//		echo $this->Html->css('/js/vendar/jqueryui/themes/cupertino/jquery-ui-1.10.3.custom');
 
 	?>
 
@@ -72,8 +72,8 @@
 
 	<?php
 		echo $this->Html->script('vendar/jquery/jquery-1.10.2.min');
-		echo $this->Html->script('vendar/jqueryui/jquery-ui.min');
 		echo $this->Html->script('vendar/bootstrap/js/bootstrap.min');
+		echo $this->Html->script('vendar/jqueryui/jquery-ui.min');
 		echo $this->Html->script('vendar/jquery.nicescroll/jquery.nicescroll.min');
 	?>
 

@@ -24,6 +24,7 @@ $(document).ready(function () {
 		$('#memoui .widget').draggable({
 			handle: 'i.icon',
 			stack: 'div.widget',
+			containment: '#memoui',
 			stop: function (event, ui) {
 				var allxyz = [], memo_id, pos, curxyz;
 				$('.widget').each(function () {

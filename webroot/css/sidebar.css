@@ -50,6 +50,9 @@
   margin-right: 0.5em;
   display: inline;
 }
+.sidebar-nav li i.active {
+  color: #5cb85c;
+}
 .sidebar-nav .sidebar-brand {
   height: 65px;
   line-height: 65px;

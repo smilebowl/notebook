@@ -25,7 +25,8 @@ $(document).ready(function () {
 	function reset_datepicker() {
 		$('.inputdate').datepicker({
 			dateFormat: "yy-mm-dd",
-			showButtonPanel: true
+			showButtonPanel: true,
+			showAnim: 'show'
 //			currentText: 'Today'
 		});
 		$('span.actions').disableSelection();
