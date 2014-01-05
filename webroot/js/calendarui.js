@@ -14,6 +14,8 @@ $(document).ready(function () {
 		cursoropacitymin: 0.4
 	});
 
+	$('.categoryselector').eq(0).click();
+
 	calendar = $('#calendarui').fullCalendar({
 		header: {
 //			left: 'prev,next today',

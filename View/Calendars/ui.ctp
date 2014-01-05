@@ -6,9 +6,7 @@ echo $this->Html->script('vendar/fullcalendar/fullcalendar.min', array('inline' 
 echo $this->Html->script('vendar/fullcalendar/gcal', array('inline' => false));
 ?>
 
-<h3>
-	<?php echo __( 'Calendar'); ?>
-</h3>
+<h3><?php echo __('Calendar'); ?></h3>
 
 <div class="categories clearfix">
 	<?php foreach($calendarcategories as $calendarcategory) : ?>

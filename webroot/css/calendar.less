@@ -1,21 +1,20 @@
 @import "common";
 
-div.infobox {
-	a.addmemo {
-		background-color: #333;
-	}
-}
 
 /* 日曜日 */
 .fc-sun {
-	color: red;
-	background-color: darken(@brand-warning, -30%);
-/*	background-color:#eec;*/
+	color: @brand-warning;
+//	background-color: darken(@brand-warning, -30%);
 }
 
 /* 土曜日 */
 .fc-sat {
-	color: blue;
+	color: @brand-primary;
+//	background-color: darken(@brand-success, -40%);
+}
+th.fc-sun {
+	background-color: darken(@brand-warning, -30%);
+}
+th.fc-sat {
 	background-color: darken(@brand-success, -40%);
-/*	background-color:#eee;*/
 }
