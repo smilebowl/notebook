@@ -78,9 +78,7 @@ class MemosController extends AppController {
 	public function ajax_delete() {
 		Configure::write('debug', 0);
 		$this->autoRender = false;
-		$this->layout = "ajax";
 		$this->Memo->delete($this->request->data['id']);
-		echo "1";
 	}
 
 	// reorder categories

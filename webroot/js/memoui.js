@@ -37,7 +37,7 @@ $(document).ready(function () {
 			}
 		});
 
-		$('.widget').resizable({
+		$('#memoui .widget').resizable({
 			minHeight: 80,
 			minWidth: 160,
 			stop: function (event, ui) {
@@ -109,13 +109,7 @@ $(document).ready(function () {
 				'id': memo.attr('id').replace('memo-', '')
 			},
 			function (result) {
-				if (result === "1") {
-					memo.fadeOut(
-						'normal',
-						function () {	memo.remove('fast');	}
-					);
-				}
-			}
+				memo.fadeOut('normal').closest('.norwwrapper').remove();
 		);
 	});
 

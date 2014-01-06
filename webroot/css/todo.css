@@ -19,7 +19,7 @@ table.todolist td.text {
   width: 94%;
 }
 table.todolist td.high-priority {
-  color: red;
+  color: #d9534f;
 }
 table.todolist td[contenteditable="true"]:focus {
   border-radius: 6px;
