@@ -110,6 +110,7 @@ $(document).ready(function () {
 			},
 			function (result) {
 				memo.fadeOut('normal').closest('.norwwrapper').remove();
+			}
 		);
 	});
 
