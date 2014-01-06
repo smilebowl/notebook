@@ -76,7 +76,6 @@ class NotebookSchema extends CakeSchema {
 		'recordcategory_id' => array('type' => 'integer', 'null' => true, 'default' => null, 'comment' => 'カテゴリ'),
 		'eventdate' => array('type' => 'date', 'null' => false, 'default' => null, 'comment' => '日付'),
 		'title' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 512, 'collate' => 'utf8_general_ci', 'comment' => '名前', 'charset' => 'utf8'),
-		'position' => array('type' => 'integer', 'null' => true, 'default' => '0', 'comment' => 'position'),
 		'priority' => array('type' => 'boolean', 'null' => true, 'default' => '0', 'comment' => 'priority'),
 		'created' => array('type' => 'datetime', 'null' => true, 'default' => null, 'comment' => '登録日'),
 		'indexes' => array(
@@ -117,7 +116,7 @@ class NotebookSchema extends CakeSchema {
 		'position' => array('type' => 'integer', 'null' => true, 'default' => '0', 'comment' => 'position'),
 		'priority' => array('type' => 'boolean', 'null' => false, 'default' => '0'),
 		'created' => array('type' => 'datetime', 'null' => true, 'default' => null, 'comment' => '登録日'),
-		'completed' => array('type' => 'datetime', 'null' => true, 'default' => null, 'comment' => '完了日'),
+		'completed' => array('type' => 'date', 'null' => true, 'default' => null, 'comment' => '完了日'),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),

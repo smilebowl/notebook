@@ -24,7 +24,6 @@
 		echo $this->Form->input('recordcategory_id');
 		echo $this->Form->input('eventdate');
 		echo $this->Form->input('title');
-		echo $this->Form->input('position');
 		echo $this->Form->input('priority');
 	?>
 	</fieldset>

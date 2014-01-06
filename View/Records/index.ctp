@@ -21,7 +21,6 @@
 			<th><?php echo $this->Paginator->sort('recordcategory_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('eventdate'); ?></th>
 			<th><?php echo $this->Paginator->sort('title'); ?></th>
-			<th><?php echo $this->Paginator->sort('position'); ?></th>
 			<th><?php echo $this->Paginator->sort('priority'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 		</tr>
@@ -38,7 +37,6 @@
 		</td>
 		<td><?php echo h($record['Record']['eventdate']); ?>&nbsp;</td>
 		<td><?php echo String::truncate(h($record['Record']['title']),20); ?>&nbsp;</td>
-		<td><?php echo h($record['Record']['position']); ?>&nbsp;</td>
 		<td><?php echo h($record['Record']['priority']); ?>&nbsp;</td>
 		<td><?php echo h($record['Record']['created']); ?>&nbsp;</td>
 	</tr>

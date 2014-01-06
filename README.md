@@ -1,6 +1,11 @@
 Notebook
 ====
 
+## History
+
+* `todos.completed` date type
+* delete `recors.position`
+
 ## Nginx設定
 
 ```

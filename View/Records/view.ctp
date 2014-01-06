@@ -32,11 +32,6 @@
 			<?php echo h($record['Record']['title']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Position'); ?></dt>
-		<dd>
-			<?php echo h($record['Record']['position']); ?>
-			&nbsp;
-		</dd>
 		<dt><?php echo __('Priority'); ?></dt>
 		<dd>
 			<?php echo h($record['Record']['priority']); ?>
