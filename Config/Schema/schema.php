@@ -102,7 +102,7 @@ class NotebookSchema extends CakeSchema {
 		'position' => array('type' => 'integer', 'null' => true, 'default' => '0', 'comment' => 'position'),
 		'priority' => array('type' => 'boolean', 'null' => true, 'default' => '0', 'comment' => 'priority'),
 		'created' => array('type' => 'datetime', 'null' => true, 'default' => null, 'comment' => '登録日'),
-		'completed' => array('type' => 'datetime', 'null' => true, 'default' => null, 'comment' => '完了日'),
+		'completed' => array('type' => 'date', 'null' => true, 'default' => null, 'comment' => '完了日'),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),

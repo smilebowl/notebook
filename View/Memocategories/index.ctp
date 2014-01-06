@@ -29,9 +29,9 @@
 			<?php echo $this->Icon->link(__('Edit'), array('action' => 'edit', $memocategory['Memocategory']['id'])); ?>
 			<?php echo $this->Icon->postLink(__('Delete'), array('action' => 'delete', $memocategory['Memocategory']['id']), null, __('Are you sure you want to delete # %s?', $memocategory['Memocategory']['id'])); ?>
 		</td>
-		<td><?php echo h($memocategory['Memocategory']['id']); ?>&nbsp;</td>
+		<td class="right"><?php echo h($memocategory['Memocategory']['id']); ?>&nbsp;</td>
 		<td><?php echo h($memocategory['Memocategory']['name']); ?>&nbsp;</td>
-		<td><?php echo h($memocategory['Memocategory']['position']); ?>&nbsp;</td>
+		<td class="right"><?php echo h($memocategory['Memocategory']['position']); ?>&nbsp;</td>
 		<td><?php echo h($memocategory['Memocategory']['created']); ?>&nbsp;</td>
 	</tr>
 <?php endforeach; ?>

@@ -29,9 +29,9 @@
 			<?php echo $this->Icon->link(__('Edit'), array('action' => 'edit', $todocategory['Todocategory']['id'])); ?>
 			<?php echo $this->Icon->postLink(__('Delete'), array('action' => 'delete', $todocategory['Todocategory']['id']), null, __('Are you sure you want to delete # %s?', $todocategory['Todocategory']['id'])); ?>
 		</td>
-		<td><?php echo h($todocategory['Todocategory']['id']); ?>&nbsp;</td>
+		<td class="right"><?php echo h($todocategory['Todocategory']['id']); ?>&nbsp;</td>
 		<td><?php echo h($todocategory['Todocategory']['name']); ?>&nbsp;</td>
-		<td><?php echo h($todocategory['Todocategory']['position']); ?>&nbsp;</td>
+		<td class="right"><?php echo h($todocategory['Todocategory']['position']); ?>&nbsp;</td>
 		<td><?php echo h($todocategory['Todocategory']['created']); ?>&nbsp;</td>
 	</tr>
 <?php endforeach; ?>

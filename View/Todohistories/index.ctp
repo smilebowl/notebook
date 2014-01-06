@@ -32,12 +32,12 @@
 			<?php echo $this->Icon->link(__('Edit'), array('action' => 'edit', $todohistory['Todohistory']['id'])); ?>
 			<?php echo $this->Icon->postLink(__('Delete'), array('action' => 'delete', $todohistory['Todohistory']['id']), null, __('Are you sure you want to delete # %s?', $todohistory['Todohistory']['id'])); ?>
 		</td>
-		<td><?php echo h($todohistory['Todohistory']['id']); ?>&nbsp;</td>
+		<td class="right"><?php echo h($todohistory['Todohistory']['id']); ?>&nbsp;</td>
 		<td><?php echo String::truncate(h($todohistory['Todohistory']['title']), 20); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($todohistory['Todocategory']['name'], array('controller' => 'todocategories', 'action' => 'view', $todohistory['Todocategory']['id'])); ?>
 		</td>
-		<td><?php echo h($todohistory['Todohistory']['position']); ?>&nbsp;</td>
+		<td class="right"><?php echo h($todohistory['Todohistory']['position']); ?>&nbsp;</td>
 		<td><?php echo h($todohistory['Todohistory']['priority']); ?>&nbsp;</td>
 		<td><?php echo h($todohistory['Todohistory']['created']); ?>&nbsp;</td>
 		<td><?php echo h($todohistory['Todohistory']['completed']); ?>&nbsp;</td>

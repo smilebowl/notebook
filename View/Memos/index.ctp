@@ -32,7 +32,7 @@
 			<?php echo $this->Icon->link(__('Edit'), array('action' => 'edit', $memo['Memo']['id'])); ?>
 			<?php echo $this->Icon->postLink(__('Delete'), array('action' => 'delete', $memo['Memo']['id']), null, __('Are you sure you want to delete # %s?', $memo['Memo']['id'])); ?>
 		</td>
-		<td><?php echo h($memo['Memo']['id']); ?>&nbsp;</td>
+		<td class="right"><?php echo h($memo['Memo']['id']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($memo['Memocategory']['name'], array('controller' => 'memocategories', 'action' => 'view', $memo['Memocategory']['id'])); ?>
 		</td>

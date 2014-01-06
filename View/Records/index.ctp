@@ -31,13 +31,13 @@
 			<?php echo $this->Icon->link(__('Edit'), array('action' => 'edit', $record['Record']['id'])); ?>
 			<?php echo $this->Icon->postLink(__('Delete'), array('action' => 'delete', $record['Record']['id']), null, __('Are you sure you want to delete # %s?', $record['Record']['id'])); ?>
 		</td>
-		<td><?php echo h($record['Record']['id']); ?>&nbsp;</td>
+		<td class="right"><?php echo h($record['Record']['id']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($record['Recordcategory']['name'], array('controller' => 'recordcategories', 'action' => 'view', $record['Recordcategory']['id'])); ?>
 		</td>
 		<td><?php echo h($record['Record']['eventdate']); ?>&nbsp;</td>
 		<td><?php echo String::truncate(h($record['Record']['title']),20); ?>&nbsp;</td>
-		<td><?php echo h($record['Record']['priority']); ?>&nbsp;</td>
+		<td class="right"><?php echo h($record['Record']['priority']); ?>&nbsp;</td>
 		<td><?php echo h($record['Record']['created']); ?>&nbsp;</td>
 	</tr>
 <?php endforeach; ?>

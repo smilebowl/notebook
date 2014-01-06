@@ -201,8 +201,8 @@ function initCalendar(element, category_id) {
 		eventSources: [
 			{
 				url: 'https://www.google.com/calendar/feeds/ja.japanese%23holiday%40group.v.calendar.google.com/public/basic',
-				color: '#f0e4e4',
-				textColor: '#000',
+				color: '#2c3e50', //'#f0e4e4',
+				textColor: '#fff',
 				editable: false,
 				success: function (events) {
 					$(events).each(function () {

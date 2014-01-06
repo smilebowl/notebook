@@ -29,9 +29,9 @@
 			<?php echo $this->Icon->link(__('Edit'), array('action' => 'edit', $recordcategory['Recordcategory']['id'])); ?>
 			<?php echo $this->Icon->postLink(__('Delete'), array('action' => 'delete', $recordcategory['Recordcategory']['id']), null, __('Are you sure you want to delete # %s?', $recordcategory['Recordcategory']['id'])); ?>
 		</td>
-		<td><?php echo h($recordcategory['Recordcategory']['id']); ?>&nbsp;</td>
+		<td class="right"><?php echo h($recordcategory['Recordcategory']['id']); ?>&nbsp;</td>
 		<td><?php echo h($recordcategory['Recordcategory']['name']); ?>&nbsp;</td>
-		<td><?php echo h($recordcategory['Recordcategory']['position']); ?>&nbsp;</td>
+		<td class="right"><?php echo h($recordcategory['Recordcategory']['position']); ?>&nbsp;</td>
 		<td><?php echo h($recordcategory['Recordcategory']['created']); ?>&nbsp;</td>
 	</tr>
 <?php endforeach; ?>

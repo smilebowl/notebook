@@ -3,7 +3,7 @@ Notebook
 
 ## History
 
-* `todos.completed` date type
+* `todos.completed` , `todohistories.completed`  date type
 * delete `recors.position`
 
 ## Nginx設定

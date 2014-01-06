@@ -29,9 +29,9 @@
 			<?php echo $this->Icon->link(__('Edit'), array('action' => 'edit', $calendarcategory['Calendarcategory']['id'])); ?>
 			<?php echo $this->Icon->postLink(__('Delete'), array('action' => 'delete', $calendarcategory['Calendarcategory']['id']), null, __('Are you sure you want to delete # %s?', $calendarcategory['Calendarcategory']['id'])); ?>
 		</td>
-		<td><?php echo h($calendarcategory['Calendarcategory']['id']); ?>&nbsp;</td>
+		<td class="right"><?php echo h($calendarcategory['Calendarcategory']['id']); ?>&nbsp;</td>
 		<td><?php echo h($calendarcategory['Calendarcategory']['name']); ?>&nbsp;</td>
-		<td><?php echo h($calendarcategory['Calendarcategory']['position']); ?>&nbsp;</td>
+		<td class="right"><?php echo h($calendarcategory['Calendarcategory']['position']); ?>&nbsp;</td>
 		<td><?php echo h($calendarcategory['Calendarcategory']['created']); ?>&nbsp;</td>
 	</tr>
 <?php endforeach; ?>

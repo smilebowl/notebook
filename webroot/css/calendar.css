@@ -2,10 +2,12 @@
 /* 日曜日 */
 .fc-sun {
   color: #f0ad4e;
+  background-color: #ecf0f1;
 }
 /* 土曜日 */
 .fc-sat {
   color: #428bca;
+  background-color: #ecf0f1;
 }
 th.fc-sun {
   background-color: #fceedb;
