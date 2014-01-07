@@ -213,11 +213,12 @@ $(document).ready(function () {
 	// event date for new item
 
 	$('#recordui').on('focus', '.inputdate', function () {
-		$(this).datepicker({dateFormat: "yy-mm-dd"});
+		$(this).datepicker({dateFormat: "yy-mm-dd"}).data('before', $(this).val());
 	});
 
 	$('#recordui').on('change', '.inputdate', function () {
 		if (!window.confirm('日付を変更しますか？')) {
+			$(this).val($(this).data('before')).datepicker("hide").data('before').remove();
 			return false;
 		}
 		var record = $(this).closest("[id^=record-]");
