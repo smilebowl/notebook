@@ -3,6 +3,8 @@
 $(document).ready(function () {
 	'use strict';
 
+	var hiddencomplete = false;
+
 	$('body').niceScroll({
 		scrollspeed: 100,
 		mousescrollstep: 80,
@@ -43,7 +45,8 @@ $(document).ready(function () {
 	// toggle completed rows
 
 	$('i.icon').dblclick(function () {
-		$('.completed').toggle();
+		$('.completed').toggle(hiddencomplete);
+		hiddencomplete = !hiddencomplete;
 	});
 
 	// insert new item
