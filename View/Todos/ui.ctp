@@ -39,7 +39,7 @@
 	<div class="todo col-sm-6" id="category-<?php echo $todoset['Todocategory']['id'] ?>">
 		<div class="widget">
 			<div class="widget-header">
-				<i class="icon glyphicon glyphicon-th" title="ドッラグで移動"></i>
+				<i class="icon glyphicon glyphicon-th" title="ドッラグで移動＋α"></i>
 				<span class="title" contenteditable="true"><?php echo $todoset[ 'Todocategory'][ 'name']; ?></span>
 				<span class="actions">
 					<i class="insert glyphicon glyphicon-plus" title="アイテム追加"></i>&nbsp;

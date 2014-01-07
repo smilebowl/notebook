@@ -93,6 +93,10 @@ $(document).ready(function () {
 		$(this).data('before', $(this).text());
 	});
 	$('#recordui').on('blur', 'span.title', function () {
+		if ($(this).text() === $(this).data('before')) {
+			$(this).removeData('before');
+			return;
+		}
 		var title = $(this).text(),
 			category_id = $(this).closest("[id^=category-]").attr('id').replace('category-', '');
 		if (title.length === 0) {

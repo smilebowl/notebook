@@ -3,8 +3,6 @@
 $(document).ready(function () {
 	'use strict';
 
-//	$('.widget i, span.toolbox i').tooltip();
-
 	$('body').niceScroll({
 		scrollspeed: 100,
 		mousescrollstep: 80,
@@ -31,7 +29,6 @@ $(document).ready(function () {
 
 	$(".todoui").sortable({
 		handle: "i.icon",
-//		placeholder: 'sortable-placeholder',
 		update: function () {
 			var arr = $(this).sortable('toArray');
 			$.post(
@@ -41,6 +38,12 @@ $(document).ready(function () {
 				}
 			);
 		}
+	});
+
+	// toggle completed rows
+
+	$('i.icon').dblclick(function () {
+		$('.completed').toggle();
 	});
 
 	// insert new item
@@ -59,6 +62,7 @@ $(document).ready(function () {
 		);
 	});
 
+	// move(sortable)
 
 	$('div.widget').on('dblclick', 'i.handle', function () {
 		var flag = 1, todo = $(this).closest("[id^=todo-]");

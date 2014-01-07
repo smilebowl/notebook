@@ -23,6 +23,7 @@ $(document).ready(function () {
 
 		$('#memoui .widget').draggable({
 			handle: 'i.icon',
+//			handle: '.widget-header > *:not(span)',
 			stack: 'div.widget',
 			containment: '#memoui',
 			stop: function (event, ui) {
@@ -167,16 +168,23 @@ $(document).ready(function () {
 
 	// change title
 
+	$('#memoui').on('focus', 'span.title', function () {
+		$(this).data('before', $(this).text());
+	});
+
 	$('#memoui').on('blur', 'span.title', function () {
 		var memo = $(this).closest("[id^=memo-]");
-		$.post(
-			'ajax_edit',
-			{
-				'id': memo.attr('id').replace('memo-', ''),
-				'name': $(this).text()
-			}
-		);
-		$(this).text($(this).text());
+		if ($(this).text() !== $(this).data('before')) {
+			$.post(
+				'ajax_edit',
+				{
+					'id': memo.attr('id').replace('memo-', ''),
+					'name': $(this).text()
+				}
+			);
+			$(this).text($(this).text());
+		}
+		$(this).removeData('before');
 	});
 
 });
