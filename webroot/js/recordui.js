@@ -247,7 +247,7 @@ $(document).ready(function () {
 	// focus event
 
 	$('#recordui').on('focus', 'td.text', function () {
-		$(this).data('before', $(this).html());
+		$(this).data('before', $(this).html()).selectText();
 		//	log($(this).text());
 	});
 

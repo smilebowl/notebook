@@ -104,6 +104,9 @@ $(document).ready(function () {
 			completed = $.datepicker.formatDate('yy-mm-dd', new Date());
 		if (todo.hasClass('completed')) {
 			completed = null;
+			$(this).removeAttr('title');
+		} else {
+			$(this).attr('title', '完了日：' + completed);
 		}
 		todo.toggleClass('completed');
 		$.post(
