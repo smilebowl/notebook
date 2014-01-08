@@ -6,5 +6,6 @@
         ,"cakephp/debug_kit": "*"
         ,"cakedc/search": "*"
         ,"twitter/bootstrap": "3.*"
+        ,"cakedc/migrations": "*"
     }
 }

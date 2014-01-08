@@ -1,6 +1,24 @@
 Notebook
 ====
 
+## Migrations
+
+### generate
+
+```
+cake Migrations.migration generate -f
+```
+
+### run
+
+```
+cake Migrations.migration run
+or
+cake Migrations.migration run all
+or
+cake Migrations.migration run all -p
+```
+
 ## History
 
 * `todos.completed` , `todohistories.completed`  date type
