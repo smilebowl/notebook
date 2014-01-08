@@ -65,8 +65,6 @@ div.widget {
 }
 div.widget i {
   font-size: 12px;
-}
-div.widget .actions i {
   cursor: pointer;
 }
 div.widget .widget-header {
