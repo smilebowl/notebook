@@ -278,7 +278,8 @@ $(document).ready(function () {
 		// ↓、enter
 		if (e.which === 13 || e.which === 40) {
 			e.preventDefault();
-			$(this).closest('tr').next().find('.text').focus();
+//			$(this).closest('tr').next().find('.text').focus();
+			$(this).closest('tr').nextAll(':visible:first').find('.text').focus();
 		}
 		// escape
 		if (e.which === 27) {
@@ -288,7 +289,8 @@ $(document).ready(function () {
 		// ↑
 		if (e.which === 38) {
 			e.preventDefault();
-			$(this).closest('tr').prev().find('.text').focus();
+//			$(this).closest('tr').prev().find('.text').focus();
+			$(this).closest('tr').prevAll(':visible:first').find('.text').focus();
 		}
 		// insert item into next posion
 		if (e.which === 45 && !e.shiftKey) {
