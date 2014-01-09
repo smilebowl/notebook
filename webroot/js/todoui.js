@@ -25,7 +25,6 @@ $(document).ready(function () {
 			);
 		}
 	});
-//	$('.todolist span.actions').disableSelection();
 	$('.widget-content td[contenteditable!=true]').disableSelection();
 	$('.widget span.actions').disableSelection();
 

@@ -17,13 +17,15 @@ $(document).ready(function () {
 		}
 	});
 
+
+
 	// for reload
 
 	function reset() {
 
 		$('#memoui .widget').draggable({
-			handle: 'i.icon',
-//			handle: '.widget-header > *:not(span)',
+//			handle: 'i.icon',
+			handle: '.widget-header:not(.title)',
 			stack: 'div.widget',
 			containment: '#memoui',
 			stop: function (event, ui) {
@@ -166,13 +168,23 @@ $(document).ready(function () {
 		}
 	});
 
-	// change title
+	// focus title
 
-	$('#memoui').on('focus', 'span.title', function () {
-		$(this).data('before', $(this).text());
+	$('#memoui').on('click', 'span.title', function () {
+		$(this).data('before', $(this).text()).focus().selectText();
 	});
 
+	// change title
+
+//	$('#memoui').on('focus', 'span.title', function () {
+//		$(this).data('before', $(this).text());
+//	});
+
 	$('#memoui').on('blur', 'span.title', function () {
+		if ($(this).text().length === 0) {
+			$(this).text($(this).data('before')).removeData('before');
+			return;
+		}
 		var memo = $(this).closest("[id^=memo-]");
 		if ($(this).text() !== $(this).data('before')) {
 			$.post(
