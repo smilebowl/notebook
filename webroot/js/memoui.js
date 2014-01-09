@@ -174,12 +174,6 @@ $(document).ready(function () {
 		$(this).data('before', $(this).text()).focus().selectText();
 	});
 
-	// change title
-
-//	$('#memoui').on('focus', 'span.title', function () {
-//		$(this).data('before', $(this).text());
-//	});
-
 	$('#memoui').on('blur', 'span.title', function () {
 		if ($(this).text().length === 0) {
 			$(this).text($(this).data('before')).removeData('before');
