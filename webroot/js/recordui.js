@@ -3,8 +3,6 @@
 $(document).ready(function () {
 	'use strict';
 
-	$.datepicker.setDefaults($.datepicker.regional.ja);
-
 	$(".categories").sortable({
 //		handle: "i.icon",
 		cancel: 'a.addrecord',
@@ -20,29 +18,17 @@ $(document).ready(function () {
 		}
 	});
 
+
 	// for reload
 
-	function reset_datepicker() {
-		$('.inputdate').datepicker({
-			dateFormat: "yy-mm-dd",
-			showButtonPanel: true,
-			showAnim: 'show'
-//			currentText: 'Today'
-		});
-		$('span.actions').disableSelection();
-		$('.widget-content td[contenteditable!=true]').disableSelection();
-//		$('#ui-datepicker-div').hide();
-	}
-
-	function reset() {
-
-		// set title
-		$('.widget-header span.title').text($('.categories .active').text());
-//		$('.widget-header').disableSelection();
-		reset_datepicker();
-//		$('.widget i').tooltip();
-//		$('div.text').niceScroll();
-	}
+//	function reset() {
+//
+//		// set title
+//		$('.widget-header span.title').text($('.categories .active').text());
+////		$('.widget-header').disableSelection();
+////		$('.widget i').tooltip();
+////		$('div.text').niceScroll();
+//	}
 
 	// select category
 
@@ -60,7 +46,8 @@ $(document).ready(function () {
 				$('div.infobox a').removeClass('active');
 				me.addClass('active');
 
-				reset();
+				$('.widget-header span.title').text($('.categories .active').text());
+//				reset();
 			}
 		);
 	});
@@ -217,7 +204,11 @@ $(document).ready(function () {
 	// event date for new item
 
 	$('#recordui').on('focus', '.inputdate', function () {
-		$(this).datepicker({dateFormat: "yy-mm-dd"}).data('before', $(this).val());
+		$(this).datepicker({
+			dateFormat: "yy-mm-dd",
+			showButtonPanel: true,
+			showAnim: 'show'
+		}).data('before', $(this).val());
 	});
 
 	$('#recordui').on('change', '.inputdate', function () {
@@ -245,14 +236,12 @@ $(document).ready(function () {
 				return $(a).find('input.inputdate').val() < $(b).find('input.inputdate').val() ? 1 : -1;
 			})
 		);
-		reset_datepicker();
 	});
 
 	// focus event
 
 	$('#recordui').on('focus', 'td.text', function () {
 		$(this).data('before', $(this).html()).selectText();
-		//	log($(this).text());
 	});
 
 	// td.text handling
