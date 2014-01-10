@@ -7,6 +7,8 @@ App::uses('AppModel', 'Model');
  */
 class Todocategory extends AppModel {
 
+//	public $actsAs = array('SoftDelete');
+
 /**
  * Validation rules
  *

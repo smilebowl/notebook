@@ -21,4 +21,21 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class AppModel extends Model {
+
+	public function exists($id = null) {
+    if ($this->Behaviors->attached('SoftDelete')) {
+        return $this->existsAndNotDeleted($id);
+    } else {
+        return parent::exists($id);
+    }
+	}
+
+	public function delete($id = NULL, $cascade = true) {
+		$ret = parent::delete($id, $cascade);
+		if ($this->Behaviors->attached('SoftDelete')) {
+			$ret = !$ret;
+		}
+		return $ret;
+	}
+
 }

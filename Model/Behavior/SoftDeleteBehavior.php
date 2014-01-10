@@ -116,18 +116,19 @@ class SoftDeleteBehavior extends ModelBehavior {
  * Before delete callback
  *
  * @param Model $model
- * @param boolean $cascade
+ * @param array $query
  * @return boolean
  */
 	public function beforeDelete(Model $model, $cascade = true) {
 		$runtime = $this->runtime[$model->alias];
 		if ($runtime) {
 			if ($model->beforeDelete($cascade)) {
-				return $this->delete($model, $model->id);
+			  $res = $this->delete($model, $model->id);
 			}
 			return false;
+		} else {
+			return true;
 		}
-		return true;
 	}
 
 /**
@@ -219,6 +220,7 @@ class SoftDeleteBehavior extends ModelBehavior {
 		if (is_null($active)) {
 			return isset($this->runtime[$model->alias]) ? @$this->runtime[$model->alias] : null;
 		}
+
 
 		$result = !isset($this->runtime[$model->alias]) || $this->runtime[$model->alias] !== $active;
 		$this->runtime[$model->alias] = $active;
