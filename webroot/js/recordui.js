@@ -54,7 +54,8 @@ $(document).ready(function () {
 
 	// load first page
 
-	$('.categoryselector').eq(0).click();
+//	$('.categoryselector').eq(0).click();
+	$('.categoryselector:eq(0)').click();
 
 	// insert
 
@@ -264,28 +265,34 @@ $(document).ready(function () {
 	// keyboard
 
 	$('#recordui').on('keydown', 'td.text', function (e) {
+		// tab
+		if (e.which === 9) {
+			e.preventDefault();
+			if (e.shiftKey) {
+				$(this).closest('tr').prev().find('.text').focus();
+			} else {
+				$(this).closest('tr').next().find('.text').focus();
+			}
+		}
 		// down, enter
 //		if (e.which === 13 || e.which === 40) {
-		if (e.which === 40) {
-			e.preventDefault();
-			$(this).closest('tr').next().find('.text').focus();
-		}
+//			e.preventDefault();
+//			$(this).closest('tr').next().find('.text').focus();
+//		}
 		// escape
 		if (e.which === 27) {
 			e.preventDefault();
 			$(this).text($(this).data('before'));
 		}
 		// up arrow
-		if (e.which === 38) {
-			e.preventDefault();
-			$(this).closest('tr').prev().find('.text').focus();
-		}
+//		if (e.which === 38) {
+//			e.preventDefault();
+//			$(this).closest('tr').prev().find('.text').focus();
+//		}
 		// insert item into next posion
 		if (e.which === 45 && !e.shiftKey) {
-//		if (e.which === 45) {
 			e.preventDefault();
 			$(this).closest('.widget').find('i.insert').click();
-//			$(this).closest('tr').find('i.insert').focus().click();
 		}
 	});
 

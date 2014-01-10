@@ -96,7 +96,8 @@ $(document).ready(function () {
 	});
 
 	// load first
-	$('.categoryselector').eq(0).click();
+//	$('.categoryselector').eq(0).click();
+	$('.categoryselector:eq(0)').click();
 
 
 	// remove item
