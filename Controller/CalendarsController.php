@@ -27,7 +27,7 @@ class CalendarsController extends AppController {
 	}
 
 	// fullcalendar loading query(json)
-	public function ajaxloadevent() {
+	public function ajax_loadevent() {
 
 		Configure::write('debug', 0);
 		$this->autoRender = false;
@@ -43,7 +43,8 @@ class CalendarsController extends AppController {
 
 		$this->Calendar->recursive = 0;
 		$events = $this->Calendar->find('all', array(
-			'conditions'=>$cond,
+			'conditions' => $cond,
+			'order' => 'start'
 		));
 
 		// return json
@@ -58,7 +59,7 @@ class CalendarsController extends AppController {
 
 	// new event
 
-	public function ajaxnewevent() {
+	public function ajax_newevent() {
 		Configure::write('debug', 0);
 		$this->autoRender = false;
 		$this->layout = 'ajax';
@@ -69,7 +70,7 @@ class CalendarsController extends AppController {
 
 	// update event
 
-	public function ajaxupdate() {
+	public function ajax_update() {
 		Configure::write('debug', 0);
 		$this->autoRender = false;
 
@@ -78,7 +79,7 @@ class CalendarsController extends AppController {
 
 	// get json
 
-	public function ajaxgetrecord() {
+	public function ajax_getrecord() {
 		Configure::write('debug', 0);
 		$this->autoRender = false;
 		$this->layout = 'ajax';
@@ -88,29 +89,9 @@ class CalendarsController extends AppController {
 		echo json_encode($data['Calendar']);
 	}
 
-	// get detail field
-
-	public function ajaxgetdetail() {
-		Configure::write('debug', 0);
-		$this->autoRender = false;
-
-		$this->Calendar->id = $this->request->data['id'];
-		echo $this->Calendar->field('detail');
-	}
-
-	// get calendarcategory_id field
-
-	public function ajaxgetcid() {
-		Configure::write('debug', 0);
-		$this->autoRender = false;
-
-		$this->Calendar->id = $this->request->data['id'];
-		echo $this->Calendar->field('calendarcategory_id');
-	}
-
 	// remove event
 
-	public function ajaxdelete($id = null) {
+	public function ajax_delete($id = null) {
 		Configure::write('debug', 0);
 		$this->autoRender = false;
 
@@ -119,17 +100,16 @@ class CalendarsController extends AppController {
 
 	// event ui
 
-	public function eventui($calendarid=null) {
-		$calendars = $this->Calendar->Calendar->find('list',array('order'=>'position'));
-		$this->set(compact('calendars'));
-	}
+//	public function eventui($calendarid=null) {
+//		$calendars = $this->Calendar->Calendar->find('list',array('order'=>'position'));
+//		$this->set(compact('calendars'));
+//	}
 
 	public function ajax_reorder() {
 		Configure::write('debug', 0);
 		$this->autoRender = false;
 
-		$this->log($this->request->data['idlist']);
-
+//		$this->log($this->request->data['idlist']);
 		$pos = $this->request->data['idlist'];
 		$curpos = 0;
 		foreach ($pos as $seq => $idstring) {

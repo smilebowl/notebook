@@ -30,7 +30,8 @@ class TodosController extends AppController {
 		));
 
 		$this->Todo->create();
-		$this->request->data['position'] = $min['Todo']['position']-1;
+		if (isset($min['Todo']['position']))
+			$this->request->data['position'] = $min['Todo']['position']-1;
 		$this->Todo->save($this->request->data, false);
 		$todo = $this->Todo->read();
 		$this->set('todo', $todo['Todo']);

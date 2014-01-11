@@ -45,7 +45,7 @@ $(document).ready(function () {
 			// get events / json
 
 			events: {
-				url: "ajaxloadevent",
+				url: "ajax_loadevent",
 				data : {'calendarcategory_id': current_category_id}
 			},
 
@@ -101,7 +101,7 @@ $(document).ready(function () {
 
 				$.ajax({
 					type:	'post',
-					url:	"ajaxgetrecord",
+					url:	"ajax_getrecord",
 					data:	{'id': event.id},
 					dataType:	"json",
 					success: function (data, dataType) {
@@ -120,7 +120,7 @@ $(document).ready(function () {
 			eventDrop: function (event, delta) {
 
 				$.post(
-					"ajaxupdate",
+					"ajax_update",
 					{
 						'id': event.id,
 						'start': $.fullCalendar.formatDate(event.start, 'yyyy-MM-dd'),
@@ -135,7 +135,7 @@ $(document).ready(function () {
 			eventResize: function (event, dayDelta, minuteDelta, revertFunc, jsEvent, ui, view) {
 
 				$.post(
-					"ajaxupdate",
+					"ajax_update",
 					{
 						'id': event.id,
 						'start': $.fullCalendar.formatDate(event.start, 'yyyy-MM-dd'),
@@ -178,14 +178,14 @@ $(document).ready(function () {
 					currentEvent.color = $('#event_color').val();
 //					var id = currentEvent.id;
 					$.post(
-						"ajaxupdate",
+						"ajax_update",
 						{
 							'id': currentEvent.id,
 							'title': currentEvent.title,
 							'start': currentEvent.start,
 							'color': currentEvent.color,
-							'detail': $('#event_detail').val(),
-							'calendarcategory_id': current_category_id
+							'detail': $('#event_detail').val()
+//							'calendarcategory_id': current_category_id
 						},
 						function (msg) {
 							calendar.fullCalendar('updateEvent', currentEvent);
@@ -200,7 +200,7 @@ $(document).ready(function () {
 						start = $('#event_date').val(),
 						color = $('#event_color').val();
 					$.post(
-						"ajaxnewevent",
+						"ajax_newevent",
 						{
 							'title': title,
 							'start': start,
@@ -233,7 +233,7 @@ $(document).ready(function () {
 			Delete: function () {
 				if (!window.confirm("削除しますか？")) { return; }
 
-				$.post("ajaxdelete/" + currentEvent.id, null, function () {
+				$.post("ajax_delete/" + currentEvent.id, null, function () {
 					calendar.fullCalendar('removeEvents', currentEvent.id);
 				});
 
