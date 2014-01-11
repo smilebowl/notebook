@@ -24,7 +24,7 @@
 			<th><?php echo $this->Paginator->sort('end'); ?></th>
 			<th><?php echo $this->Paginator->sort('detail'); ?></th>
 			<th><?php echo $this->Paginator->sort('color'); ?></th>
-			<th><?php echo $this->Paginator->sort('textcolor'); ?></th>
+<!--			<th><?php echo $this->Paginator->sort('textcolor'); ?></th>-->
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 		</tr>
 	<?php foreach ($calendars as $calendar): ?>
@@ -34,16 +34,16 @@
 			<?php echo $this->Icon->link(__('Edit'), array('action' => 'edit', $calendar['Calendar']['id'])); ?>
 			<?php echo $this->Icon->postLink(__('Delete'), array('action' => 'delete', $calendar['Calendar']['id']), null, __('Are you sure you want to delete # %s?', $calendar['Calendar']['id'])); ?>
 		</td>
-		<td><?php echo h($calendar['Calendar']['id']); ?>&nbsp;</td>
+		<td class="right"><?php echo h($calendar['Calendar']['id']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($calendar['Calendarcategory']['name'], array('controller' => 'calendarcategories', 'action' => 'view', $calendar['Calendarcategory']['id'])); ?>
 		</td>
-		<td><?php echo h($calendar['Calendar']['title']); ?>&nbsp;</td>
+		<td><?php echo String::truncate(h($calendar['Calendar']['title']), 20); ?>&nbsp;</td>
 		<td><?php echo h($calendar['Calendar']['start']); ?>&nbsp;</td>
 		<td><?php echo h($calendar['Calendar']['end']); ?>&nbsp;</td>
-		<td><?php echo h($calendar['Calendar']['detail']); ?>&nbsp;</td>
+		<td><?php echo String::truncate(h($calendar['Calendar']['detail']), 20); ?>&nbsp;</td>
 		<td><?php echo h($calendar['Calendar']['color']); ?>&nbsp;</td>
-		<td><?php echo h($calendar['Calendar']['textcolor']); ?>&nbsp;</td>
+<!--		<td><?php echo h($calendar['Calendar']['textcolor']); ?>&nbsp;</td>-->
 		<td><?php echo h($calendar['Calendar']['created']); ?>&nbsp;</td>
 	</tr>
 <?php endforeach; ?>
