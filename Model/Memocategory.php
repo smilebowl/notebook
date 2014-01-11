@@ -7,7 +7,7 @@ App::uses('AppModel', 'Model');
  */
 class Memocategory extends AppModel {
 
-//	public $actsAs = array('SoftDelete');
+	public $actsAs = array('SoftDelete');
 
 /**
  * Validation rules

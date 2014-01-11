@@ -10,7 +10,7 @@
 <tr id="todo-<?php echo $todo['id']?>" class="<?php echo $completed; ?>">
 	<td nowrap>
 		<span class="actions">
-			<i class="handle glyphicon glyphicon-tasks"></i>
+			<i class="handle glyphicon glyphicon-tag"></i>
 			<i class="done glyphicon glyphicon-ok" title="<?php echo $completeguide; ?>"></i>
 			<i class="remove glyphicon glyphicon-remove"></i>
 			<input type="checkbox" class="checkmark" style="display:none;"/>

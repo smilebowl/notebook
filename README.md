@@ -46,7 +46,10 @@ location /notebook {
 
 ```
 Set objShell = WScript.CreateObject("WScript.Shell")
+Set objEnv = objShell.Environment("Volatile")
+objEnv.Item("PHP_FCGI_MAX_REQUESTS") = 0
 objShell.CurrentDirectory = "D:\nginx\"
+
 Call objShell.Run("D:\nginx\nginx.exe", 0)
 Call objShell.Run("D:\nginx\php\php-cgi.exe -b 127.0.0.1:9000 -c d:\nginx\php\php.ini", 0)
 ```

@@ -66,6 +66,8 @@ div.widget {
 div.widget i {
   font-size: 12px;
   cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
 }
 div.widget .widget-header {
   height: 32px;
@@ -91,6 +93,8 @@ div.widget .widget-header .actions {
   line-height: 32px;
   float: right;
   margin-right: 0.5em;
+  user-select: none;
+  -webkit-user-select: none;
 }
 div.widget .widget-header span.title {
   font-weight: bold;

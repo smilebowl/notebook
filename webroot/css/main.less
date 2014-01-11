@@ -69,9 +69,12 @@ div.widget {
 //	margin-bottom:1em;
 //	margin: 1em 0.5em;
 	position: relative;
+
 	i {
 		font-size: 12px;
 		cursor: pointer;
+		user-select: none;
+		-webkit-user-select: none;
 	}
 //	.actions i {
 //		cursor: pointer;
@@ -102,6 +105,8 @@ div.widget {
 			line-height: @widget-header-height;
 			float: right;
 			margin-right: 0.5em;
+			user-select: none;
+			-webkit-user-select: none;
 		}
 		span.title {
 			font-weight: bold;

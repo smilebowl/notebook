@@ -25,8 +25,8 @@ $(document).ready(function () {
 			);
 		}
 	});
-	$('.widget-content td[contenteditable!=true]').disableSelection();
-	$('.widget span.actions').disableSelection();
+//	$('.widget-content td[contenteditable!=true]').disableSelection();
+//	$('.widget span.actions').disableSelection();
 
 	$(".todoui").sortable({
 		handle: "i.icon",
