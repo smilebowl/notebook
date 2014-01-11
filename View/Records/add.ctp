@@ -22,7 +22,7 @@
 		<legend><?php echo __('Add Record'); ?></legend>
 	<?php
 		echo $this->Form->input('recordcategory_id');
-		echo $this->Form->input('eventdate');
+		echo $this->Form->input('eventdate', array('type' => 'text', 'class' => 'form-control input_date'));
 		echo $this->Form->input('title');
 		echo $this->Form->input('priority');
 	?>

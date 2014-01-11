@@ -11,6 +11,6 @@
 		</span>
 	</td>
 <!--	<td class="eventdate" nowrap><?php // echo $record['Record']['eventdate']; ?></td>-->
-	<td class="eventdate" nowrap><input type="text" class="inputdate" size="10" readonly="readonly" value="<?php echo $record['Record']['eventdate']; ?>" /></td>
+	<td class="eventdate" nowrap><input type="text" class="input_date" size="10" readonly="readonly" value="<?php echo $record['Record']['eventdate']; ?>" /></td>
 	<td contenteditable="true" class="text<?php echo $priority;?>"><?php echo $record['Record']['title']; ?></td>
 </tr>

@@ -1,7 +1,6 @@
 <?php
 echo $this->Html->css('record', null, array('inline' => false));
 echo $this->Html->script('recordui', array('inline' => false));
-echo $this->Html->script('vendar/jqueryui/i18n/jquery.ui.datepicker-ja.min', array('inline' => false));
 ?>
 
 <h3>

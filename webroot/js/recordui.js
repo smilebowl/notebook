@@ -204,7 +204,7 @@ $(document).ready(function () {
 
 	// event date for new item
 
-	$('#recordui').on('focus', '.inputdate', function () {
+	$('#recordui').on('focus', '.input_date', function () {
 		$(this).datepicker({
 			dateFormat: "yy-mm-dd",
 			showButtonPanel: true,
@@ -212,7 +212,7 @@ $(document).ready(function () {
 		}).data('before', $(this).val());
 	});
 
-	$('#recordui').on('change', '.inputdate', function () {
+	$('#recordui').on('change', '.input_date', function () {
 		if (!window.confirm('日付を変更しますか？')) {
 			$(this).val($(this).data('before')).datepicker("hide").data('before').remove();
 			return false;
@@ -230,11 +230,10 @@ $(document).ready(function () {
 			}
 		);
 		// sort
-		$('input.inputdate').datepicker('destroy');
+		$('input.input_date').datepicker('destroy');
 		$('.recordlist tbody').html(
 			$('.recordlist tr').sort(function (a, b) {
-				var ee = $(a).find('input.inputdate').val();
-				return $(a).find('input.inputdate').val() < $(b).find('input.inputdate').val() ? 1 : -1;
+				return $(a).find('input.input_date').val() < $(b).find('input.input_date').val() ? 1 : -1;
 			})
 		);
 	});

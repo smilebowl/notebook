@@ -37,8 +37,8 @@ class CalendarsController extends AppController {
 		$end = date("Y-m-d",$this->request->query['end']);
 		$cond = array('and'=>array('start >='=>$start, 'start <='=>$end));
 
-		if (!empty($this->request->query['calendar_id'])) {
-			$cond['and']['calendar_id'] =$this->request->query['calendar_id'];
+		if (!empty($this->request->query['calendarcategory_id'])) {
+			$cond['and']['calendarcategory_id'] =$this->request->query['calendarcategory_id'];
 		}
 
 		$this->Calendar->recursive = 0;
@@ -98,14 +98,14 @@ class CalendarsController extends AppController {
 		echo $this->Calendar->field('detail');
 	}
 
-	// get calendar_id field
+	// get calendarcategory_id field
 
 	public function ajaxgetcid() {
 		Configure::write('debug', 0);
 		$this->autoRender = false;
 
 		$this->Calendar->id = $this->request->data['id'];
-		echo $this->Calendar->field('calendar_id');
+		echo $this->Calendar->field('calendarcategory_id');
 	}
 
 	// remove event
@@ -124,7 +124,22 @@ class CalendarsController extends AppController {
 		$this->set(compact('calendars'));
 	}
 
+	public function ajax_reorder() {
+		Configure::write('debug', 0);
+		$this->autoRender = false;
 
+		$this->log($this->request->data['idlist']);
+
+		$pos = $this->request->data['idlist'];
+		$curpos = 0;
+		foreach ($pos as $seq => $idstring) {
+
+			$id = str_replace('cal-', '', $idstring);
+			if ($this->Calendar->Calendarcategory->exists($id)) {
+				$this->Calendar->Calendarcategory->save(array('id'=>$id,'position'=>$curpos++),false,array('position'));
+			}
+		}
+	}
 
 
 

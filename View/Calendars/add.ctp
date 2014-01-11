@@ -23,8 +23,8 @@
 	<?php
 		echo $this->Form->input('calendarcategory_id');
 		echo $this->Form->input('title');
-		echo $this->Form->input('start');
-		echo $this->Form->input('end');
+		echo $this->Form->input('start', array('type' => 'text', 'class' => 'form-control input_date'));
+		echo $this->Form->input('end', array('type' => 'text', 'class' => 'form-control input_date'));
 		echo $this->Form->input('detail');
 		echo $this->Form->input('color');
 		echo $this->Form->input('textcolor');

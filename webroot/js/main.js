@@ -33,6 +33,14 @@ $(document).ready(function () {
 		$(this).closest('.widget').find('.widget-content').toggle('blind', 300);
 	});
 
+	// jquery datepicker
+	$('.input_date').datepicker({
+		dateFormat: 'yy-mm-dd',
+		firstDay: 1,
+		showButtonPanel: true,
+		showAnim: 'show'
+	});
+
 });
 
 /* select text */

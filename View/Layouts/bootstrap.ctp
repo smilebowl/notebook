@@ -75,6 +75,7 @@
 		echo $this->Html->script('vendar/bootstrap/js/bootstrap.min');
 		echo $this->Html->script('vendar/jqueryui/jquery-ui.min');
 		echo $this->Html->script('vendar/jquery.nicescroll/jquery.nicescroll.min');
+		echo $this->Html->script('vendar/jqueryui/i18n/jquery.ui.datepicker-ja.min');
 	?>
 
 	<?php echo $this->Html->script('main'); ?>

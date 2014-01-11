@@ -40,7 +40,7 @@ table.recordlist i.remove {
 table.recordlist i.handle {
   color: #5cb85c;
 }
-table.recordlist .inputdate {
+table.recordlist .input_date {
   border-style: none;
   background-color: transparent;
 }
