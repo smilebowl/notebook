@@ -13,8 +13,8 @@ class TodosController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator');
-
+	public $components = array('Paginator', 'Search.Prg');
+	public $presetVars = true;
 
 
 	// add
@@ -155,8 +155,14 @@ class TodosController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->Prg->commonProcess();
+		$this->Paginator->settings['conditions'] = $this->Todo->parseCriteria($this->Prg->parsedParams());
+
 		$this->Todo->recursive = 0;
 		$this->set('todos', $this->Paginator->paginate());
+
+		$todocategories = $this->Todo->Todocategory->find('list');
+		$this->set(compact('todocategories'));
 	}
 
 /**

@@ -21,13 +21,50 @@ $(document).ready(function () {
 	/* FullCalendar */
 	/* ------------ */
 
+	// dialog for event update. preset currentEvent
+
+	function updateEvent(event) {
+		currentEvent = event;
+		$('#event_title').val(currentEvent.title);
+		$('#event_date').val($.fullCalendar.formatDate(currentEvent.start, 'yyyy-MM-dd'));
+
+		// get event record from server
+
+		$.ajax({
+			type:	'post',
+			url:	"ajax_getrecord",
+			data:	{'id': currentEvent.id},
+			dataType:	"json",
+			success: function (data, dataType) {
+				$('#event_detail').val(data.detail);
+				$('#event_color').val(data.color).change();
+
+				// open dialog
+				dialog_event.dialog('option', 'title', 'Update event');
+				$('#dialog-event').dialog('open');
+			}
+		});
+	}
+
+	// dialog for new event
+
+	function addEvent(start) {
+		$('#event_date').val($.fullCalendar.formatDate(start, 'yyyy-MM-dd'));
+		$('#event_title').val('');
+		$('#event_detail').val(null);
+		dialog_event.dialog('option', 'title', 'New event');
+
+		// open dialog
+
+		$('#dialog-event').dialog('open');
+		calendar.fullCalendar('unselect');
+	}
+
 	function initCalendar(element) {
 
 		calendar = $(element).fullCalendar({
 			header: {
-	//			left: 'prev,next today',
-	//			center: 'title',
-//				right: 'month,basicWeek',
+	//			left: 'prev,next today', center: 'title', right: 'month,basicWeek',
 				ignoreTimezone: false
 			},
 			editable: true,
@@ -69,17 +106,19 @@ $(document).ready(function () {
 
 			select: function (start, end, allDay, jsEvent, view) {
 
+				addEvent(start);
+
 				// initialize dialog items for new event
 
-				$('#event_date').val($.fullCalendar.formatDate(start, 'yyyy-MM-dd'));
-				$('#event_title').val('');
-				$('#event_detail').val(null);
-				dialog_event.dialog('option', 'title', 'New event');
-
-				// open dialog
-
-				$('#dialog-event').dialog('open');
-				calendar.fullCalendar('unselect');
+//				$('#event_date').val($.fullCalendar.formatDate(start, 'yyyy-MM-dd'));
+//				$('#event_title').val('');
+//				$('#event_detail').val(null);
+//				dialog_event.dialog('option', 'title', 'New event');
+//
+//				// open dialog
+//
+//				$('#dialog-event').dialog('open');
+//				calendar.fullCalendar('unselect');
 			},
 
 			// update event
@@ -88,36 +127,37 @@ $(document).ready(function () {
 
 				if (!$.isNumeric(event.id)) { return; } // skip google calender
 
-				currentEvent = event;
+
 				mode_update = true;
 
+				updateEvent(event);
 				// initialize dialog for update
 
 //				$('.datepart').show();
-				$('#event_title').val(event.title);
-				$('#event_date').val($.fullCalendar.formatDate(event.start, 'yyyy-MM-dd'));
-
-				// get event record from server
-
-				$.ajax({
-					type:	'post',
-					url:	"ajax_getrecord",
-					data:	{'id': event.id},
-					dataType:	"json",
-					success: function (data, dataType) {
-						$('#event_detail').val(data.detail);
-						$('#event_color').val(data.color).change();
-
-						// open dialog
-						dialog_event.dialog('option', 'title', 'Update event');
-						$('#dialog-event').dialog('open');
-					}
-				});
+//				$('#event_title').val(event.title);
+//				$('#event_date').val($.fullCalendar.formatDate(event.start, 'yyyy-MM-dd'));
+//
+//				// get event record from server
+//
+//				$.ajax({
+//					type:	'post',
+//					url:	"ajax_getrecord",
+//					data:	{'id': event.id},
+//					dataType:	"json",
+//					success: function (data, dataType) {
+//						$('#event_detail').val(data.detail);
+//						$('#event_color').val(data.color).change();
+//
+//						// open dialog
+//						dialog_event.dialog('option', 'title', 'Update event');
+//						$('#dialog-event').dialog('open');
+//					}
+//				});
 			},
 
 			// event droped
 
-			eventDrop: function (event, delta) {
+			eventDrop: function (event, delta, minuteDelta, allDay, revertFunc, jsEvent, ui, view) {
 
 				$.post(
 					"ajax_update",

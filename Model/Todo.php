@@ -7,6 +7,14 @@ App::uses('AppModel', 'Model');
  */
 class Todo extends AppModel {
 
+	public $actsAs = array('Search.Searchable');
+	public $filterArgs = array(
+		'todocategory_id' => array('type' => 'value'),
+		'title' => array('type' => 'like'),
+		'start' => array('type' => 'value', 'field' => 'completed >='),
+		'end' => array('type' => 'value', 'field' => 'completed <='),
+	);
+
 /**
  * Validation rules
  *

@@ -8,6 +8,37 @@
 </div>
 <div class="todos index">
 	<h2><?php echo __('Todos'); ?></h2>
+
+<?php echo $this->Form->create('Todo', array(
+	'inputDefaults' => array(
+		'div' => 'form-group',
+		'label' => false,
+		'wrapInput' => false,
+		'class' => 'form-control'
+	),
+	'class' => 'form-inline well well-sm',
+	'novalidate' => true
+	));
+	echo $this->Form->submit('Search', array(
+		'div' => 'form-group',
+		'class' => 'btn btn-primary'
+	));
+	echo $this->Form->input('todocategory_id', array('empty'=>'---'));
+	echo $this->Form->input('title', array(
+		'type'=>'text','class'=>'form-control','placeholder' => 'Title'
+	));
+	echo $this->Form->input('start', array(
+		'type'=>'text','class'=>'form-control col col-xs-1 input_date','placeholder' => 'completed from'
+	));
+	echo $this->Form->input('end', array(
+		'type'=>'text','class'=>'form-control col col-xs-1 input_date','placeholder' => 'completed to'
+	));
+	echo $this->Form->end();
+?>
+
+<div class="clearfix"></div>
+
+
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(
