@@ -286,8 +286,11 @@ $(document).ready(function () {
 		$(this).css('background-color', $(this).val());
 	});
 	$('#event_color').change(function () {
-		var clr = $(this).find('option:selected').val();
-		$(this).css('background-color', clr);
+		$(this).find('option').text('');
+		$(this).find('option:selected').text('✔');
+//		var clr = $(this).find('option:selected').val();
+//		$(this).css('background-color', clr);
+		$(this).css('background-color', $(this).val());
 	}).change();
 
 });

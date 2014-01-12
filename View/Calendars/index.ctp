@@ -8,6 +8,33 @@
 </div>
 <div class="calendars index">
 	<h2><?php echo __('Calendars'); ?></h2>
+
+<?php echo $this->Form->create('Calendar', array(
+	'inputDefaults' => array(
+		'div' => 'form-group',
+		'label' => false,
+		'wrapInput' => false,
+		'class' => 'form-control'
+	),
+	'class' => 'form-inline well well-sm',
+	'novalidate' => true
+	));
+	echo $this->Form->submit('Search', array(
+		'div' => 'form-group',
+		'class' => 'btn btn-primary'
+	));
+	echo $this->Form->input('calendarcategory_id', array('empty'=>'---'));
+	echo $this->Form->input('start', array(
+		'type'=>'text','class'=>'form-control col col-sm-1 input_date','placeholder' => 'start day'
+	));
+	echo $this->Form->input('keyword', array(
+		'type'=>'text','class'=>'form-control','placeholder' => 'keyword'
+	));
+	echo $this->Form->end();
+?>
+
+<div class="clearfix"></div>
+
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(

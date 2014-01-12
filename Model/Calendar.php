@@ -7,6 +7,23 @@ App::uses('AppModel', 'Model');
  */
 class Calendar extends AppModel {
 
+	public $actsAs = array('Search.Searchable');
+	public $filterArgs = array(
+		'calendarcategory_id' => array('type' => 'value'),
+		'start' => array('type' => 'value', 'field' => 'start >='),
+		'keyword' => array('type' => 'query', 'method' => 'findword'),
+	);
+	public function findword($data = array()) {
+		$filter = $data['keyword'];
+		$cond = array(
+			'OR' => array(
+				$this->alias . '.title LIKE' => '%' . $filter . '%',
+				$this->alias . '.detail LIKE' => '%' . $filter . '%',
+			));
+		return $cond;
+	}
+
+
 /**
  * Validation rules
  *

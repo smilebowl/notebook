@@ -33,7 +33,7 @@ location /notebook {
     if (!-e $request_filename) {
         rewrite ^(.+)$ /notebook/index.php?q=$1 last;
     }
-    location ~ ^/notebook/(.+\.php) {
+    location ~ \.php$ {
         fastcgi_pass   127.0.0.1:9000;
         fastcgi_index index.php;
         fastcgi_param SCRIPT_FILENAME $request_filename;

@@ -8,12 +8,9 @@ App::uses('AppController', 'Controller');
  */
 class CalendarsController extends AppController {
 
-/**
- * Components
- *
- * @var array
- */
-	public $components = array('Paginator');
+	public $components = array('Paginator', 'Search.Prg');
+	public $presetVars = true;
+
 
 
 	public function ui() {
@@ -129,8 +126,14 @@ class CalendarsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->Prg->commonProcess();
+		$this->Paginator->settings['conditions'] = $this->Calendar->parseCriteria($this->Prg->parsedParams());
+
 		$this->Calendar->recursive = 0;
 		$this->set('calendars', $this->Paginator->paginate());
+
+		$calendarcategories = $this->Calendar->Calendarcategory->find('list');
+		$this->set(compact('calendarcategories'));
 	}
 
 /**
