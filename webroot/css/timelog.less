@@ -1,0 +1,46 @@
+@import "common";
+
+.widget-header {
+	i.donechecked {
+		color: @brand-success;
+	}
+	i.removechecked {
+		color: @brand-danger;
+	}
+	i.historychecked {
+		color: @brand-warning;
+	}
+}
+table.timeloglist {
+	width: 100%;
+	tr {
+		border-bottom: 1px solid #cdcdcd;
+	}
+	tr.active {
+		background-color: darken(@brand-success, -40%);
+	}
+	td {
+		padding: 6px;
+	}
+	i.glyphicon {
+		font-size: 14px;
+	}
+	i.remove {
+		color: @brand-danger;
+	}
+	i.handle {
+		color: @brand-success;
+	}
+}
+
+input.timelog_worktime {
+	width: 70px;
+	text-align: right
+}
+
+.input-error {
+	border-color: @brand-danger;
+}
+//.form-control {
+//	width: auto;
+//}

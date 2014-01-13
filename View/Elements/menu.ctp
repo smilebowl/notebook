@@ -1,5 +1,5 @@
 <?php
-$act_todo=''; $act_memo=''; $act_calendar=''; $act_record='';
+$act_todo=''; $act_memo=''; $act_calendar=''; $act_record=''; $act_timelog='';
 switch ($this->name) {
 	case "Todos":
 	case "Todocategories":
@@ -17,6 +17,11 @@ switch ($this->name) {
 	case "Records":
 	case "Recordcategories":
 		$act_record = "active";
+		break;
+	case "Timelogs":
+	case "Timelogcategories":
+	case "Timelogtasks":
+		$act_timelog = "active";
 		break;
 };
 ?>
@@ -53,22 +58,6 @@ switch ($this->name) {
 			</ul>
 		</li>
 
-		<!-- Memo -->
-		<li>
-			<a href="<?php echo $this->Html->url(array('controller'=>'memos', 'action'=>'ui')); ?>">
-				<i class="glyphicon glyphicon-book <?php echo $act_memo; ?>"></i>Memo</a>
-		</li>
-		<li>
-			<ul>
-				<li>
-					<?php echo $this->Html->link(__('Memocategories'), array('controller' => 'memocategories', 'action' => 'index')); ?>
-				</li>
-				<li>
-					<?php echo $this->Html->link(__('Mentenance'), array('controller' => 'memos', 'action' => 'index')); ?>
-				</li>
-			</ul>
-		</li>
-
 		<!-- Record -->
 		<li>
 			<a href="<?php echo $this->Html->url(array('controller'=>'records', 'action'=>'ui')); ?>">
@@ -81,6 +70,38 @@ switch ($this->name) {
 				</li>
 				<li>
 					<?php echo $this->Html->link(__('Mentenance'), array('controller' => 'records', 'action' => 'index')); ?>
+				</li>
+			</ul>
+		</li>
+
+		<!-- Timelog -->
+		<li>
+			<a href="<?php echo $this->Html->url(array('controller'=>'timelogs', 'action'=>'ui')); ?>">
+				<i class="glyphicon glyphicon-time <?php echo $act_timelog; ?>"></i><?php echo __('Timelog');?></a>
+		</li>
+		<li>
+			<ul>
+				<li>
+					<?php echo $this->Html->link(__('Timelogcategories'), array('controller' => 'timelogcategories', 'action' => 'index')); ?>
+				</li>
+				<li>
+					<?php echo $this->Html->link(__('Mentenance'), array('controller' => 'timelogs', 'action' => 'index')); ?>
+				</li>
+			</ul>
+		</li>
+
+		<!-- Memo -->
+		<li>
+			<a href="<?php echo $this->Html->url(array('controller'=>'memos', 'action'=>'ui')); ?>">
+				<i class="glyphicon glyphicon-book <?php echo $act_memo; ?>"></i>Memo</a>
+		</li>
+		<li>
+			<ul>
+				<li>
+					<?php echo $this->Html->link(__('Memocategories'), array('controller' => 'memocategories', 'action' => 'index')); ?>
+				</li>
+				<li>
+					<?php echo $this->Html->link(__('Mentenance'), array('controller' => 'memos', 'action' => 'index')); ?>
 				</li>
 			</ul>
 		</li>
