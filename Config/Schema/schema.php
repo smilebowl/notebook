@@ -101,6 +101,47 @@ class NotebookSchema extends CakeSchema {
 		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
 	);
 
+	public $timelogcategories = array(
+		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'key' => 'primary'),
+		'name' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 128, 'collate' => 'utf8_general_ci', 'comment' => '名前', 'charset' => 'utf8'),
+		'position' => array('type' => 'integer', 'null' => false, 'default' => '0', 'comment' => 'position'),
+		'created' => array('type' => 'datetime', 'null' => true, 'default' => null, 'comment' => '登録日'),
+		'deleted' => array('type' => 'integer', 'null' => true, 'default' => '0', 'length' => 4, 'comment' => '削除フラグ'),
+		'deleted_date' => array('type' => 'datetime', 'null' => true, 'default' => null, 'comment' => '削除日'),
+		'indexes' => array(
+			'PRIMARY' => array('column' => 'id', 'unique' => 1)
+		),
+		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
+	);
+
+	public $timelogs = array(
+		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'key' => 'primary'),
+		'timelogcategory_id' => array('type' => 'integer', 'null' => true, 'default' => null, 'comment' => 'カテゴリ'),
+		'timelogtask_id' => array('type' => 'integer', 'null' => true, 'default' => null, 'comment' => 'タスク'),
+		'workdate' => array('type' => 'date', 'null' => false, 'default' => null, 'comment' => '日付'),
+		'worktime' => array('type' => 'float', 'null' => false, 'default' => null, 'length' => '5,2'),
+		'title' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 256, 'collate' => 'utf8_general_ci', 'comment' => '名前', 'charset' => 'utf8'),
+		'created' => array('type' => 'datetime', 'null' => true, 'default' => null, 'comment' => '登録日'),
+		'modified' => array('type' => 'datetime', 'null' => true, 'default' => null, 'comment' => '変更日'),
+		'indexes' => array(
+			'PRIMARY' => array('column' => 'id', 'unique' => 1)
+		),
+		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
+	);
+
+	public $timelogtasks = array(
+		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'key' => 'primary'),
+		'name' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 128, 'collate' => 'utf8_general_ci', 'comment' => '名前', 'charset' => 'utf8'),
+		'position' => array('type' => 'integer', 'null' => false, 'default' => '0', 'comment' => 'position'),
+		'created' => array('type' => 'datetime', 'null' => true, 'default' => null, 'comment' => '登録日'),
+		'deleted' => array('type' => 'integer', 'null' => true, 'default' => '0', 'length' => 4, 'comment' => '削除フラグ'),
+		'deleted_date' => array('type' => 'datetime', 'null' => true, 'default' => null, 'comment' => '削除日'),
+		'indexes' => array(
+			'PRIMARY' => array('column' => 'id', 'unique' => 1)
+		),
+		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
+	);
+
 	public $todocategories = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'key' => 'primary'),
 		'name' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 128, 'collate' => 'utf8_general_ci', 'comment' => '名前', 'charset' => 'utf8'),
