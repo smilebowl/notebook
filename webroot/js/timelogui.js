@@ -93,6 +93,16 @@ $(document).ready(function () {
 		);
 	});
 
+	// 再計算
+
+	function reset_summary() {
+		var total = 0.0;
+		$('table.timeloglist tr[id^=timelog-]').each(function () {
+			total += parseFloat($(this).find("input[name=worktime]").val());
+		});
+		$('table.timeloglist td.total_worktime').text(total.toFixed(2));
+	}
+
 	// remove timelog
 
 	$('#timelogui').on('click', 'i.remove', function () {
@@ -104,40 +114,10 @@ $(document).ready(function () {
 			'ajax_delete',
 			{
 				'id': timelog.attr('id').replace('timelog-', '')
-			},
-			function (result) {
-				if (result === "1") {
-					timelog.fadeOut(
-						'normal',
-						function () {	timelog.remove('fast');	}
-					);
-				}
 			}
 		);
-	});
-
-
-	// remove item
-
-	$('#timelogui').on('click', 'i.remove', function () {
-		if (!window.confirm('削除しますか？')) {
-			return false;
-		}
-		var timelog = $(this).closest("[id^=timelog-]");
-		$.post(
-			'ajax_delete',
-			{
-				'id': timelog.attr('id').replace('timelog-', '')
-			},
-			function (result) {
-				if (result === "1") {
-					timelog.fadeOut(
-						'normal',
-						function () {	timelog.remove('fast');	}
-					);
-				}
-			}
-		);
+		timelog.remove();
+		reset_summary();
 	});
 
 	// toggle toolbox
@@ -177,7 +157,7 @@ $(document).ready(function () {
 				'items': idlist
 			}
 		);
-		$('table.timeloglist td.total_worktime').text('0.00');
+		reset_summary();
 		$(this).closest('.actions').find('i.toggletool').click();
 	});
 
