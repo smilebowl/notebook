@@ -36,20 +36,23 @@ $(document).ready(function () {
 
 	$('#timelogui').on('click', '#updateTimelog', function () {
 //	$('#updateTimelog').click(function () {
-		var timelogs = [], hasError;
-		$('table.timeloglist .input-error').removeClass('input-error');
+		var timelogs = [], hasError, chkWorktime;
 		hasError = false;
+		$('table.timeloglist .input-error').removeClass('input-error');
+
+		// check & make array for post
 
 		$('table.timeloglist tr[id^=timelog-]').each(function () {
 
+			chkWorktime = $(this).find("input[name=worktime]");
 			// check
-
-//			if ($(this).find("select[name=timelogcategory_id]").val() === '') {
-//				$(this).find("select[name=timelogcategory_id]").addClass('input-error');
-//				window.alert('timelogcategory empty');
-//				hasError = true;
-//				return false;
-//			}
+			if (!$.isNumeric(chkWorktime.val()) || parseFloat($(chkWorktime).val()) <= 0.00) {
+				$(this).find("input[name=worktime]").addClass('input-error');
+				window.alert('invalid worktime.');
+				hasError = true;
+				$(chkWorktime).focus();
+				return false;
+			}
 
 			timelogs.push({
 				'id': $(this).closest("[id^=timelog-]").attr('id').replace('timelog-', ''),
@@ -62,6 +65,7 @@ $(document).ready(function () {
 		});
 
 		if (hasError) { return false; }
+		$(this).removeClass('btn-primary').addClass('btn-warning');
 
 		$.ajax({
 			type: 'post',
@@ -177,87 +181,28 @@ $(document).ready(function () {
 		$(this).closest('.actions').find('i.toggletool').click();
 	});
 
-	// event date for new item
-
-	$('#timelogui').on('focus', '.input_date', function () {
-		$(this).datepicker({
-			dateFormat: "yy-mm-dd",
-			showButtonPanel: true,
-			showAnim: 'show'
-		}).data('before', $(this).val());
-	});
-
-	$('#timelogui').on('change', '.input_date', function () {
-		if (!window.confirm('日付を変更しますか？')) {
-			$(this).val($(this).data('before')).datepicker("hide").data('before').remove();
-			return false;
-		}
-		var timelog = $(this).closest("[id^=timelog-]");
-
-		$('tr').removeClass('active');
-		$(this).closest('tr').addClass('active');
-
-		$.post(
-			'ajax_edit',
-			{
-				'id': timelog.attr('id').replace('timelog-', ''),
-				'eventdate': $(this).val()
-			}
-		);
-		// sort
-		$('input.input_date').datepicker('destroy');
-		$('.timeloglist tbody').html(
-			$('.timeloglist tr').sort(function (a, b) {
-				return $(a).find('input.input_date').val() < $(b).find('input.input_date').val() ? 1 : -1;
-			})
-		);
-	});
-
-	// focus event
-
-	$('#timelogui').on('focus', 'td.text', function () {
-		$(this).data('before', $(this).html()).selectText();
-	});
-
-	// td.text handling
-
-	$('#timelogui').on('blur', 'td.text', function () {
-		// changed
-		var timelog = $(this).closest("[id^=timelog-]");
-		if ($(this).data('before') !== $(this).html()) {
-			$.post(
-				'ajax_edit',
-				{
-					'id': timelog.attr('id').replace('timelog-', ''),
-					'title': $(this).html()
-				}
-			);
-		}
-		$(this).removeData('before');
-	});
-
 	// keyboard
 
-	$('#timelogui').on('keydown', 'td.text', function (e) {
+	$('#timelogui').on('keydown', 'input', function (e) {
 		// tab
-		if (e.which === 9) {
-			e.preventDefault();
-			if (e.shiftKey) {
-				$(this).closest('tr').prev().find('.text').focus();
-			} else {
-				$(this).closest('tr').next().find('.text').focus();
-			}
-		}
+//		if (e.which === 9) {
+//			e.preventDefault();
+//			if (e.shiftKey) {
+//				$(this).closest('tr').prev().find('.timelog_worktime').focus();
+//			} else {
+//				$(this).closest('tr').next().find('.timelog_worktime').focus();
+//			}
+//		}
 		// down, enter
 //		if (e.which === 13 || e.which === 40) {
 //			e.preventDefault();
 //			$(this).closest('tr').next().find('.text').focus();
 //		}
 		// escape
-		if (e.which === 27) {
-			e.preventDefault();
-			$(this).text($(this).data('before'));
-		}
+//		if (e.which === 27) {
+//			e.preventDefault();
+//			$(this).text($(this).data('before'));
+//		}
 		// up arrow
 //		if (e.which === 38) {
 //			e.preventDefault();

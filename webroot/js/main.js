@@ -8,6 +8,10 @@ $(document).ready(function () {
 		$('#wrapper').toggleClass('active');
 	});
 
+	// toggle menu
+//	$('ul.sidebar-nav li').click(function (e) {
+//		$(this).children().show();
+//	});
 
 	$(".gotop").hide();
 	$(window).scroll(function () {

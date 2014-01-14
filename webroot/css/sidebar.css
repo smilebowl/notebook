@@ -50,7 +50,7 @@
   margin-right: 0.5em;
   display: inline;
 }
-.sidebar-nav li i.active {
+.sidebar-nav li.active i {
   color: #5cb85c;
 }
 .sidebar-nav .sidebar-brand {
@@ -81,6 +81,9 @@
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff322f34', endColorstr='#ff2a282c', GradientType=0);
   text-indent: 40px;
+}
+ul.sidebar-nav li:not([class="active"]) ul {
+  display: none;
 }
 @media (max-width: 767px) {
   #wrapper {

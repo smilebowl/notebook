@@ -35,7 +35,7 @@
 			<?php echo $this->Icon->link(__('Edit'), array('action' => 'edit', $timelog['Timelog']['id'])); ?>
 			<?php echo $this->Icon->postLink(__('Delete'), array('action' => 'delete', $timelog['Timelog']['id']), null, __('Are you sure you want to delete # %s?', $timelog['Timelog']['id'])); ?>
 		</td>
-		<td><?php echo h($timelog['Timelog']['id']); ?>&nbsp;</td>
+		<td class="right"><?php echo h($timelog['Timelog']['id']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($timelog['Timelogcategory']['name'], array('controller' => 'timelogcategories', 'action' => 'view', $timelog['Timelogcategory']['id'])); ?>
 		</td>
@@ -44,7 +44,7 @@
 		</td>
 		<td><?php echo h($timelog['Timelog']['workdate']); ?>&nbsp;</td>
 		<td><?php echo h($timelog['Timelog']['title']); ?>&nbsp;</td>
-		<td><?php echo h($timelog['Timelog']['worktime']); ?>&nbsp;</td>
+		<td class="right"><?php echo h($timelog['Timelog']['worktime']); ?>&nbsp;</td>
 		<td><?php echo h($timelog['Timelog']['created']); ?>&nbsp;</td>
 		<td><?php echo h($timelog['Timelog']['modified']); ?>&nbsp;</td>
 	</tr>

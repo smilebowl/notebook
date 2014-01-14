@@ -54,9 +54,9 @@
 				margin-right:0.5em;
 				display:inline;
 		}
-		i.active {
-			color: @brand-success;
-		}
+	}
+	li.active i {
+		color: @brand-success;
 	}
 	.sidebar-brand {
 		height: 65px;
@@ -78,6 +78,11 @@
 			}
 		}
 	}
+}
+
+// menu item toggle
+ul.sidebar-nav li:not([class="active"]) ul {
+	display: none;
 }
 
 @media (max-width: 767px) {
