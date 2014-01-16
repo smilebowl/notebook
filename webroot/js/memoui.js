@@ -113,7 +113,9 @@ $(document).ready(function () {
 				'id': memo.attr('id').replace('memo-', '')
 			},
 			function (result) {
-				memo.fadeOut('normal').closest('.norwwrapper').remove();
+				memo.fadeOut('slow', function () {
+					memo.closest('.norwwrapper').remove();
+				});
 			}
 		);
 	});

@@ -110,14 +110,16 @@ $(document).ready(function () {
 			return false;
 		}
 		var timelog = $(this).closest("[id^=timelog-]");
-		$.post(
-			'ajax_delete',
-			{
-				'id': timelog.attr('id').replace('timelog-', '')
-			}
-		);
-		timelog.remove();
-		reset_summary();
+		timelog.fadeOut('normal', function () {
+			$.post(
+				'ajax_delete',
+				{
+					'id': timelog.attr('id').replace('timelog-', '')
+				}
+			);
+			timelog.remove();
+			reset_summary();
+		});
 	});
 
 	// toggle toolbox
@@ -172,6 +174,17 @@ $(document).ready(function () {
 //			} else {
 //				$(this).closest('tr').next().find('.timelog_worktime').focus();
 //			}
+//		}
+		// enter
+//		if (e.which === 13) {
+//			var inputs = $(this).parents("table").eq(0).find(":input"),
+//				idx = inputs.index(this);
+//			if (idx === inputs.length - 1) {
+//				inputs[0].select();
+//			} else {
+//				inputs[idx + 1].focus();
+//			}
+//			return false;
 //		}
 		// down, enter
 //		if (e.which === 13 || e.which === 40) {

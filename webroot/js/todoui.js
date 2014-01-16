@@ -6,8 +6,8 @@ $(document).ready(function () {
 	var hiddencomplete = false;
 
 	$('body').niceScroll({
-		scrollspeed: 100,
-		mousescrollstep: 80,
+		scrollspeed: 50,
+		mousescrollstep: 40,
 		cursoropacitymin: 0.4
 	});
 
