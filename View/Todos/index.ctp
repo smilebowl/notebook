@@ -51,9 +51,8 @@
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('title'); ?></th>
 			<th><?php echo $this->Paginator->sort('todocategory_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('position'); ?></th>
-			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('completed'); ?></th>
+			<th><?php echo $this->Paginator->sort('created'); ?></th>
 		</tr>
 	<?php foreach ($todos as $todo): ?>
 	<tr style="white-space: nowrap;">
@@ -67,9 +66,8 @@
 		<td>
 			<?php echo $this->Html->link($todo['Todocategory']['name'], array('controller' => 'todocategories', 'action' => 'view', $todo['Todocategory']['id'])); ?>
 		</td>
-		<td class="right"><?php echo h($todo['Todo']['position']); ?>&nbsp;</td>
-		<td><?php echo h($todo['Todo']['created']); ?>&nbsp;</td>
 		<td><?php echo h($todo['Todo']['completed']); ?>&nbsp;</td>
+		<td><?php echo h($todo['Todo']['created']); ?>&nbsp;</td>
 	</tr>
 <?php endforeach; ?>
 	</table>

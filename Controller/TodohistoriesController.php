@@ -13,7 +13,8 @@ class TodohistoriesController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator');
+	public $components = array('Paginator', 'Search.Prg');
+	public $presetVars = true;
 
 /**
  * index method
@@ -21,8 +22,14 @@ class TodohistoriesController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->Prg->commonProcess();
+		$this->Paginator->settings['conditions'] = $this->Todohistory->parseCriteria($this->Prg->parsedParams());
+
 		$this->Todohistory->recursive = 0;
 		$this->set('todohistories', $this->Paginator->paginate());
+
+		$todocategories = $this->Todohistory->Todocategory->find('list');
+		$this->set(compact('todocategories'));
 	}
 
 /**

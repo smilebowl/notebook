@@ -8,6 +8,36 @@
 </div>
 <div class="todohistories index">
 	<h2><?php echo __('Todohistories'); ?></h2>
+
+<?php echo $this->Form->create('Todohistory', array(
+	'inputDefaults' => array(
+		'div' => 'form-group',
+		'label' => false,
+		'wrapInput' => false,
+		'class' => 'form-control'
+	),
+	'class' => 'form-inline well well-sm',
+	'novalidate' => true
+	));
+	echo $this->Form->submit('Search', array(
+		'div' => 'form-group',
+		'class' => 'btn btn-primary'
+	));
+	echo $this->Form->input('todocategory_id', array('empty'=>'---'));
+	echo $this->Form->input('title', array(
+		'type'=>'text','class'=>'form-control','placeholder' => 'Title'
+	));
+	echo $this->Form->input('start', array(
+		'type'=>'text','class'=>'form-control col col-xs-1 input_date','placeholder' => 'completed from'
+	));
+	echo $this->Form->input('end', array(
+		'type'=>'text','class'=>'form-control col col-xs-1 input_date','placeholder' => 'completed to'
+	));
+	echo $this->Form->end();
+?>
+
+<div class="clearfix"></div>
+
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(
@@ -20,10 +50,8 @@
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('title'); ?></th>
 			<th><?php echo $this->Paginator->sort('todocategory_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('position'); ?></th>
-			<th><?php echo $this->Paginator->sort('priority'); ?></th>
-			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('completed'); ?></th>
+			<th><?php echo $this->Paginator->sort('created'); ?></th>
 		</tr>
 	<?php foreach ($todohistories as $todohistory): ?>
 	<tr style="white-space: nowrap;">
@@ -37,10 +65,8 @@
 		<td>
 			<?php echo $this->Html->link($todohistory['Todocategory']['name'], array('controller' => 'todocategories', 'action' => 'view', $todohistory['Todocategory']['id'])); ?>
 		</td>
-		<td class="right"><?php echo h($todohistory['Todohistory']['position']); ?>&nbsp;</td>
-		<td><?php echo h($todohistory['Todohistory']['priority']); ?>&nbsp;</td>
-		<td><?php echo h($todohistory['Todohistory']['created']); ?>&nbsp;</td>
 		<td><?php echo h($todohistory['Todohistory']['completed']); ?>&nbsp;</td>
+		<td><?php echo h($todohistory['Todohistory']['created']); ?>&nbsp;</td>
 	</tr>
 <?php endforeach; ?>
 	</table>
