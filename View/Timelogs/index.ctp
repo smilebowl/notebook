@@ -56,7 +56,6 @@
 			<th><?php echo $this->Paginator->sort('workdate'); ?></th>
 			<th><?php echo $this->Paginator->sort('title'); ?></th>
 			<th><?php echo $this->Paginator->sort('worktime'); ?></th>
-			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 		</tr>
 	<?php foreach ($timelogs as $timelog): ?>
@@ -74,9 +73,8 @@
 			<?php echo $this->Html->link($timelog['Timelogtask']['name'], array('controller' => 'timelogtasks', 'action' => 'view', $timelog['Timelogtask']['id'])); ?>
 		</td>
 		<td><?php echo h($timelog['Timelog']['workdate']); ?>&nbsp;</td>
-		<td><?php echo h($timelog['Timelog']['title']); ?>&nbsp;</td>
+		<td><?php echo String::truncate(h($timelog['Timelog']['title']), 20); ?>&nbsp;</td>
 		<td class="right"><?php echo h($timelog['Timelog']['worktime']); ?>&nbsp;</td>
-		<td><?php echo h($timelog['Timelog']['created']); ?>&nbsp;</td>
 		<td><?php echo h($timelog['Timelog']['modified']); ?>&nbsp;</td>
 	</tr>
 <?php endforeach; ?>

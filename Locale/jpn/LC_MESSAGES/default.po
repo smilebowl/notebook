@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2014-01-04 16:40+0900\n"
+"POT-Creation-Date: 2014-01-18 21:10+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -13,10 +13,49 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
 
+#: Controller/CalendarcategoriesController.php:37;69;94
+msgid "Invalid calendarcategory"
+msgstr ""
+
+#: Controller/CalendarcategoriesController.php:52;73
+msgid "The calendarcategory has been saved."
+msgstr ""
+
+#: Controller/CalendarcategoriesController.php:55;76
+msgid "The calendarcategory could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/CalendarcategoriesController.php:98
+msgid "The calendarcategory has been deleted."
+msgstr ""
+
+#: Controller/CalendarcategoriesController.php:100
+msgid "The calendarcategory could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/CalendarsController.php:148;182;209
+msgid "Invalid calendar"
+msgstr ""
+
+#: Controller/CalendarsController.php:163;186
+msgid "The calendar has been saved."
+msgstr ""
+
+#: Controller/CalendarsController.php:166;189
+msgid "The calendar could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/CalendarsController.php:213
+msgid "The calendar has been deleted."
+msgstr ""
+
+#: Controller/CalendarsController.php:215
+msgid "The calendar could not be deleted. Please, try again."
+msgstr ""
+
 #: Controller/MemocategoriesController.php:37;69;94
-#, fuzzy
 msgid "Invalid memocategory"
-msgstr "Todo分類"
+msgstr ""
 
 #: Controller/MemocategoriesController.php:52;73
 msgid "The memocategory has been saved."
@@ -34,30 +73,29 @@ msgstr ""
 msgid "The memocategory could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/MemosController.php:126;160;187
+#: Controller/MemosController.php:124;158;185
 msgid "Invalid memo"
 msgstr ""
 
-#: Controller/MemosController.php:141;164
+#: Controller/MemosController.php:139;162
 msgid "The memo has been saved."
 msgstr ""
 
-#: Controller/MemosController.php:144;167
+#: Controller/MemosController.php:142;165
 msgid "The memo could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/MemosController.php:191
+#: Controller/MemosController.php:189
 msgid "The memo has been deleted."
 msgstr ""
 
-#: Controller/MemosController.php:193
+#: Controller/MemosController.php:191
 msgid "The memo could not be deleted. Please, try again."
 msgstr ""
 
 #: Controller/RecordcategoriesController.php:37;69;94
-#, fuzzy
 msgid "Invalid recordcategory"
-msgstr "Todo分類"
+msgstr ""
 
 #: Controller/RecordcategoriesController.php:52;73
 msgid "The recordcategory has been saved."
@@ -75,25 +113,84 @@ msgstr ""
 msgid "The recordcategory could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/RecordsController.php:135;169;196
-#, fuzzy
+#: Controller/RecordsController.php:152;186;213
 msgid "Invalid record"
-msgstr "Todo分類"
+msgstr ""
 
-#: Controller/RecordsController.php:150;173
+#: Controller/RecordsController.php:167;190
 msgid "The record has been saved."
 msgstr ""
 
-#: Controller/RecordsController.php:153;176
+#: Controller/RecordsController.php:170;193
 msgid "The record could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/RecordsController.php:200
+#: Controller/RecordsController.php:217
 msgid "The record has been deleted."
 msgstr ""
 
-#: Controller/RecordsController.php:202
+#: Controller/RecordsController.php:219
 msgid "The record could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/TimelogcategoriesController.php:37;69;94
+msgid "Invalid timelogcategory"
+msgstr ""
+
+#: Controller/TimelogcategoriesController.php:52;73
+msgid "The timelogcategory has been saved."
+msgstr ""
+
+#: Controller/TimelogcategoriesController.php:55;76
+msgid "The timelogcategory could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/TimelogcategoriesController.php:98
+msgid "The timelogcategory has been deleted."
+msgstr ""
+
+#: Controller/TimelogcategoriesController.php:100
+msgid "The timelogcategory could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/TimelogsController.php:175;210;238
+msgid "Invalid timelog"
+msgstr ""
+
+#: Controller/TimelogsController.php:190;214
+msgid "The timelog has been saved."
+msgstr ""
+
+#: Controller/TimelogsController.php:193;217
+msgid "The timelog could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/TimelogsController.php:242
+msgid "The timelog has been deleted."
+msgstr ""
+
+#: Controller/TimelogsController.php:244
+msgid "The timelog could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/TimelogtasksController.php:37;69;94
+msgid "Invalid timelogtask"
+msgstr ""
+
+#: Controller/TimelogtasksController.php:52;73
+msgid "The timelogtask has been saved."
+msgstr ""
+
+#: Controller/TimelogtasksController.php:55;76
+msgid "The timelogtask could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/TimelogtasksController.php:98
+msgid "The timelogtask has been deleted."
+msgstr ""
+
+#: Controller/TimelogtasksController.php:100
+msgid "The timelogtask could not be deleted. Please, try again."
 msgstr ""
 
 #: Controller/TodocategoriesController.php:37;69;94
@@ -116,43 +213,43 @@ msgstr ""
 msgid "The todocategory could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/TodohistoriesController.php:37;71;98
+#: Controller/TodohistoriesController.php:44;78;105
 msgid "Invalid todohistory"
 msgstr ""
 
-#: Controller/TodohistoriesController.php:52;75
+#: Controller/TodohistoriesController.php:59;82
 msgid "The todohistory has been saved."
 msgstr ""
 
-#: Controller/TodohistoriesController.php:55;78
+#: Controller/TodohistoriesController.php:62;85
 msgid "The todohistory could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/TodohistoriesController.php:102
+#: Controller/TodohistoriesController.php:109
 msgid "The todohistory has been deleted."
 msgstr ""
 
-#: Controller/TodohistoriesController.php:104
+#: Controller/TodohistoriesController.php:111
 msgid "The todohistory could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/TodosController.php:161;195;222
+#: Controller/TodosController.php:188;222;249
 msgid "Invalid todo"
 msgstr ""
 
-#: Controller/TodosController.php:176;199
+#: Controller/TodosController.php:203;226
 msgid "The todo has been saved."
 msgstr ""
 
-#: Controller/TodosController.php:179;202
+#: Controller/TodosController.php:206;229
 msgid "The todo could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/TodosController.php:226
+#: Controller/TodosController.php:253
 msgid "The todo has been deleted."
 msgstr ""
 
-#: Controller/TodosController.php:228
+#: Controller/TodosController.php:255
 msgid "The todo could not be deleted. Please, try again."
 msgstr ""
 
@@ -191,59 +288,53 @@ msgstr ""
 msgid "Alert danger message testing..."
 msgstr ""
 
-#: View/Elements/menu.ctp:13 View/Todos/ui.ctp:20 View/Todos/view.ctp:13
-msgid "Todo"
+#: Plugin/Migrations/Console/Command/MigrationShell.php:139
+msgid "Plugin name to be used"
 msgstr ""
 
-#: View/Elements/menu.ctp:19 View/Todocategories/index.ctp:10
-msgid "Todocategories"
-msgstr "Todo分類"
-
-#: View/Elements/menu.ctp:22;40;55
-msgid "Mentenance"
-msgstr "メンテナンス"
-
-#: View/Elements/menu.ctp:25 View/Todohistories/index.ctp:10
-msgid "Todohistories"
-msgstr "Todo履歴"
-
-#: View/Elements/menu.ctp:37 View/Memocategories/index.ctp:10
-msgid "Memocategories"
-msgstr "Memo分類"
-
-#: View/Elements/menu.ctp:47 View/Records/ui.ctp:7 View/Records/view.ctp:13
-msgid "Record"
+#: Plugin/Migrations/Console/Command/MigrationShell.php:143
+msgid "Precheck migrations"
 msgstr ""
 
-#: View/Elements/menu.ctp:52 View/Recordcategories/index.ctp:10
-msgid "Recordcategories"
-msgstr "Record分類"
-
-#: View/Helper/IconHelper.php:20;24 View/Memocategories/index.ctp:28
-#: View/Memos/index.ctp:31 View/Recordcategories/index.ctp:28
-#: View/Records/index.ctp:31 View/Todocategories/index.ctp:28
-#: View/Todohistories/index.ctp:31 View/Todos/index.ctp:30
-msgid "View"
+#: Plugin/Migrations/Console/Command/MigrationShell.php:147
+msgid "Force 'generate' to compare all tables."
 msgstr ""
 
-#: View/Helper/IconHelper.php:26;29 View/Memocategories/index.ctp:29
-#: View/Memos/index.ctp:32 View/Recordcategories/index.ctp:29
-#: View/Records/index.ctp:32 View/Todocategories/index.ctp:29
-#: View/Todohistories/index.ctp:32 View/Todos/index.ctp:31
-msgid "Edit"
+#: Plugin/Migrations/Console/Command/MigrationShell.php:151
+msgid "Overrides the 'default' connection of the MigrationVersion"
 msgstr ""
 
-#: View/Helper/IconHelper.php:37;40 View/Memocategories/edit.ctp:5
-#: View/Memocategories/index.ctp:30 View/Memos/edit.ctp:5
-#: View/Memos/index.ctp:33 View/Recordcategories/edit.ctp:5
-#: View/Recordcategories/index.ctp:30 View/Records/edit.ctp:5
-#: View/Records/index.ctp:33 View/Todocategories/edit.ctp:5
-#: View/Todocategories/index.ctp:30 View/Todohistories/edit.ctp:5
-#: View/Todohistories/index.ctp:33 View/Todos/edit.ctp:5
-#: View/Todos/index.ctp:32
-msgid "Delete"
+#: Plugin/Migrations/Console/Command/MigrationShell.php:155
+msgid ""
+"Overrides the 'default' connection of the CakeMigrations that are applied"
 msgstr ""
 
+#: Plugin/Migrations/Console/Command/MigrationShell.php:160
+msgid "Output the raw SQL queries rather than applying them to the database."
+msgstr ""
+
+#: Plugin/Migrations/Console/Command/MigrationShell.php:165
+msgid ""
+"Disables automatic creation of migrations table and running any internal "
+"plugin migrations"
+msgstr ""
+
+#: Plugin/Migrations/Console/Command/MigrationShell.php:167
+msgid "Displays a status of all plugin and app migrations."
+msgstr ""
+
+#: Plugin/Migrations/Console/Command/MigrationShell.php:169
+msgid "Run a migration to given direction or version."
+msgstr ""
+
+#: Plugin/Migrations/Console/Command/MigrationShell.php:171
+msgid "Generates a migration file."
+msgstr ""
+
+#: View/Calendarcategories/add.ctp:2 View/Calendarcategories/edit.ctp:2
+#: View/Calendarcategories/index.ctp:2;19 View/Calendarcategories/view.ctp:2
+#: View/Calendars/add.ctp:2 View/Calendars/edit.ctp:2
+#: View/Calendars/index.ctp:2;46 View/Calendars/view.ctp:2
 #: View/Memocategories/add.ctp:2 View/Memocategories/edit.ctp:2
 #: View/Memocategories/index.ctp:2;19 View/Memocategories/view.ctp:2
 #: View/Memos/add.ctp:2 View/Memos/edit.ctp:2 View/Memos/index.ctp:2;19
@@ -251,14 +342,267 @@ msgstr ""
 #: View/Recordcategories/edit.ctp:2 View/Recordcategories/index.ctp:2;19
 #: View/Recordcategories/view.ctp:2 View/Records/add.ctp:2
 #: View/Records/edit.ctp:2 View/Records/index.ctp:2;19 View/Records/view.ctp:2
+#: View/Timelogcategories/add.ctp:2 View/Timelogcategories/edit.ctp:2
+#: View/Timelogcategories/index.ctp:2;19 View/Timelogcategories/view.ctp:2
+#: View/Timelogs/add.ctp:2 View/Timelogs/edit.ctp:2
+#: View/Timelogs/index.ctp:2;52 View/Timelogs/view.ctp:2
+#: View/Timelogtasks/add.ctp:2 View/Timelogtasks/edit.ctp:2
+#: View/Timelogtasks/index.ctp:2;19 View/Timelogtasks/view.ctp:2
 #: View/Todocategories/add.ctp:2 View/Todocategories/edit.ctp:2
 #: View/Todocategories/index.ctp:2;19 View/Todocategories/view.ctp:2
 #: View/Todohistories/add.ctp:2 View/Todohistories/edit.ctp:2
-#: View/Todohistories/index.ctp:2;19 View/Todohistories/view.ctp:2
-#: View/Todos/add.ctp:2 View/Todos/edit.ctp:2 View/Todos/index.ctp:2;19
-#: View/Todos/ui.ctp:5 View/Todos/view.ctp:2
+#: View/Todohistories/index.ctp:2;49 View/Todohistories/view.ctp:2
+#: View/Todos/add.ctp:2 View/Todos/edit.ctp:2 View/Todos/index.ctp:2;50
+#: View/Todos/ui.ctp:8 View/Todos/view.ctp:2
 msgid "Actions"
 msgstr ""
+
+#: View/Calendarcategories/add.ctp:5 View/Calendarcategories/edit.ctp:6
+#: View/Calendarcategories/view.ctp:6 View/Calendars/add.ctp:6
+#: View/Calendars/edit.ctp:7 View/Calendars/index.ctp:5
+#: View/Calendars/view.ctp:8
+msgid "List Calendarcategories"
+msgstr "Calendar分類一覧"
+
+#: View/Calendarcategories/add.ctp:6 View/Calendarcategories/edit.ctp:7
+#: View/Calendarcategories/index.ctp:5 View/Calendarcategories/view.ctp:8
+#: View/Calendars/add.ctp:5 View/Calendars/edit.ctp:6
+#: View/Calendars/view.ctp:6
+msgid "List Calendars"
+msgstr "Calendar一覧"
+
+#: View/Calendarcategories/add.ctp:7 View/Calendarcategories/edit.ctp:8
+#: View/Calendarcategories/index.ctp:6 View/Calendarcategories/view.ctp:9
+#: View/Calendars/index.ctp:4 View/Calendars/view.ctp:7
+msgid "New Calendar"
+msgstr ""
+
+#: View/Calendarcategories/add.ctp:22
+msgid "Add Calendarcategory"
+msgstr "Calendar分類追加"
+
+#: View/Calendarcategories/add.ctp:28 View/Calendarcategories/edit.ctp:30
+#: View/Calendars/add.ctp:33 View/Calendars/edit.ctp:35
+#: View/Memocategories/add.ctp:28 View/Memocategories/edit.ctp:30
+#: View/Memos/add.ctp:31 View/Memos/edit.ctp:33
+#: View/Recordcategories/add.ctp:28 View/Recordcategories/edit.ctp:30
+#: View/Records/add.ctp:30 View/Records/edit.ctp:32
+#: View/Timelogcategories/add.ctp:28 View/Timelogcategories/edit.ctp:30
+#: View/Timelogs/add.ctp:33 View/Timelogs/edit.ctp:35
+#: View/Timelogtasks/add.ctp:28 View/Timelogtasks/edit.ctp:30
+#: View/Todocategories/add.ctp:28 View/Todocategories/edit.ctp:30
+#: View/Todohistories/add.ctp:31 View/Todohistories/edit.ctp:33
+#: View/Todos/add.ctp:30 View/Todos/edit.ctp:32
+msgid "Submit"
+msgstr ""
+
+#: View/Calendarcategories/edit.ctp:5 View/Calendarcategories/index.ctp:30
+#: View/Calendars/edit.ctp:5 View/Calendars/index.ctp:62
+#: View/Helper/IconHelper.php:37;40 View/Memocategories/edit.ctp:5
+#: View/Memocategories/index.ctp:30 View/Memos/edit.ctp:5
+#: View/Memos/index.ctp:33 View/Recordcategories/edit.ctp:5
+#: View/Recordcategories/index.ctp:30 View/Records/edit.ctp:5
+#: View/Records/index.ctp:32 View/Timelogcategories/edit.ctp:5
+#: View/Timelogcategories/index.ctp:30 View/Timelogs/edit.ctp:5
+#: View/Timelogs/index.ctp:67 View/Timelogtasks/edit.ctp:5
+#: View/Timelogtasks/index.ctp:30 View/Todocategories/edit.ctp:5
+#: View/Todocategories/index.ctp:30 View/Todohistories/edit.ctp:5
+#: View/Todohistories/index.ctp:61 View/Todos/edit.ctp:5
+#: View/Todos/index.ctp:62
+msgid "Delete"
+msgstr ""
+
+#: View/Calendarcategories/edit.ctp:5 View/Calendarcategories/index.ctp:30
+#: View/Calendarcategories/view.ctp:5 View/Calendars/edit.ctp:5
+#: View/Calendars/index.ctp:62 View/Calendars/view.ctp:5
+#: View/Memocategories/edit.ctp:5 View/Memocategories/index.ctp:30
+#: View/Memocategories/view.ctp:5 View/Memos/edit.ctp:5
+#: View/Memos/index.ctp:33 View/Memos/view.ctp:5
+#: View/Recordcategories/edit.ctp:5 View/Recordcategories/index.ctp:30
+#: View/Recordcategories/view.ctp:5 View/Records/edit.ctp:5
+#: View/Records/index.ctp:32 View/Records/view.ctp:5
+#: View/Timelogcategories/edit.ctp:5 View/Timelogcategories/index.ctp:30
+#: View/Timelogcategories/view.ctp:5 View/Timelogs/edit.ctp:5
+#: View/Timelogs/index.ctp:67 View/Timelogs/view.ctp:5
+#: View/Timelogtasks/edit.ctp:5 View/Timelogtasks/index.ctp:30
+#: View/Timelogtasks/view.ctp:5 View/Todocategories/edit.ctp:5
+#: View/Todocategories/index.ctp:30 View/Todocategories/view.ctp:5
+#: View/Todohistories/edit.ctp:5 View/Todohistories/index.ctp:61
+#: View/Todohistories/view.ctp:5 View/Todos/edit.ctp:5 View/Todos/index.ctp:62
+#: View/Todos/view.ctp:5
+msgid "Are you sure you want to delete # %s?"
+msgstr ""
+
+#: View/Calendarcategories/edit.ctp:23 View/Calendarcategories/view.ctp:4
+msgid "Edit Calendarcategory"
+msgstr "Calendar分類編集"
+
+#: View/Calendarcategories/index.ctp:4 View/Calendarcategories/view.ctp:7
+#: View/Calendars/add.ctp:7 View/Calendars/edit.ctp:8
+#: View/Calendars/index.ctp:6 View/Calendars/view.ctp:9
+msgid "New Calendarcategory"
+msgstr "Calendar分類追加"
+
+#: View/Calendarcategories/index.ctp:10 View/Elements/menu.ctp:127
+msgid "Calendarcategories"
+msgstr "Calendar分類"
+
+#: View/Calendarcategories/index.ctp:14 View/Calendars/index.ctp:41
+#: View/Memocategories/index.ctp:14 View/Memos/index.ctp:14
+#: View/Recordcategories/index.ctp:14 View/Records/index.ctp:14
+#: View/Timelogcategories/index.ctp:14 View/Timelogs/index.ctp:47
+#: View/Timelogtasks/index.ctp:14 View/Todocategories/index.ctp:14
+#: View/Todohistories/index.ctp:44 View/Todos/index.ctp:45
+msgid ""
+"Page {:page} of {:pages}, showing {:current} records out of {:count} total, "
+"starting on record {:start}, ending on {:end}"
+msgstr ""
+"record {:start} - {:end} / total {:count} records, Page {:page} / {:pages}"
+
+#: View/Calendarcategories/index.ctp:28 View/Calendars/index.ctp:60
+#: View/Helper/IconHelper.php:20;24 View/Memocategories/index.ctp:28
+#: View/Memos/index.ctp:31 View/Recordcategories/index.ctp:28
+#: View/Records/index.ctp:30 View/Timelogcategories/index.ctp:28
+#: View/Timelogs/index.ctp:65 View/Timelogtasks/index.ctp:28
+#: View/Todocategories/index.ctp:28 View/Todohistories/index.ctp:59
+#: View/Todos/index.ctp:60
+msgid "View"
+msgstr ""
+
+#: View/Calendarcategories/index.ctp:29 View/Calendars/index.ctp:61
+#: View/Helper/IconHelper.php:26;29 View/Memocategories/index.ctp:29
+#: View/Memos/index.ctp:32 View/Recordcategories/index.ctp:29
+#: View/Records/index.ctp:31 View/Timelogcategories/index.ctp:29
+#: View/Timelogs/index.ctp:66 View/Timelogtasks/index.ctp:29
+#: View/Todocategories/index.ctp:29 View/Todohistories/index.ctp:60
+#: View/Todos/index.ctp:61
+msgid "Edit"
+msgstr ""
+
+#: View/Calendarcategories/view.ctp:5
+msgid "Delete Calendarcategory"
+msgstr "Calendar分類削除"
+
+#: View/Calendarcategories/view.ctp:13 View/Calendars/view.ctp:20
+msgid "Calendarcategory"
+msgstr "Calendar分類"
+
+#: View/Calendarcategories/view.ctp:15 View/Calendars/view.ctp:15
+#: View/Memocategories/view.ctp:15 View/Memos/view.ctp:15
+#: View/Recordcategories/view.ctp:15 View/Records/csv.ctp:8
+#: View/Records/view.ctp:15 View/Timelogcategories/view.ctp:15
+#: View/Timelogs/view.ctp:17 View/Timelogtasks/view.ctp:15
+#: View/Todocategories/view.ctp:15 View/Todohistories/view.ctp:15
+#: View/Todos/view.ctp:15
+msgid "Id"
+msgstr "ID"
+
+#: View/Calendarcategories/view.ctp:20 View/Memocategories/view.ctp:20
+#: View/Memos/view.ctp:25 View/Recordcategories/view.ctp:20
+#: View/Timelogcategories/view.ctp:20 View/Timelogtasks/view.ctp:20
+#: View/Todocategories/view.ctp:20
+msgid "Name"
+msgstr ""
+
+#: View/Calendarcategories/view.ctp:25 View/Memocategories/view.ctp:25
+#: View/Recordcategories/view.ctp:25 View/Timelogcategories/view.ctp:25
+#: View/Timelogtasks/view.ctp:25 View/Todocategories/view.ctp:25
+#: View/Todohistories/view.ctp:30 View/Todos/view.ctp:30
+msgid "Position"
+msgstr ""
+
+#: View/Calendarcategories/view.ctp:30 View/Calendars/view.ctp:55
+#: View/Memocategories/view.ctp:30 View/Memos/view.ctp:45
+#: View/Recordcategories/view.ctp:30 View/Records/csv.ctp:11
+#: View/Records/view.ctp:40 View/Timelogcategories/view.ctp:30
+#: View/Timelogs/view.ctp:47 View/Timelogtasks/view.ctp:30
+#: View/Todocategories/view.ctp:30 View/Todohistories/view.ctp:40
+#: View/Todos/view.ctp:35
+msgid "Created"
+msgstr "作成日"
+
+#: View/Calendars/add.ctp:22
+msgid "Add Calendar"
+msgstr ""
+
+#: View/Calendars/edit.ctp:23 View/Calendars/view.ctp:4
+msgid "Edit Calendar"
+msgstr ""
+
+#: View/Calendars/index.ctp:10
+msgid "Calendars"
+msgstr ""
+
+#: View/Calendars/ui.ctp:9 View/Calendars/view.ctp:13
+#: View/Elements/menu.ctp:120
+msgid "Calendar"
+msgstr ""
+
+#: View/Calendars/view.ctp:5
+msgid "Delete Calendar"
+msgstr "Calendar削除"
+
+#: View/Calendars/view.ctp:25 View/Records/csv.ctp:10 View/Records/view.ctp:30
+#: View/Timelogs/view.ctp:37 View/Todohistories/view.ctp:20
+#: View/Todos/view.ctp:20
+msgid "Title"
+msgstr ""
+
+#: View/Calendars/view.ctp:30
+msgid "Start"
+msgstr "開始"
+
+#: View/Calendars/view.ctp:35
+msgid "End"
+msgstr "終了"
+
+#: View/Calendars/view.ctp:40
+msgid "Detail"
+msgstr "詳細"
+
+#: View/Calendars/view.ctp:45
+msgid "Color"
+msgstr ""
+
+#: View/Calendars/view.ctp:50
+msgid "Textcolor"
+msgstr ""
+
+#: View/Elements/menu.ctp:44 View/Todos/ui.ctp:23 View/Todos/view.ctp:13
+msgid "Todo"
+msgstr ""
+
+#: View/Elements/menu.ctp:52 View/Todocategories/index.ctp:10
+msgid "Todocategories"
+msgstr "Todo分類"
+
+#: View/Elements/menu.ctp:55;76;94;112;130
+msgid "Mentenance"
+msgstr "メンテナンス"
+
+#: View/Elements/menu.ctp:58 View/Todohistories/index.ctp:10
+msgid "Todohistories"
+msgstr "Todo履歴"
+
+#: View/Elements/menu.ctp:66 View/Records/ui.ctp:7 View/Records/view.ctp:13
+msgid "Record"
+msgstr ""
+
+#: View/Elements/menu.ctp:73 View/Recordcategories/index.ctp:10
+msgid "Recordcategories"
+msgstr "Record分類"
+
+#: View/Elements/menu.ctp:84 View/Timelogs/ui.ctp:7 View/Timelogs/view.ctp:15
+msgid "Timelog"
+msgstr ""
+
+#: View/Elements/menu.ctp:91 View/Timelogcategories/index.ctp:10
+msgid "Timelogcategories"
+msgstr "Timelog分類"
+
+#: View/Elements/menu.ctp:109 View/Memocategories/index.ctp:10
+msgid "Memocategories"
+msgstr "Memo分類"
 
 #: View/Memocategories/add.ctp:5 View/Memocategories/edit.ctp:6
 #: View/Memocategories/view.ctp:6 View/Memos/add.ctp:6 View/Memos/edit.ctp:7
@@ -282,29 +626,6 @@ msgstr "Memo追加"
 msgid "Add Memocategory"
 msgstr "Memo分類追加"
 
-#: View/Memocategories/add.ctp:28 View/Memocategories/edit.ctp:30
-#: View/Memos/add.ctp:31 View/Memos/edit.ctp:33
-#: View/Recordcategories/add.ctp:28 View/Recordcategories/edit.ctp:30
-#: View/Records/add.ctp:31 View/Records/edit.ctp:33
-#: View/Todocategories/add.ctp:28 View/Todocategories/edit.ctp:30
-#: View/Todohistories/add.ctp:31 View/Todohistories/edit.ctp:33
-#: View/Todos/add.ctp:30 View/Todos/edit.ctp:32
-msgid "Submit"
-msgstr ""
-
-#: View/Memocategories/edit.ctp:5 View/Memocategories/index.ctp:30
-#: View/Memocategories/view.ctp:5 View/Memos/edit.ctp:5
-#: View/Memos/index.ctp:33 View/Memos/view.ctp:5
-#: View/Recordcategories/edit.ctp:5 View/Recordcategories/index.ctp:30
-#: View/Recordcategories/view.ctp:5 View/Records/edit.ctp:5
-#: View/Records/index.ctp:33 View/Records/view.ctp:5
-#: View/Todocategories/edit.ctp:5 View/Todocategories/index.ctp:30
-#: View/Todocategories/view.ctp:5 View/Todohistories/edit.ctp:5
-#: View/Todohistories/index.ctp:33 View/Todohistories/view.ctp:5
-#: View/Todos/edit.ctp:5 View/Todos/index.ctp:32 View/Todos/view.ctp:5
-msgid "Are you sure you want to delete # %s?"
-msgstr ""
-
 #: View/Memocategories/edit.ctp:23 View/Memocategories/view.ctp:4
 msgid "Edit Memocategory"
 msgstr "Memo分類編集"
@@ -315,16 +636,6 @@ msgstr "Memo分類編集"
 msgid "New Memocategory"
 msgstr "Memo分類追加"
 
-#: View/Memocategories/index.ctp:14 View/Memos/index.ctp:14
-#: View/Recordcategories/index.ctp:14 View/Records/index.ctp:14
-#: View/Todocategories/index.ctp:14 View/Todohistories/index.ctp:14
-#: View/Todos/index.ctp:14
-msgid ""
-"Page {:page} of {:pages}, showing {:current} records out of {:count} total, "
-"starting on record {:start}, ending on {:end}"
-msgstr ""
-"Page {:page} / {:pages}, record {:start} - {:end} / total {:count} records"
-
 #: View/Memocategories/view.ctp:5
 msgid "Delete Memocategory"
 msgstr "Memo分類削除"
@@ -332,31 +643,6 @@ msgstr "Memo分類削除"
 #: View/Memocategories/view.ctp:13 View/Memos/view.ctp:20
 msgid "Memocategory"
 msgstr "Memo分類"
-
-#: View/Memocategories/view.ctp:15 View/Memos/view.ctp:15
-#: View/Recordcategories/view.ctp:15 View/Records/view.ctp:15
-#: View/Todocategories/view.ctp:15 View/Todohistories/view.ctp:15
-#: View/Todos/view.ctp:15
-msgid "Id"
-msgstr ""
-
-#: View/Memocategories/view.ctp:20 View/Memos/view.ctp:25
-#: View/Recordcategories/view.ctp:20 View/Todocategories/view.ctp:20
-msgid "Name"
-msgstr ""
-
-#: View/Memocategories/view.ctp:25 View/Recordcategories/view.ctp:25
-#: View/Records/view.ctp:35 View/Todocategories/view.ctp:25
-#: View/Todohistories/view.ctp:30 View/Todos/view.ctp:30
-msgid "Position"
-msgstr ""
-
-#: View/Memocategories/view.ctp:30 View/Memos/view.ctp:45
-#: View/Recordcategories/view.ctp:30 View/Records/view.ctp:45
-#: View/Todocategories/view.ctp:30 View/Todohistories/view.ctp:40
-#: View/Todos/view.ctp:35
-msgid "Created"
-msgstr ""
 
 #: View/Memos/add.ctp:22
 msgid "Add Memo"
@@ -434,6 +720,10 @@ msgstr "Record分類"
 msgid "Add Record"
 msgstr "Record追加"
 
+#: View/Records/csv.ctp:9 View/Records/view.ctp:25
+msgid "Eventdate"
+msgstr "日付"
+
 #: View/Records/edit.ctp:23 View/Records/view.ctp:4
 msgid "Edit Record"
 msgstr "Record編集"
@@ -446,24 +736,127 @@ msgstr ""
 msgid "Delete Record"
 msgstr "Record削除"
 
-#: View/Records/view.ctp:25
-msgid "Eventdate"
-msgstr ""
-
-#: View/Records/view.ctp:30 View/Todohistories/view.ctp:20
-#: View/Todos/view.ctp:20
-msgid "Title"
-msgstr ""
-
-#: View/Records/view.ctp:40 View/Todohistories/view.ctp:35
+#: View/Records/view.ctp:35 View/Todohistories/view.ctp:35
 msgid "Priority"
 msgstr ""
+
+#: View/Timelogcategories/add.ctp:5 View/Timelogcategories/edit.ctp:6
+#: View/Timelogcategories/view.ctp:6 View/Timelogs/add.ctp:6
+#: View/Timelogs/edit.ctp:7 View/Timelogs/index.ctp:5 View/Timelogs/view.ctp:8
+msgid "List Timelogcategories"
+msgstr "Timelog分類一覧"
+
+#: View/Timelogcategories/add.ctp:6 View/Timelogcategories/edit.ctp:7
+#: View/Timelogcategories/index.ctp:5 View/Timelogcategories/view.ctp:8
+#: View/Timelogs/add.ctp:5 View/Timelogs/edit.ctp:6 View/Timelogs/view.ctp:6
+#: View/Timelogtasks/add.ctp:6 View/Timelogtasks/edit.ctp:7
+#: View/Timelogtasks/index.ctp:5 View/Timelogtasks/view.ctp:8
+msgid "List Timelogs"
+msgstr "Timelog一覧"
+
+#: View/Timelogcategories/add.ctp:7 View/Timelogcategories/edit.ctp:8
+#: View/Timelogcategories/index.ctp:6 View/Timelogcategories/view.ctp:9
+#: View/Timelogs/index.ctp:4 View/Timelogs/view.ctp:7
+#: View/Timelogtasks/add.ctp:7 View/Timelogtasks/edit.ctp:8
+#: View/Timelogtasks/index.ctp:6 View/Timelogtasks/view.ctp:9
+msgid "New Timelog"
+msgstr "Timelog追加"
+
+#: View/Timelogcategories/add.ctp:22
+msgid "Add Timelogcategory"
+msgstr "Timelog分類追加"
+
+#: View/Timelogcategories/edit.ctp:23 View/Timelogcategories/view.ctp:4
+msgid "Edit Timelogcategory"
+msgstr "Timelog分類編集"
+
+#: View/Timelogcategories/index.ctp:4 View/Timelogcategories/view.ctp:7
+#: View/Timelogs/add.ctp:7 View/Timelogs/edit.ctp:8 View/Timelogs/index.ctp:6
+#: View/Timelogs/view.ctp:9
+msgid "New Timelogcategory"
+msgstr "Timelog分類追加"
+
+#: View/Timelogcategories/view.ctp:5
+msgid "Delete Timelogcategory"
+msgstr "Timelog分類削除"
+
+#: View/Timelogcategories/view.ctp:13 View/Timelogs/view.ctp:22
+msgid "Timelogcategory"
+msgstr "Timelog分類"
+
+#: View/Timelogcategories/view.ctp:35 View/Timelogtasks/view.ctp:35
+msgid "Deleted"
+msgstr "削除フラグ"
+
+#: View/Timelogcategories/view.ctp:40 View/Timelogtasks/view.ctp:40
+msgid "Deleted Date"
+msgstr "削除日"
+
+#: View/Timelogs/add.ctp:8 View/Timelogs/edit.ctp:9 View/Timelogs/index.ctp:7
+#: View/Timelogs/view.ctp:10 View/Timelogtasks/add.ctp:5
+#: View/Timelogtasks/edit.ctp:6 View/Timelogtasks/view.ctp:6
+msgid "List Timelogtasks"
+msgstr "作業"
+
+#: View/Timelogs/add.ctp:9 View/Timelogs/edit.ctp:10 View/Timelogs/index.ctp:8
+#: View/Timelogs/view.ctp:11 View/Timelogtasks/index.ctp:4
+#: View/Timelogtasks/view.ctp:7
+msgid "New Timelogtask"
+msgstr "作業追加"
+
+#: View/Timelogs/add.ctp:24
+msgid "Add Timelog"
+msgstr "Timelog追加"
+
+#: View/Timelogs/edit.ctp:25 View/Timelogs/view.ctp:4
+msgid "Edit Timelog"
+msgstr "Timelog編集"
+
+#: View/Timelogs/index.ctp:12
+msgid "Timelogs"
+msgstr ""
+
+#: View/Timelogs/view.ctp:5
+msgid "Delete Timelog"
+msgstr "Timelog削除"
+
+#: View/Timelogs/view.ctp:27 View/Timelogtasks/view.ctp:13
+msgid "Timelogtask"
+msgstr "作業"
+
+#: View/Timelogs/view.ctp:32
+msgid "Workdate"
+msgstr "日付"
+
+#: View/Timelogs/view.ctp:42
+msgid "Worktime"
+msgstr "時間"
+
+#: View/Timelogs/view.ctp:52
+msgid "Modified"
+msgstr "変更日"
+
+#: View/Timelogtasks/add.ctp:22
+msgid "Add Timelogtask"
+msgstr "作業追加"
+
+#: View/Timelogtasks/edit.ctp:23 View/Timelogtasks/view.ctp:4
+msgid "Edit Timelogtask"
+msgstr "作業編集"
+
+#: View/Timelogtasks/index.ctp:10
+msgid "Timelogtasks"
+msgstr "作業"
+
+#: View/Timelogtasks/view.ctp:5
+msgid "Delete Timelogtask"
+msgstr "作業削除"
 
 #: View/Todocategories/add.ctp:5 View/Todocategories/edit.ctp:6
 #: View/Todocategories/view.ctp:6 View/Todohistories/add.ctp:6
 #: View/Todohistories/edit.ctp:7 View/Todohistories/index.ctp:5
 #: View/Todohistories/view.ctp:8 View/Todos/add.ctp:6 View/Todos/edit.ctp:7
-#: View/Todos/index.ctp:5 View/Todos/ui.ctp:13 View/Todos/view.ctp:8
+#: View/Todos/index.ctp:5 View/Todos/ui.ctp:16 View/Todos/view.ctp:8
 msgid "List Todocategories"
 msgstr "Todo分類一覧"
 
@@ -475,7 +868,7 @@ msgstr "Todo一覧"
 
 #: View/Todocategories/add.ctp:7 View/Todocategories/edit.ctp:8
 #: View/Todocategories/index.ctp:6 View/Todocategories/view.ctp:9
-#: View/Todos/index.ctp:4 View/Todos/ui.ctp:9 View/Todos/view.ctp:7
+#: View/Todos/index.ctp:4 View/Todos/ui.ctp:12 View/Todos/view.ctp:7
 msgid "New Todo"
 msgstr ""
 
@@ -491,7 +884,7 @@ msgstr "Todo分類編集"
 #: View/Todohistories/add.ctp:7 View/Todohistories/edit.ctp:8
 #: View/Todohistories/index.ctp:6 View/Todohistories/view.ctp:9
 #: View/Todos/add.ctp:7 View/Todos/edit.ctp:8 View/Todos/index.ctp:6
-#: View/Todos/ui.ctp:15 View/Todos/view.ctp:9
+#: View/Todos/ui.ctp:18 View/Todos/view.ctp:9
 msgid "New Todocategory"
 msgstr "Todo分類追加"
 
@@ -505,7 +898,7 @@ msgid "Todocategory"
 msgstr "Todo分類"
 
 #: View/Todohistories/add.ctp:5 View/Todohistories/edit.ctp:6
-#: View/Todohistories/view.ctp:6 View/Todos/ui.ctp:11
+#: View/Todohistories/view.ctp:6 View/Todos/ui.ctp:14
 msgid "List Todohistories"
 msgstr "Todo履歴一覧"
 
@@ -531,7 +924,7 @@ msgstr "Todo履歴"
 
 #: View/Todohistories/view.ctp:45 View/Todos/view.ctp:40
 msgid "Completed"
-msgstr ""
+msgstr "完了日"
 
 #: View/Todos/add.ctp:22
 msgid "Add Todo"
@@ -549,17 +942,24 @@ msgstr ""
 msgid "Delete Todo"
 msgstr "Todo削除"
 
-#: Model/Memo.php:validation for field name Model/Memocategory.php:validation
-#: Model/Record.php:validation title Model/Recordcategory.php:validation
-#: Model/Todocategory.php:validation Model/Todohistory.php:validation
+#: Model/Calendar.php:validation for field title
+#: Model/Calendarcategory.php:validation name Model/Memo.php:validation
+#: Model/Memocategory.php:validation Model/Record.php:validation
+#: Model/Recordcategory.php:validation Model/Timelogcategory.php:validation
+#: Model/Timelogtask.php:validation Model/Todocategory.php:validation
+#: Model/Todohistory.php:validation
 msgid "notEmpty"
-msgstr ""
+msgstr "未入力です。"
 
-#: Model/Memocategory.php:validation for field position
-#: Model/Recordcategory.php:validation Model/Todocategory.php:validation
-msgid "numeric"
-msgstr ""
-
-#: Model/Record.php:validation for field eventdate
+#: Model/Calendar.php:validation for field start Model/Record.php:validation
+#: eventdate Model/Timelog.php:validation workdate
 msgid "date"
+msgstr ""
+
+#: Model/Calendarcategory.php:validation for field position
+#: Model/Memocategory.php:validation Model/Recordcategory.php:validation
+#: Model/Timelog.php:validation timelogcategory_id;validation worktime
+#: Model/Timelogcategory.php:validation Model/Timelogtask.php:validation
+#: Model/Todocategory.php:validation
+msgid "numeric"
 msgstr ""

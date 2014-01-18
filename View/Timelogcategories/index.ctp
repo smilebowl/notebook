@@ -29,9 +29,9 @@
 			<?php echo $this->Icon->link(__('Edit'), array('action' => 'edit', $timelogcategory['Timelogcategory']['id'])); ?>
 			<?php echo $this->Icon->postLink(__('Delete'), array('action' => 'delete', $timelogcategory['Timelogcategory']['id']), null, __('Are you sure you want to delete # %s?', $timelogcategory['Timelogcategory']['id'])); ?>
 		</td>
-		<td><?php echo h($timelogcategory['Timelogcategory']['id']); ?>&nbsp;</td>
+		<td class="right"><?php echo h($timelogcategory['Timelogcategory']['id']); ?>&nbsp;</td>
 		<td><?php echo h($timelogcategory['Timelogcategory']['name']); ?>&nbsp;</td>
-		<td><?php echo h($timelogcategory['Timelogcategory']['position']); ?>&nbsp;</td>
+		<td class="right"><?php echo h($timelogcategory['Timelogcategory']['position']); ?>&nbsp;</td>
 		<td><?php echo h($timelogcategory['Timelogcategory']['created']); ?>&nbsp;</td>
 	</tr>
 <?php endforeach; ?>
