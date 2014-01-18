@@ -5,6 +5,7 @@ $fn = 'data';
 // header
 
 $this->Csv->setRow(array(
+	__('Recordcategory'),
 	__('Id'),
 	__('Eventdate'),
 	__('Title'),
@@ -18,9 +19,10 @@ foreach ($records as $record) {
 		$fn = $record['Recordcategory']['name'];
 	}
 	$this->Csv->setRow(array(
+		$record['Recordcategory']['name'],
 		$record['Record']['id'],
 		$record['Record']['eventdate'],
-		strip_tags($record['Record']['title']),
+		strip_tags(preg_replace('/\<br(\s*)?\/?\>/i', "\n", $record['Record']['title'])),
 		$record['Record']['created'],
 	));
 }

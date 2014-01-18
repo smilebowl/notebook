@@ -19,11 +19,6 @@ or
 cake Migrations.migration run all -p
 ```
 
-## History
-
-* `todos.completed` , `todohistories.completed`  date type
-* delete `recors.position`
-
 ## Nginx設定
 
 ```
