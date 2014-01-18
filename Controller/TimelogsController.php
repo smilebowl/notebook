@@ -13,7 +13,8 @@ class TimelogsController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator');
+	public $components = array('Paginator', 'Search.Prg');
+	public $presetVars = true;
 
 
 	public function ui() {
@@ -151,8 +152,15 @@ class TimelogsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->Prg->commonProcess();
+		$this->Paginator->settings['conditions'] = $this->Timelog->parseCriteria($this->Prg->parsedParams());
+
 		$this->Timelog->recursive = 0;
 		$this->set('timelogs', $this->Paginator->paginate());
+		$timelogcategories = $this->Timelog->Timelogcategory->find('list');
+
+		$timelogtasks = $this->Timelog->Timelogtask->find('list');
+		$this->set(compact('timelogcategories', 'timelogtasks'));
 	}
 
 /**

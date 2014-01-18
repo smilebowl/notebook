@@ -8,6 +8,15 @@ App::uses('AppModel', 'Model');
  */
 class Timelog extends AppModel {
 
+	public $actsAs = array('Search.Searchable');
+	public $filterArgs = array(
+		'timelogcategory_id' => array('type' => 'value'),
+		'timelogtask_id' => array('type' => 'value'),
+		'start' => array('type' => 'value', 'field' => 'workdate >='),
+		'end' => array('type' => 'value', 'field' => 'workdate <='),
+		'title' => array('type' => 'like'),
+	);
+
 /**
  * Validation rules
  *
