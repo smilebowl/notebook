@@ -90,7 +90,7 @@ $(document).ready(function () {
 
 			eventSources: [
 				{
-					url: 'https://www.google.com/calendar/feeds/ja.japanese%23holiday%40group.v.calendar.google.com/public/basic',
+					url: 'http://www.google.com/calendar/feeds/ja.japanese%23holiday%40group.v.calendar.google.com/public/basic',
 					color: '#2c3e50', //'#f0e4e4',
 					textColor: '#fff',
 					editable: false,
@@ -98,6 +98,9 @@ $(document).ready(function () {
 						$(events).each(function () {
 							this.url = null;	// remove link
 						});
+					},
+					error: function () {
+						window.alert('there was an error while fetching events!');
 					}
 				}
 			],

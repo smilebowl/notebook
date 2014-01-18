@@ -16,6 +16,8 @@ class TodosController extends AppController {
 	public $components = array('Paginator', 'Search.Prg');
 	public $presetVars = true;
 
+	public $helpers = array('Csv');
+
 
 	// add
 
@@ -163,6 +165,15 @@ class TodosController extends AppController {
 
 		$todocategories = $this->Todo->Todocategory->find('list');
 		$this->set(compact('todocategories'));
+	}
+
+	public function csv() {
+		Configure::write('debug', 0);
+		$this->layout = 'ajax';
+		$this->Todo->recursive = 0;
+		$todos = $this->Todo->find('all');
+		$this->set(compact('todos'));
+		$this->render('csv', 'ajax');
 	}
 
 /**

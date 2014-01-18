@@ -14,6 +14,7 @@ class RecordsController extends AppController {
  * @var array
  */
 	public $components = array('Paginator');
+	public $helpers = array('Csv');
 
 	public function ui() {
 		$this->Record->Recordcategory->recursive = 0;
@@ -24,6 +25,22 @@ class RecordsController extends AppController {
 		);
 //		$this->set('records', $this->Record->Recordcategory->find('all'));
 	}
+
+	public function download($category_id = null) {
+//		Configure::write('debug', 0);
+		$this->layout = 'ajax';
+		$this->Record->recursive = 0;
+
+//		$category = $this->request->data['recordcategory_id'];
+		$records = $this->Record->find('all', array(
+			'conditions' => array('recordcategory_id' => $category_id),
+			'order' => 'eventdate desc'
+		));
+
+		$this->set(compact('records'));
+		$this->render('csv', 'ajax');
+	}
+
 
 	public function getRecords() {
 		Configure::write('debug', 0);

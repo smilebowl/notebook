@@ -5,6 +5,7 @@
 			<span class="title" contenteditable="true"></span>
 			<span class="actions">
 				<i class="insert glyphicon glyphicon-plus" title="アイテム追加"></i>
+				<i class="download glyphicon glyphicon-save" title="CSVダウンロード"></i>
 				<i class="toggletool glyphicon glyphicon-wrench" title="ツール"></i>
 				<span class="toolbox" style="display:none;">
 					<input type="checkbox" class="tooglecheckall" />

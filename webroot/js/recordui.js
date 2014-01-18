@@ -19,17 +19,6 @@ $(document).ready(function () {
 	});
 
 
-	// for reload
-
-//	function reset() {
-//
-//		// set title
-//		$('.widget-header span.title').text($('.categories .active').text());
-////		$('.widget-header').disableSelection();
-////		$('.widget i').tooltip();
-////		$('div.text').niceScroll();
-//	}
-
 	// select category
 
 	$('div.infobox a.categoryselector').click(function () {
@@ -80,6 +69,7 @@ $(document).ready(function () {
 	$('#recordui').on('focus', 'span.title', function () {
 		$(this).data('before', $(this).text());
 	});
+
 	$('#recordui').on('blur', 'span.title', function () {
 		if ($(this).text() === $(this).data('before')) {
 			$(this).removeData('before');
@@ -200,6 +190,22 @@ $(document).ready(function () {
 			}
 		);
 		$(this).closest('.actions').find('i.toggletool').click();
+	});
+
+	// csv download
+
+	$('#recordui').on('click', 'i.download', function () {
+		location.href = 'download/' +
+			$(this).closest("[id^=category-]").attr('id').replace('category-', '');
+		return;
+
+//		var category = $(this).closest("[id^=category-]").attr('id').replace('category-', '');
+//		$.post(
+//			'download',
+//			{
+//				'recordcategory_id': category.attr('id').replace('category-', '')
+//			}
+//		);
 	});
 
 	// event date for new item
