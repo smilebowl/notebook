@@ -21,7 +21,13 @@
 	));
 	echo $this->Form->submit('Search', array(
 		'div' => 'form-group',
-		'class' => 'btn btn-primary'
+		'class' => 'btn btn-primary',
+		'name' => 'search'
+	));
+	echo $this->Form->submit('CSV', array(
+		'div' => 'form-group',
+		'class' => 'btn btn-primary',
+		'name' => 'csv'
 	));
 	echo $this->Form->input('todocategory_id', array('empty'=>'---'));
 	echo $this->Form->input('title', array(

@@ -157,14 +157,30 @@ class TodosController extends AppController {
  * @return void
  */
 	public function index() {
+		if (isset($this->request->data['csv'])) {
+			$this->params['named'] = array('csv' => 'csv');
+		}
+
 		$this->Prg->commonProcess();
-		$this->Paginator->settings['conditions'] = $this->Todo->parseCriteria($this->Prg->parsedParams());
 
-		$this->Todo->recursive = 0;
-		$this->set('todos', $this->Paginator->paginate());
+//		$this->log($this->params);
 
-		$todocategories = $this->Todo->Todocategory->find('list');
-		$this->set(compact('todocategories'));
+		if (isset($this->params['named']['csv'])) {
+//			Configure::write('debug', 0);
+//			$this->layout = 'ajax';
+//			$this->autoRender = false;
+			$this->set('todos', $this->Todo->find('all', array(
+				'conditions' => $this->Todo->parseCriteria($this->Prg->parsedParams()),
+				'order' => 'todocategory_id, Todo.id'
+			)));
+			$this->render('csv', 'ajax');
+		} else {
+			$this->Paginator->settings['conditions'] = $this->Todo->parseCriteria($this->Prg->parsedParams());
+			$this->Todo->recursive = 0;
+			$this->set('todos', $this->Paginator->paginate());
+			$todocategories = $this->Todo->Todocategory->find('list');
+			$this->set(compact('todocategories'));
+		}
 	}
 
 	public function csv() {
