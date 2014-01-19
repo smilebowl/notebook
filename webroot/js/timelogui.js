@@ -9,15 +9,35 @@ $(document).ready(function () {
 
 	function getTimelog() {
 		$.post(
+			'getTimelog_summay',
+			{
+				'workdate': currentWorkdate
+			},
+			function (html) {
+				$('#summaryOfMonth').html(html);
+				$('#summaryOfMonth .widget-header span.title').text(currentWorkdate.substr(0, 7) + ' Summary');
+				$('#summaryOfMonth tr:not(.sumamry-row)').hide();
+			}
+		);
+		$.post(
 			'getTimelogs',
 			{
 				'workdate': currentWorkdate
 			},
 			function (html) {
 				$('#timelogui').html(html);
-				$('.widget-header span.title').text(currentWorkdate);
+				$('#timelogui .widget-header span.title').text(currentWorkdate);
 			}
 		);
+//		$.post(
+//			'getTimelog_list',
+//			{
+//				'workdate': currentWorkdate
+//			},
+//			function (html) {
+//				$('#timeloglist').html(html);
+//			}
+//		);
 	}
 
 	function showOverlay() {
@@ -26,6 +46,14 @@ $(document).ready(function () {
 	function hideOverlay() {
 		$('.widget-content').removeClass('overlay');
 	}
+
+	// scroll
+
+	$('body').niceScroll({
+		scrollspeed: 50,
+		mousescrollstep: 40,
+		cursoropacitymin: 0.4
+	});
 
 	// calendar
 
@@ -38,6 +66,11 @@ $(document).ready(function () {
 		}
 	});
 //	calendar.datepicker('setDate', 'today+1');
+
+	$('#summaryOfMonth').on('click', '.widget-header', function () {
+		$('#summaryOfMonth tr:not(.sumamry-row)').toggle();
+	});
+
 
 	// update timelog
 
@@ -177,15 +210,10 @@ $(document).ready(function () {
 	$('#timelogui').on('keydown', 'input', function (e) {
 		// tab
 //		if (e.which === 9) {
-//			e.preventDefault();
-//			if (e.shiftKey) {
-//				$(this).closest('tr').prev().find('.timelog_worktime').focus();
-//			} else {
-//				$(this).closest('tr').next().find('.timelog_worktime').focus();
-//			}
 //		}
 		// enter
-//		if (e.which === 13) {
+		if (e.which === 13) {
+			$('#updateTimelog').click();
 //			var inputs = $(this).parents("table").eq(0).find(":input"),
 //				idx = inputs.index(this);
 //			if (idx === inputs.length - 1) {
@@ -194,21 +222,15 @@ $(document).ready(function () {
 //				inputs[idx + 1].focus();
 //			}
 //			return false;
-//		}
+		}
 		// down, enter
 //		if (e.which === 13 || e.which === 40) {
-//			e.preventDefault();
-//			$(this).closest('tr').next().find('.text').focus();
 //		}
 		// escape
 //		if (e.which === 27) {
-//			e.preventDefault();
-//			$(this).text($(this).data('before'));
 //		}
 		// up arrow
 //		if (e.which === 38) {
-//			e.preventDefault();
-//			$(this).closest('tr').prev().find('.text').focus();
 //		}
 		// insert item into next posion
 		if (e.which === 45 && !e.shiftKey) {
@@ -216,5 +238,10 @@ $(document).ready(function () {
 			$(this).closest('.widget').find('i.insert').click();
 		}
 	});
+
+	// select todat
+
+	currentWorkdate = calendar.val();
+	getTimelog();
 
 });

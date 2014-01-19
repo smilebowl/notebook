@@ -29,6 +29,12 @@ table.timeloglist i.remove {
 table.timeloglist i.handle {
   color: #5cb85c;
 }
+table.timelogsummay {
+  margin-bottom: 0;
+}
+table.timelogsummay tr.sumamry-row {
+  background-color: #eaf6ea;
+}
 input.timelog_worktime {
   width: 70px;
   text-align: right;

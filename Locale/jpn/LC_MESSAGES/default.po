@@ -375,7 +375,7 @@ msgstr "Calendar一覧"
 #: View/Calendarcategories/index.ctp:6 View/Calendarcategories/view.ctp:9
 #: View/Calendars/index.ctp:4 View/Calendars/view.ctp:7
 msgid "New Calendar"
-msgstr ""
+msgstr "Calendar追加"
 
 #: View/Calendarcategories/add.ctp:22
 msgid "Add Calendarcategory"
@@ -431,7 +431,7 @@ msgstr ""
 #: View/Todohistories/view.ctp:5 View/Todos/edit.ctp:5 View/Todos/index.ctp:62
 #: View/Todos/view.ctp:5
 msgid "Are you sure you want to delete # %s?"
-msgstr ""
+msgstr "本当に # %S を削除しますか。"
 
 #: View/Calendarcategories/edit.ctp:23 View/Calendarcategories/view.ctp:4
 msgid "Edit Calendarcategory"
@@ -456,9 +456,7 @@ msgstr "Calendar分類"
 msgid ""
 "Page {:page} of {:pages}, showing {:current} records out of {:count} total, "
 "starting on record {:start}, ending on {:end}"
-msgstr ""
-"record : {:start} - {:end} / total {:count} records, Page : {:page} / {:"
-"pages}"
+msgstr "{:start} - {:end} / total {:count} records, Page : {:page} / {:pages}"
 
 #: View/Calendarcategories/index.ctp:28 View/Calendars/index.ctp:60
 #: View/Helper/IconHelper.php:20;24 View/Memocategories/index.ctp:28
@@ -503,14 +501,14 @@ msgstr "ID"
 #: View/Timelogcategories/view.ctp:20 View/Timelogtasks/view.ctp:20
 #: View/Todocategories/view.ctp:20
 msgid "Name"
-msgstr ""
+msgstr "名前"
 
 #: View/Calendarcategories/view.ctp:25 View/Memocategories/view.ctp:25
 #: View/Recordcategories/view.ctp:25 View/Timelogcategories/view.ctp:25
 #: View/Timelogtasks/view.ctp:25 View/Todocategories/view.ctp:25
 #: View/Todohistories/view.ctp:30 View/Todos/view.ctp:30
 msgid "Position"
-msgstr ""
+msgstr "順番"
 
 #: View/Calendarcategories/view.ctp:30 View/Calendars/view.ctp:55
 #: View/Memocategories/view.ctp:30 View/Memos/view.ctp:45
@@ -524,11 +522,11 @@ msgstr "作成日"
 
 #: View/Calendars/add.ctp:22
 msgid "Add Calendar"
-msgstr ""
+msgstr "Calendar追加"
 
 #: View/Calendars/edit.ctp:23 View/Calendars/view.ctp:4
 msgid "Edit Calendar"
-msgstr ""
+msgstr "Calendar編集"
 
 #: View/Calendars/index.ctp:10
 msgid "Calendars"
@@ -547,7 +545,7 @@ msgstr "Calendar削除"
 #: View/Timelogs/view.ctp:37 View/Todohistories/view.ctp:20
 #: View/Todos/view.ctp:20
 msgid "Title"
-msgstr ""
+msgstr "タイトル"
 
 #: View/Calendars/view.ctp:30
 msgid "Start"
@@ -739,7 +737,7 @@ msgstr "Record削除"
 
 #: View/Records/view.ctp:35 View/Todohistories/view.ctp:35
 msgid "Priority"
-msgstr ""
+msgstr "重要"
 
 #: View/Timelogcategories/add.ctp:5 View/Timelogcategories/edit.ctp:6
 #: View/Timelogcategories/view.ctp:6 View/Timelogs/add.ctp:6
@@ -871,7 +869,7 @@ msgstr "Todo一覧"
 #: View/Todocategories/index.ctp:6 View/Todocategories/view.ctp:9
 #: View/Todos/index.ctp:4 View/Todos/ui.ctp:12 View/Todos/view.ctp:7
 msgid "New Todo"
-msgstr ""
+msgstr "Todo追加"
 
 #: View/Todocategories/add.ctp:22
 msgid "Add Todocategory"
@@ -955,7 +953,7 @@ msgstr "未入力です。"
 #: Model/Calendar.php:validation for field start Model/Record.php:validation
 #: eventdate Model/Timelog.php:validation workdate
 msgid "date"
-msgstr ""
+msgstr "日付ではありません。"
 
 #: Model/Calendarcategory.php:validation for field position
 #: Model/Memocategory.php:validation Model/Recordcategory.php:validation
@@ -963,4 +961,4 @@ msgstr ""
 #: Model/Timelogcategory.php:validation Model/Timelogtask.php:validation
 #: Model/Todocategory.php:validation
 msgid "numeric"
-msgstr ""
+msgstr "数字ではありません。"

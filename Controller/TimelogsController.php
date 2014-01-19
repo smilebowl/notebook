@@ -18,13 +18,7 @@ class TimelogsController extends AppController {
 
 
 	public function ui() {
-//		$this->Timelog->Timelogcategory->recursive = 0;
-//		$this->set('timelogcategories',
-//			$this->Timelog->Timelogcategory->find('all',array(
-//				'order' => 'position'
-//			))
-//		);
-//		$this->set('timelogs', $this->Timelog->Timelogcategory->find('all'));
+		// no process
 	}
 
 	public function getTimelogs() {
@@ -36,13 +30,91 @@ class TimelogsController extends AppController {
 		$this->set('timelogs', $this->Timelog->find('all', array(
 			'conditions' => array('workdate' => $workdate),
 		)));
-//		$this->set('timelogcategory_id', $category);
 
 		$timelogcategories = $this->Timelog->Timelogcategory->find('list');
 		$timelogtasks = $this->Timelog->Timelogtask->find('list');
 		$this->set(compact('timelogcategories', 'timelogtasks'));
 
 		$this->render('ui_category', 'ajax');
+	}
+
+	// summary
+
+	public function getTimelog_summay() {
+		$this->autoRender = false;
+
+		$workdate = $this->request->data['workdate'];
+
+		$this->Timelog->virtualFields = array('sum_worktime' => 'SUM(worktime)');
+		$summary = $this->Timelog->find('all', array(
+			'conditions' => array(
+				'workdate >=' => date('Y-m-01', strtotime($workdate)),
+				'workdate <=' => date('Y-m-t', strtotime($workdate))
+			),
+			'group' => array('timelogcategory_id', 'timelogtask_id'),
+			'fields' => array(
+				'timelogcategory_id',
+				'Timelogcategory.Name',
+				'timelogtask_id',
+				'Timelogtask.Name',
+				'sum_worktime'
+			),
+		));
+
+		$this->set(compact('summary'));
+		$this->render('ui_sum_month', 'ajax');
+	}
+
+	// detail list
+
+	public function getTimelog_list() {
+		$this->autoRender = false;
+
+		$workdate = $this->request->data['workdate'];
+
+//		$list = $this->Timelog->Timelogcategory->Behaviors->load('Containable');
+		$list = $this->Timelog->Timelogcategory->find('all', array(
+//		$list = $this->Timelog->find('all', array(
+			'contain' => array(
+				'Timelog' => array(
+					'conditions' => array(
+						'Timelog.workdate >=' => date('Y-m-01', strtotime($workdate)),
+						'Timelog.workdate <=' => date('Y-m-t', strtotime($workdate)),
+					),
+					'fields' => array('id', 'worktime'),
+					array('Timelogtask')
+//					array('Timelogtask' => array(
+//						'fields' => array('id, Timelogtask.Name'),
+//					)),
+				),
+			),
+			'fields' => 'id, Timelogcategory.name',
+//			'conditions' => array(
+//				'Timelog.workdate >=' => date('Y-m-01', strtotime($workdate)),
+//				'Timelog.workdate <=' => date('Y-m-t', strtotime($workdate))
+//			),
+//			'fields' => array(
+//				'Timelog.timelogcategory_id',
+//				'Timelogcategory.Name',
+//				'Timelog.timelogtask_id',
+//				'Timelogtask.Name',
+//				'Timelog.worktime',
+//			),
+		));
+
+		$this->Timelog->Timelogcategory->recursive = 2;
+		$list = $this->Timelog->Timelogcategory->find('all', array(
+			'fields' => array(
+				'Timelog.timelogcategory_id',
+				'Timelogcategory.Name',
+				'Timelog.timelogtask_id',
+				'Timelogtask.Name',
+				'Timelog.worktime',
+			),
+		));
+
+		$this->set(compact('list'));
+		$this->render('ui_list_month', 'ajax');
 	}
 
 	// update timelogs
@@ -76,9 +148,6 @@ class TimelogsController extends AppController {
 
 
 
-
-
-
 	// delete checked items
 
 	public function ajax_deleteitems() {
@@ -90,19 +159,6 @@ class TimelogsController extends AppController {
 		}
 	}
 
-	// add
-
-//	public function ajax_add() {
-//		Configure::write('debug', 0);
-//		$this->autoRender = false;
-////		$this->layout = "ajax";
-//
-//		$this->Timelog->create();
-//		$this->Timelog->save($this->request->data, false);
-//		$timelog = $this->Timelog->read();
-//		$this->set('timelog', $timelog);
-//		$this->render('ui_element', 'ajax');
-//	}
 
 	// update
 

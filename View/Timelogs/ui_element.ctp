@@ -19,5 +19,5 @@ $id = $timelog['Timelog']['id'];
 		<?php echo $this->Form->input('timelogtask_id', array('name'=>'timelogtask_id','class'=>'form-control input-sm','label'=>false,'empty'=>'---','value'=>$timelog['Timelog']['timelogtask_id'])); ?>
 	</td>
 	<td><input name="worktime" name="worktime" value="<?php echo number_format($timelog['Timelog']['worktime'], 2); ?>" class="form-control input-sm timelog_worktime" placeholder="worktime" type="number" /></td>
-	<td><input name="title" name="title" value="<?php echo $timelog['Timelog']['title']?>" class="form-control input-sm timelog_title" placeholder="title" type="text"></td>
+	<td><input name="title" name="title" value="<?php echo $timelog['Timelog']['title']?>" class="form-control input-sm timelog_title" placeholder="(title)" type="text"></td>
 </tr>
