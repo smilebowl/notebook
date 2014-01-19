@@ -26,7 +26,7 @@
 		echo $this->Form->input('title');
 		echo $this->Form->input('todocategory_id');
 		echo $this->Form->input('position');
-		echo $this->Form->input('completed');
+		echo $this->Form->input('completed', array('type' => 'text', 'class' => 'form-control input_date'));
 	?>
 	</fieldset>
 <?php echo $this->Form->submit(__('Submit'), array('class'=>'btn btn-primary')); ?>

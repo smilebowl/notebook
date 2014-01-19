@@ -47,6 +47,7 @@ $(document).ready(function () {
 
 });
 
+
 /* select text */
 jQuery.fn.selectText = function () {
 	'use strict';

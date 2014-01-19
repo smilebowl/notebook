@@ -2,7 +2,11 @@
 //	$completed = ($todo['completed']) ? 'completed' : '';
 	$completeguide = $completed = '';
 	if ($todo['completed']) {
-		$completed = 'completed';
+		if ($todo['completed'] === date('Y-m-d')) {
+			$completed = 'completed completedToday';
+		} else {
+			$completed = 'completed';
+		}
 		$completeguide = "完了日：{$todo['completed']}";
 	}
 	$priority = ($todo['priority']) ? ' high-priority' : '';

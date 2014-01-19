@@ -20,6 +20,13 @@ $(document).ready(function () {
 		);
 	}
 
+	function showOverlay() {
+		$('.widget-content').addClass('overlay');
+	}
+	function hideOverlay() {
+		$('.widget-content').removeClass('overlay');
+	}
+
 	// calendar
 
 	calendar = $('#calendar').datepicker({
@@ -39,6 +46,7 @@ $(document).ready(function () {
 		var timelogs = [], hasError, chkWorktime;
 		hasError = false;
 		$('table.timeloglist .input-error').removeClass('input-error');
+		showOverlay();
 
 		// check & make array for post
 
@@ -74,6 +82,7 @@ $(document).ready(function () {
 //			dataType:	"json",
 			success: function (data, status, xhr) {
 				getTimelog(); // reload
+				hideOverlay();
 			}
 		});
 	});

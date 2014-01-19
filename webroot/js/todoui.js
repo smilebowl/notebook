@@ -3,7 +3,7 @@
 $(document).ready(function () {
 	'use strict';
 
-	var hiddencomplete = false;
+	var hiddencompleted = false;
 
 	$('body').niceScroll({
 		scrollspeed: 50,
@@ -44,8 +44,8 @@ $(document).ready(function () {
 	// toggle completed rows
 
 	$('i.icon').dblclick(function () {
-		$('.completed').toggle(hiddencomplete);
-		hiddencomplete = !hiddencomplete;
+		$('.completed').toggle(hiddencompleted);
+		hiddencompleted = !hiddencompleted;
 	});
 
 	// insert new item
@@ -111,10 +111,15 @@ $(document).ready(function () {
 		if (todo.hasClass('completed')) {
 			completed = null;
 			$(this).removeAttr('title');
+			todo.removeClass('completed completedToday');
 		} else {
 			$(this).attr('title', '完了日：' + completed);
+			todo.addClass('completed completedToday');
 		}
-		todo.toggleClass('completed');
+//		todo.toggleClass('completed');
+//		if (todo.hasClass('completed')) {
+//			todo.addClass('completedToday');
+//		}
 		$.post(
 			'ajax_edit',
 			{
@@ -175,7 +180,7 @@ $(document).ready(function () {
 		if (chks.length === 0) { return false; }
 		chks.each(function () {
 			idlist.push($(this).attr('id').replace('todo-', ''));
-			$(this).addClass('completed');
+			$(this).addClass('completed completedToday');
 		});
 		$.post(
 			'ajax_completeitems',

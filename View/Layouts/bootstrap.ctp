@@ -19,6 +19,9 @@
 <!--	<link href="//netdna.bootstrapcdn.com/bootswatch/3.0.2/yeti/bootstrap.min.css" rel="stylesheet">-->
 <!--	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/themes/redmond/jquery-ui.css" type="text/css" media="all" />-->
 	<?php
+
+		echo $this->Html->meta('icon', 'book_blue.ico');
+
 		echo $this->Html->css('/js/vendar/bootstrap/css/bootstrap.min');
 //		echo $this->Html->css('/js/vendar/jqueryui/themes/base/jquery-ui.min');
 		echo $this->Html->css('/js/vendar/jqueryui/themes/redmond/jquery-ui.min');

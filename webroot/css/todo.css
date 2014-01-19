@@ -40,6 +40,9 @@ table.todolist i.done {
 tr.completed {
   background-color: #eeeeee;
 }
+tr.completedToday {
+  background-color: #B0B8F1;
+}
 .sortable-placeholder {
   background-color: #80c780;
   border: 1px solid #3299bb;
