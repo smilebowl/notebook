@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2014-01-18 21:10+0900\n"
+"POT-Creation-Date: 2014-01-21 22:18+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -33,24 +33,44 @@ msgstr ""
 msgid "The calendarcategory could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/CalendarsController.php:148;182;209
+#: Controller/CalendarsController.php:181;215;242
 msgid "Invalid calendar"
 msgstr ""
 
-#: Controller/CalendarsController.php:163;186
+#: Controller/CalendarsController.php:196;219
 msgid "The calendar has been saved."
 msgstr ""
 
-#: Controller/CalendarsController.php:166;189
+#: Controller/CalendarsController.php:199;222
 msgid "The calendar could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/CalendarsController.php:213
+#: Controller/CalendarsController.php:246
 msgid "The calendar has been deleted."
 msgstr ""
 
-#: Controller/CalendarsController.php:215
+#: Controller/CalendarsController.php:248
 msgid "The calendar could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/HolidaysController.php:31;101;122
+msgid "The holiday has been saved."
+msgstr ""
+
+#: Controller/HolidaysController.php:86;118;143
+msgid "Invalid holiday"
+msgstr ""
+
+#: Controller/HolidaysController.php:104;125
+msgid "The holiday could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/HolidaysController.php:147
+msgid "The holiday has been deleted."
+msgstr ""
+
+#: Controller/HolidaysController.php:149
+msgid "The holiday could not be deleted. Please, try again."
 msgstr ""
 
 #: Controller/MemocategoriesController.php:37;69;94
@@ -153,23 +173,23 @@ msgstr ""
 msgid "The timelogcategory could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/TimelogsController.php:175;210;238
+#: Controller/TimelogsController.php:231;266;294
 msgid "Invalid timelog"
 msgstr ""
 
-#: Controller/TimelogsController.php:190;214
+#: Controller/TimelogsController.php:246;270
 msgid "The timelog has been saved."
 msgstr ""
 
-#: Controller/TimelogsController.php:193;217
+#: Controller/TimelogsController.php:249;273
 msgid "The timelog could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/TimelogsController.php:242
+#: Controller/TimelogsController.php:298
 msgid "The timelog has been deleted."
 msgstr ""
 
-#: Controller/TimelogsController.php:244
+#: Controller/TimelogsController.php:300
 msgid "The timelog could not be deleted. Please, try again."
 msgstr ""
 
@@ -233,23 +253,23 @@ msgstr ""
 msgid "The todohistory could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/TodosController.php:188;222;249
+#: Controller/TodosController.php:204;238;265
 msgid "Invalid todo"
 msgstr ""
 
-#: Controller/TodosController.php:203;226
+#: Controller/TodosController.php:219;242
 msgid "The todo has been saved."
 msgstr ""
 
-#: Controller/TodosController.php:206;229
+#: Controller/TodosController.php:222;245
 msgid "The todo could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/TodosController.php:253
+#: Controller/TodosController.php:269
 msgid "The todo has been deleted."
 msgstr ""
 
-#: Controller/TodosController.php:255
+#: Controller/TodosController.php:271
 msgid "The todo could not be deleted. Please, try again."
 msgstr ""
 
@@ -335,6 +355,8 @@ msgstr ""
 #: View/Calendarcategories/index.ctp:2;19 View/Calendarcategories/view.ctp:2
 #: View/Calendars/add.ctp:2 View/Calendars/edit.ctp:2
 #: View/Calendars/index.ctp:2;46 View/Calendars/view.ctp:2
+#: View/Holidays/add.ctp:2 View/Holidays/edit.ctp:2
+#: View/Holidays/index.ctp:2;24 View/Holidays/view.ctp:2
 #: View/Memocategories/add.ctp:2 View/Memocategories/edit.ctp:2
 #: View/Memocategories/index.ctp:2;19 View/Memocategories/view.ctp:2
 #: View/Memos/add.ctp:2 View/Memos/edit.ctp:2 View/Memos/index.ctp:2;19
@@ -352,7 +374,7 @@ msgstr ""
 #: View/Todocategories/index.ctp:2;19 View/Todocategories/view.ctp:2
 #: View/Todohistories/add.ctp:2 View/Todohistories/edit.ctp:2
 #: View/Todohistories/index.ctp:2;49 View/Todohistories/view.ctp:2
-#: View/Todos/add.ctp:2 View/Todos/edit.ctp:2 View/Todos/index.ctp:2;50
+#: View/Todos/add.ctp:2 View/Todos/edit.ctp:2 View/Todos/index.ctp:2;56
 #: View/Todos/ui.ctp:8 View/Todos/view.ctp:2
 msgid "Actions"
 msgstr ""
@@ -383,6 +405,7 @@ msgstr "Calendar分類追加"
 
 #: View/Calendarcategories/add.ctp:28 View/Calendarcategories/edit.ctp:30
 #: View/Calendars/add.ctp:33 View/Calendars/edit.ctp:35
+#: View/Holidays/add.ctp:26 View/Holidays/edit.ctp:28
 #: View/Memocategories/add.ctp:28 View/Memocategories/edit.ctp:30
 #: View/Memos/add.ctp:31 View/Memos/edit.ctp:33
 #: View/Recordcategories/add.ctp:28 View/Recordcategories/edit.ctp:30
@@ -398,37 +421,39 @@ msgstr ""
 
 #: View/Calendarcategories/edit.ctp:5 View/Calendarcategories/index.ctp:30
 #: View/Calendars/edit.ctp:5 View/Calendars/index.ctp:62
-#: View/Helper/IconHelper.php:37;40 View/Memocategories/edit.ctp:5
+#: View/Helper/IconHelper.php:37;40 View/Holidays/edit.ctp:5
+#: View/Holidays/index.ctp:35 View/Memocategories/edit.ctp:5
 #: View/Memocategories/index.ctp:30 View/Memos/edit.ctp:5
 #: View/Memos/index.ctp:33 View/Recordcategories/edit.ctp:5
 #: View/Recordcategories/index.ctp:30 View/Records/edit.ctp:5
-#: View/Records/index.ctp:32 View/Timelogcategories/edit.ctp:5
+#: View/Records/index.ctp:31 View/Timelogcategories/edit.ctp:5
 #: View/Timelogcategories/index.ctp:30 View/Timelogs/edit.ctp:5
-#: View/Timelogs/index.ctp:67 View/Timelogtasks/edit.ctp:5
+#: View/Timelogs/index.ctp:66 View/Timelogtasks/edit.ctp:5
 #: View/Timelogtasks/index.ctp:30 View/Todocategories/edit.ctp:5
 #: View/Todocategories/index.ctp:30 View/Todohistories/edit.ctp:5
 #: View/Todohistories/index.ctp:61 View/Todos/edit.ctp:5
-#: View/Todos/index.ctp:62
+#: View/Todos/index.ctp:68
 msgid "Delete"
 msgstr ""
 
 #: View/Calendarcategories/edit.ctp:5 View/Calendarcategories/index.ctp:30
 #: View/Calendarcategories/view.ctp:5 View/Calendars/edit.ctp:5
 #: View/Calendars/index.ctp:62 View/Calendars/view.ctp:5
-#: View/Memocategories/edit.ctp:5 View/Memocategories/index.ctp:30
-#: View/Memocategories/view.ctp:5 View/Memos/edit.ctp:5
-#: View/Memos/index.ctp:33 View/Memos/view.ctp:5
+#: View/Holidays/edit.ctp:5 View/Holidays/index.ctp:35
+#: View/Holidays/view.ctp:5 View/Memocategories/edit.ctp:5
+#: View/Memocategories/index.ctp:30 View/Memocategories/view.ctp:5
+#: View/Memos/edit.ctp:5 View/Memos/index.ctp:33 View/Memos/view.ctp:5
 #: View/Recordcategories/edit.ctp:5 View/Recordcategories/index.ctp:30
 #: View/Recordcategories/view.ctp:5 View/Records/edit.ctp:5
-#: View/Records/index.ctp:32 View/Records/view.ctp:5
+#: View/Records/index.ctp:31 View/Records/view.ctp:5
 #: View/Timelogcategories/edit.ctp:5 View/Timelogcategories/index.ctp:30
 #: View/Timelogcategories/view.ctp:5 View/Timelogs/edit.ctp:5
-#: View/Timelogs/index.ctp:67 View/Timelogs/view.ctp:5
+#: View/Timelogs/index.ctp:66 View/Timelogs/view.ctp:5
 #: View/Timelogtasks/edit.ctp:5 View/Timelogtasks/index.ctp:30
 #: View/Timelogtasks/view.ctp:5 View/Todocategories/edit.ctp:5
 #: View/Todocategories/index.ctp:30 View/Todocategories/view.ctp:5
 #: View/Todohistories/edit.ctp:5 View/Todohistories/index.ctp:61
-#: View/Todohistories/view.ctp:5 View/Todos/edit.ctp:5 View/Todos/index.ctp:62
+#: View/Todohistories/view.ctp:5 View/Todos/edit.ctp:5 View/Todos/index.ctp:68
 #: View/Todos/view.ctp:5
 msgid "Are you sure you want to delete # %s?"
 msgstr "本当に # %S を削除しますか。"
@@ -443,38 +468,39 @@ msgstr "Calendar分類編集"
 msgid "New Calendarcategory"
 msgstr "Calendar分類追加"
 
-#: View/Calendarcategories/index.ctp:10 View/Elements/menu.ctp:127
+#: View/Calendarcategories/index.ctp:10 View/Elements/menu.ctp:128
 msgid "Calendarcategories"
 msgstr "Calendar分類"
 
 #: View/Calendarcategories/index.ctp:14 View/Calendars/index.ctp:41
-#: View/Memocategories/index.ctp:14 View/Memos/index.ctp:14
-#: View/Recordcategories/index.ctp:14 View/Records/index.ctp:14
-#: View/Timelogcategories/index.ctp:14 View/Timelogs/index.ctp:47
-#: View/Timelogtasks/index.ctp:14 View/Todocategories/index.ctp:14
-#: View/Todohistories/index.ctp:44 View/Todos/index.ctp:45
+#: View/Holidays/index.ctp:19 View/Memocategories/index.ctp:14
+#: View/Memos/index.ctp:14 View/Recordcategories/index.ctp:14
+#: View/Records/index.ctp:14 View/Timelogcategories/index.ctp:14
+#: View/Timelogs/index.ctp:47 View/Timelogtasks/index.ctp:14
+#: View/Todocategories/index.ctp:14 View/Todohistories/index.ctp:44
+#: View/Todos/index.ctp:51
 msgid ""
 "Page {:page} of {:pages}, showing {:current} records out of {:count} total, "
 "starting on record {:start}, ending on {:end}"
 msgstr "{:start} - {:end} / total {:count} records, Page : {:page} / {:pages}"
 
 #: View/Calendarcategories/index.ctp:28 View/Calendars/index.ctp:60
-#: View/Helper/IconHelper.php:20;24 View/Memocategories/index.ctp:28
-#: View/Memos/index.ctp:31 View/Recordcategories/index.ctp:28
-#: View/Records/index.ctp:30 View/Timelogcategories/index.ctp:28
-#: View/Timelogs/index.ctp:65 View/Timelogtasks/index.ctp:28
-#: View/Todocategories/index.ctp:28 View/Todohistories/index.ctp:59
-#: View/Todos/index.ctp:60
+#: View/Helper/IconHelper.php:20;24 View/Holidays/index.ctp:33
+#: View/Memocategories/index.ctp:28 View/Memos/index.ctp:31
+#: View/Recordcategories/index.ctp:28 View/Records/index.ctp:29
+#: View/Timelogcategories/index.ctp:28 View/Timelogs/index.ctp:64
+#: View/Timelogtasks/index.ctp:28 View/Todocategories/index.ctp:28
+#: View/Todohistories/index.ctp:59 View/Todos/index.ctp:66
 msgid "View"
 msgstr ""
 
 #: View/Calendarcategories/index.ctp:29 View/Calendars/index.ctp:61
-#: View/Helper/IconHelper.php:26;29 View/Memocategories/index.ctp:29
-#: View/Memos/index.ctp:32 View/Recordcategories/index.ctp:29
-#: View/Records/index.ctp:31 View/Timelogcategories/index.ctp:29
-#: View/Timelogs/index.ctp:66 View/Timelogtasks/index.ctp:29
-#: View/Todocategories/index.ctp:29 View/Todohistories/index.ctp:60
-#: View/Todos/index.ctp:61
+#: View/Helper/IconHelper.php:26;29 View/Holidays/index.ctp:34
+#: View/Memocategories/index.ctp:29 View/Memos/index.ctp:32
+#: View/Recordcategories/index.ctp:29 View/Records/index.ctp:30
+#: View/Timelogcategories/index.ctp:29 View/Timelogs/index.ctp:65
+#: View/Timelogtasks/index.ctp:29 View/Todocategories/index.ctp:29
+#: View/Todohistories/index.ctp:60 View/Todos/index.ctp:67
 msgid "Edit"
 msgstr ""
 
@@ -487,19 +513,19 @@ msgid "Calendarcategory"
 msgstr "Calendar分類"
 
 #: View/Calendarcategories/view.ctp:15 View/Calendars/view.ctp:15
-#: View/Memocategories/view.ctp:15 View/Memos/view.ctp:15
-#: View/Recordcategories/view.ctp:15 View/Records/csv.ctp:8
-#: View/Records/view.ctp:15 View/Timelogcategories/view.ctp:15
-#: View/Timelogs/view.ctp:17 View/Timelogtasks/view.ctp:15
-#: View/Todocategories/view.ctp:15 View/Todohistories/view.ctp:15
-#: View/Todos/view.ctp:15
+#: View/Holidays/view.ctp:13 View/Memocategories/view.ctp:15
+#: View/Memos/view.ctp:15 View/Recordcategories/view.ctp:15
+#: View/Records/csv.ctp:9 View/Records/view.ctp:15
+#: View/Timelogcategories/view.ctp:15 View/Timelogs/view.ctp:17
+#: View/Timelogtasks/view.ctp:15 View/Todocategories/view.ctp:15
+#: View/Todohistories/view.ctp:15 View/Todos/csv.ctp:7 View/Todos/view.ctp:15
 msgid "Id"
 msgstr "ID"
 
-#: View/Calendarcategories/view.ctp:20 View/Memocategories/view.ctp:20
-#: View/Memos/view.ctp:25 View/Recordcategories/view.ctp:20
-#: View/Timelogcategories/view.ctp:20 View/Timelogtasks/view.ctp:20
-#: View/Todocategories/view.ctp:20
+#: View/Calendarcategories/view.ctp:20 View/Holidays/view.ctp:18
+#: View/Memocategories/view.ctp:20 View/Memos/view.ctp:25
+#: View/Recordcategories/view.ctp:20 View/Timelogcategories/view.ctp:20
+#: View/Timelogtasks/view.ctp:20 View/Todocategories/view.ctp:20
 msgid "Name"
 msgstr "名前"
 
@@ -511,12 +537,12 @@ msgid "Position"
 msgstr "順番"
 
 #: View/Calendarcategories/view.ctp:30 View/Calendars/view.ctp:55
-#: View/Memocategories/view.ctp:30 View/Memos/view.ctp:45
-#: View/Recordcategories/view.ctp:30 View/Records/csv.ctp:11
-#: View/Records/view.ctp:40 View/Timelogcategories/view.ctp:30
-#: View/Timelogs/view.ctp:47 View/Timelogtasks/view.ctp:30
-#: View/Todocategories/view.ctp:30 View/Todohistories/view.ctp:40
-#: View/Todos/view.ctp:35
+#: View/Holidays/view.ctp:28 View/Memocategories/view.ctp:30
+#: View/Memos/view.ctp:45 View/Recordcategories/view.ctp:30
+#: View/Records/csv.ctp:12 View/Records/view.ctp:40
+#: View/Timelogcategories/view.ctp:30 View/Timelogs/view.ctp:47
+#: View/Timelogtasks/view.ctp:30 View/Todocategories/view.ctp:30
+#: View/Todohistories/view.ctp:40 View/Todos/csv.ctp:10 View/Todos/view.ctp:35
 msgid "Created"
 msgstr "作成日"
 
@@ -533,7 +559,7 @@ msgid "Calendars"
 msgstr ""
 
 #: View/Calendars/ui.ctp:9 View/Calendars/view.ctp:13
-#: View/Elements/menu.ctp:120
+#: View/Elements/menu.ctp:121
 msgid "Calendar"
 msgstr ""
 
@@ -541,9 +567,9 @@ msgstr ""
 msgid "Delete Calendar"
 msgstr "Calendar削除"
 
-#: View/Calendars/view.ctp:25 View/Records/csv.ctp:10 View/Records/view.ctp:30
+#: View/Calendars/view.ctp:25 View/Records/csv.ctp:11 View/Records/view.ctp:30
 #: View/Timelogs/view.ctp:37 View/Todohistories/view.ctp:20
-#: View/Todos/view.ctp:20
+#: View/Todos/csv.ctp:8 View/Todos/view.ctp:20
 msgid "Title"
 msgstr "タイトル"
 
@@ -567,41 +593,81 @@ msgstr ""
 msgid "Textcolor"
 msgstr ""
 
-#: View/Elements/menu.ctp:44 View/Todos/ui.ctp:23 View/Todos/view.ctp:13
+#: View/Elements/menu.ctp:45 View/Todos/ui.ctp:23 View/Todos/view.ctp:13
 msgid "Todo"
 msgstr ""
 
-#: View/Elements/menu.ctp:52 View/Todocategories/index.ctp:10
+#: View/Elements/menu.ctp:53 View/Todocategories/index.ctp:10
 msgid "Todocategories"
 msgstr "Todo分類"
 
-#: View/Elements/menu.ctp:55;76;94;112;130
+#: View/Elements/menu.ctp:56;77;95;113;134
 msgid "Mentenance"
 msgstr "メンテナンス"
 
-#: View/Elements/menu.ctp:58 View/Todohistories/index.ctp:10
+#: View/Elements/menu.ctp:59 View/Todohistories/index.ctp:10
 msgid "Todohistories"
 msgstr "Todo履歴"
 
-#: View/Elements/menu.ctp:66 View/Records/ui.ctp:7 View/Records/view.ctp:13
+#: View/Elements/menu.ctp:67 View/Records/ui.ctp:7 View/Records/view.ctp:13
 msgid "Record"
 msgstr ""
 
-#: View/Elements/menu.ctp:73 View/Recordcategories/index.ctp:10
+#: View/Elements/menu.ctp:74 View/Recordcategories/index.ctp:10
 msgid "Recordcategories"
 msgstr "Record分類"
 
-#: View/Elements/menu.ctp:84 View/Timelogs/ui.ctp:7 View/Timelogs/view.ctp:15
+#: View/Elements/menu.ctp:85 View/Timelogs/ui.ctp:7 View/Timelogs/view.ctp:15
 msgid "Timelog"
 msgstr ""
 
-#: View/Elements/menu.ctp:91 View/Timelogcategories/index.ctp:10
+#: View/Elements/menu.ctp:92 View/Timelogcategories/index.ctp:10
 msgid "Timelogcategories"
 msgstr "Timelog分類"
 
-#: View/Elements/menu.ctp:109 View/Memocategories/index.ctp:10
+#: View/Elements/menu.ctp:110 View/Memocategories/index.ctp:10
 msgid "Memocategories"
 msgstr "Memo分類"
+
+#: View/Elements/menu.ctp:131 View/Holidays/index.ctp:15
+msgid "Holidays"
+msgstr ""
+
+#: View/Holidays/add.ctp:5 View/Holidays/edit.ctp:6 View/Holidays/view.ctp:6
+msgid "List Holidays"
+msgstr "Holiday一覧"
+
+#: View/Holidays/add.ctp:20
+msgid "Add Holiday"
+msgstr "Holiday追加"
+
+#: View/Holidays/edit.ctp:21 View/Holidays/view.ctp:4
+msgid "Edit Holiday"
+msgstr "Holiday編集"
+
+#: View/Holidays/index.ctp:4 View/Holidays/view.ctp:7
+msgid "New Holiday"
+msgstr "Holiday追加"
+
+#: View/Holidays/index.ctp:7
+msgid "Update holiday from Google"
+msgstr ""
+
+#: View/Holidays/view.ctp:5
+msgid "Delete Holiday"
+msgstr "Holiday削除"
+
+#: View/Holidays/view.ctp:11
+msgid "Holiday"
+msgstr ""
+
+#: View/Holidays/view.ctp:23
+msgid "Day"
+msgstr ""
+
+#: View/Holidays/view.ctp:33 View/Timelogs/view.ctp:52
+msgid "Modified"
+msgstr "変更日"
 
 #: View/Memocategories/add.ctp:5 View/Memocategories/edit.ctp:6
 #: View/Memocategories/view.ctp:6 View/Memos/add.ctp:6 View/Memos/edit.ctp:7
@@ -711,7 +777,8 @@ msgstr "Record分類追加"
 msgid "Delete Recordcategory"
 msgstr "Record分類削除"
 
-#: View/Recordcategories/view.ctp:13 View/Records/view.ctp:20
+#: View/Recordcategories/view.ctp:13 View/Records/csv.ctp:8
+#: View/Records/view.ctp:20
 msgid "Recordcategory"
 msgstr "Record分類"
 
@@ -719,7 +786,7 @@ msgstr "Record分類"
 msgid "Add Record"
 msgstr "Record追加"
 
-#: View/Records/csv.ctp:9 View/Records/view.ctp:25
+#: View/Records/csv.ctp:10 View/Records/view.ctp:25
 msgid "Eventdate"
 msgstr "日付"
 
@@ -831,10 +898,6 @@ msgstr "日付"
 msgid "Worktime"
 msgstr "時間"
 
-#: View/Timelogs/view.ctp:52
-msgid "Modified"
-msgstr "変更日"
-
 #: View/Timelogtasks/add.ctp:22
 msgid "Add Timelogtask"
 msgstr "作業追加"
@@ -892,7 +955,7 @@ msgid "Delete Todocategory"
 msgstr "Todo分類削除"
 
 #: View/Todocategories/view.ctp:13 View/Todohistories/view.ctp:25
-#: View/Todos/view.ctp:25
+#: View/Todos/csv.ctp:6 View/Todos/view.ctp:25
 msgid "Todocategory"
 msgstr "Todo分類"
 
@@ -921,7 +984,7 @@ msgstr "Todo履歴削除"
 msgid "Todohistory"
 msgstr "Todo履歴"
 
-#: View/Todohistories/view.ctp:45 View/Todos/view.ctp:40
+#: View/Todohistories/view.ctp:45 View/Todos/csv.ctp:9 View/Todos/view.ctp:40
 msgid "Completed"
 msgstr "完了日"
 
@@ -942,16 +1005,17 @@ msgid "Delete Todo"
 msgstr "Todo削除"
 
 #: Model/Calendar.php:validation for field title
-#: Model/Calendarcategory.php:validation name Model/Memo.php:validation
-#: Model/Memocategory.php:validation Model/Record.php:validation
-#: Model/Recordcategory.php:validation Model/Timelogcategory.php:validation
-#: Model/Timelogtask.php:validation Model/Todocategory.php:validation
-#: Model/Todohistory.php:validation
+#: Model/Calendarcategory.php:validation name Model/Holiday.php:validation
+#: Model/Memo.php:validation Model/Memocategory.php:validation
+#: Model/Record.php:validation Model/Recordcategory.php:validation
+#: Model/Timelogcategory.php:validation Model/Timelogtask.php:validation
+#: Model/Todocategory.php:validation Model/Todohistory.php:validation
 msgid "notEmpty"
 msgstr "未入力です。"
 
-#: Model/Calendar.php:validation for field start Model/Record.php:validation
-#: eventdate Model/Timelog.php:validation workdate
+#: Model/Calendar.php:validation for field start Model/Holiday.php:validation
+#: day Model/Record.php:validation eventdate Model/Timelog.php:validation
+#: workdate
 msgid "date"
 msgstr "日付ではありません。"
 

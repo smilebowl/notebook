@@ -81,29 +81,45 @@ $(document).ready(function () {
 
 			// get events / json
 
-			events: {
-				url: "ajax_loadevent",
-				data : {'calendarcategory_id': current_category_id}
-			},
+			eventSources: [
+				{
+					url: "ajax_loadevent",
+					data : {'calendarcategory_id': current_category_id}
+				},
+				{
+					url: "ajax_holidays",
+					editable: false,
+					color: '#2c3e50', //'#f0e4e4',
+					textColor: '#fff'
+				}
+			],
+//				,{
+//					url: "/notebook/holidays/ajax_holidays",
+//					editable: false,
+//					color: '#2c3e50', //'#f0e4e4',
+//					textColor: '#fff'
+//				}
+//			],
+
 
 			// google holiday calendar(Japanese)
 
-			eventSources: [
-				{
-					url: 'http://www.google.com/calendar/feeds/ja.japanese%23holiday%40group.v.calendar.google.com/public/basic',
-					color: '#2c3e50', //'#f0e4e4',
-					textColor: '#fff',
-					editable: false,
-					success: function (events) {
-						$(events).each(function () {
-							this.url = null;	// remove link
-						});
-					},
-					error: function () {
-						window.alert('there was an error while fetching events!');
-					}
-				}
-			],
+//			eventSources: [
+//				{
+//					url: 'https://www.google.com/calendar/feeds/ja.japanese%23holiday%40group.v.calendar.google.com/public/basic',
+//					color: '#2c3e50', //'#f0e4e4',
+//					textColor: '#fff',
+//					editable: false,
+//					success: function (events) {
+//						$(events).each(function () {
+//							this.url = null;	// remove link
+//						});
+//					},
+//					error: function () {
+//						window.alert('there was an error while fetching events!');
+//					}
+//				}
+//			],
 
 			// new event
 

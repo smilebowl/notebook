@@ -11,6 +11,7 @@ switch ($this->name) {
 		$act_memo = "active";
 		break;
 	case "Calendars":
+	case "Holidays":
 	case "Calendarcategories":
 		$act_calendar = "active";
 		break;
@@ -125,6 +126,9 @@ switch ($this->name) {
 			<ul>
 				<li>
 					<?php echo $this->Html->link(__('Calendarcategories'), array('controller' => 'calendarcategories', 'action' => 'index')); ?>
+				</li>
+				<li>
+					<?php echo $this->Html->link(__('Holidays'), array('controller' => 'holidays', 'action' => 'index')); ?>
 				</li>
 				<li>
 					<?php echo $this->Html->link(__('Mentenance'), array('controller' => 'calendars', 'action' => 'index')); ?>

@@ -10,7 +10,7 @@ class CalendarsController extends AppController {
 
 	public $components = array('Paginator', 'Search.Prg');
 	public $presetVars = true;
-
+	public $uses = array('Calendar', 'Holiday');
 
 
 	public function ui() {
@@ -20,7 +20,6 @@ class CalendarsController extends AppController {
 					'order' => 'position'
 			))
 		);
-//		$this->set('calendars', $this->Calendar->Calendarcategory->find('all'));
 	}
 
 	// fullcalendar loading query(json)
@@ -117,6 +116,40 @@ class CalendarsController extends AppController {
 			}
 		}
 	}
+
+
+	/////////////////////////// holiday
+
+	public function ajax_holidays() {
+
+		Configure::write('debug', 0);
+		$this->autoRender = false;
+		$this->layout = 'ajax';
+
+		$start = date("Y-m-d",$this->request->query['start']);
+		$end = date("Y-m-d",$this->request->query['end']);
+		$cond = array('and'=>array('day >='=>$start, 'day <='=>$end));
+
+		$this->Holiday->recursive = 0;
+		$holidays = $this->Holiday->find('all', array(
+			'conditions' => $cond,
+			'order' => 'day'
+		));
+
+		// return json
+
+		$json = array();
+		foreach ($holidays as $holiday) {
+			settype($holiday['Holiday']['id'], 'integer');
+			$json[] = array(
+				'id' => $holiday['Holiday']['id'],
+				'title' => $holiday['Holiday']['name'],
+				'start' => $holiday['Holiday']['day'],
+			);
+		}
+		echo json_encode($json);
+	}
+
 
 
 
