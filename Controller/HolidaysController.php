@@ -18,9 +18,15 @@ class HolidaysController extends AppController {
 
 	// 2年分の祝日を更新
 	public function update() {
-		$year = date('Y');
+		$year = date('Y') - 1;
 		$holidays = $this->getHolidayes($year++);
-		$holidays2 = $this->getHolidayes($year);
+		$holidays2 = $this->getHolidayes($year++);
+		$holidays = array_merge($holidays, $holidays2);
+		$holidays2 = $this->getHolidayes($year++);
+		$holidays = array_merge($holidays, $holidays2);
+		$holidays2 = $this->getHolidayes($year++);
+		$holidays = array_merge($holidays, $holidays2);
+		$holidays2 = $this->getHolidayes($year++);
 		$holidays = array_merge($holidays, $holidays2);
 //		debug($holidays);
 		$this->Holiday->query('truncate table holidays');

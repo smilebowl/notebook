@@ -8,8 +8,12 @@ echo $this->Html->script('timelogui', array('inline' => false));
 </h3>
 
 <div class="row">
-	<div id="calendar" class="col-sm-5"></div>
-	<div id="summaryOfMonth" class="col-sm-6"></div>
+	<div class="col-sm-5">
+		<div id="calendar"></div>
+	</div>
+	<div class="col-sm-6">
+		<div id="summaryOfMonth"></div>
+	</div>
 </div>
 
 <!--<div class="clearfix"></div>-->

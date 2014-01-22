@@ -3,6 +3,7 @@
 $(document).ready(function () {
 	'use strict';
 
+	var draggable;
 
 	$(".categories").sortable({
 		cancel: 'a.addmemo',
@@ -23,10 +24,11 @@ $(document).ready(function () {
 
 	function reset() {
 
-		$('#memoui .widget').draggable({
+		draggable = $('#memoui .widget').draggable({
 //			handle: 'i.icon',
-			handle: '.widget-header:not(.title)',
+			handle: '.widget-header:not(span.title)',
 			stack: 'div.widget',
+			cursor: "move",
 			containment: '#memoui',
 			stop: function (event, ui) {
 				var allxyz = [], memo_id, pos, curxyz;
@@ -51,7 +53,7 @@ $(document).ready(function () {
 			}
 		});
 
-		$('.widget i').tooltip();
+//		$('.widget i').tooltip();
 	}
 
 	// select category
@@ -174,7 +176,8 @@ $(document).ready(function () {
 	// focus title
 
 	$('#memoui').on('click', 'span.title', function () {
-		$(this).data('before', $(this).text()).focus().selectText();
+		$(this).data('before', $(this).text()).focus();
+//		draggable.draggable('disable');
 	});
 
 	$('#memoui').on('blur', 'span.title', function () {

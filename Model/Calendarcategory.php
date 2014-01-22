@@ -9,6 +9,8 @@ class Calendarcategory extends AppModel {
 
 	public $actsAs = array('SoftDelete');
 
+	public $order = "position asc";
+
 /**
  * Validation rules
  *
