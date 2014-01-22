@@ -17,7 +17,7 @@ class CalendarsController extends AppController {
 		$this->Calendar->Calendarcategory->recursive = 0;
 		$this->set('calendarcategories',
 			$this->Calendar->Calendarcategory->find('all',array(
-					'order' => 'position'
+//					'order' => 'position'
 			))
 		);
 	}

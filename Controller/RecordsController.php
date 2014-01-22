@@ -20,7 +20,7 @@ class RecordsController extends AppController {
 		$this->Record->Recordcategory->recursive = 0;
 		$this->set('recordcategories',
 			$this->Record->Recordcategory->find('all',array(
-				'order' => 'position'
+//				'order' => 'position'
 			))
 		);
 //		$this->set('records', $this->Record->Recordcategory->find('all'));

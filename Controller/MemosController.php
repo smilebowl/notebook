@@ -20,7 +20,7 @@ class MemosController extends AppController {
 		$this->Memo->Memocategory->recursive = 0;
 		$this->set('memocategories',
 			$this->Memo->Memocategory->find('all',array(
-					'order' => 'position'
+//					'order' => 'position'
 			))
 		);
 //		$this->set('memos', $this->Memo->Memocategory->find('all'));

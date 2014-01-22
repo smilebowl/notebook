@@ -29,13 +29,7 @@
 					<td class="total_worktime"><?php echo number_format($total, 2); ?></td>
 					<td></td>
 				</tr>
-<!--
-				<tr>
-					<td colspan="5">
-							<input id="updateTimelog" type="button" class="btn btn-primary" value="更新" />
-					</td>
-				</tr>
--->
+
 			</table>
 
 		</div>
@@ -44,3 +38,4 @@
 </div>
 <input id="updateTimelog" type="button" class="btn btn-primary" value="更新" />
 <?php //debug($timelogs, true);?>
+<?php //echo $this->element('sql_dump'); ?>

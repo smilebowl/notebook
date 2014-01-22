@@ -72,35 +72,19 @@ class TimelogsController extends AppController {
 
 		$workdate = $this->request->data['workdate'];
 
-//		$list = $this->Timelog->Timelogcategory->Behaviors->load('Containable');
-		$list = $this->Timelog->Timelogcategory->find('all', array(
-//		$list = $this->Timelog->find('all', array(
-			'contain' => array(
-				'Timelog' => array(
-					'conditions' => array(
-						'Timelog.workdate >=' => date('Y-m-01', strtotime($workdate)),
-						'Timelog.workdate <=' => date('Y-m-t', strtotime($workdate)),
-					),
-					'fields' => array('id', 'worktime'),
-					array('Timelogtask')
-//					array('Timelogtask' => array(
-//						'fields' => array('id, Timelogtask.Name'),
-//					)),
-				),
-			),
-			'fields' => 'id, Timelogcategory.name',
-//			'conditions' => array(
-//				'Timelog.workdate >=' => date('Y-m-01', strtotime($workdate)),
-//				'Timelog.workdate <=' => date('Y-m-t', strtotime($workdate))
+//		$list = $this->Timelog->Timelogcategory->find('all', array(
+//			'contain' => array(
+//				'Timelog' => array(
+//					'conditions' => array(
+//						'Timelog.workdate >=' => date('Y-m-01', strtotime($workdate)),
+//						'Timelog.workdate <=' => date('Y-m-t', strtotime($workdate)),
+//					),
+//					'fields' => array('id', 'worktime'),
+//					array('Timelogtask')
+//				),
 //			),
-//			'fields' => array(
-//				'Timelog.timelogcategory_id',
-//				'Timelogcategory.Name',
-//				'Timelog.timelogtask_id',
-//				'Timelogtask.Name',
-//				'Timelog.worktime',
-//			),
-		));
+//			'fields' => 'id, Timelogcategory.name',
+//		));
 
 		$this->Timelog->Timelogcategory->recursive = 2;
 		$list = $this->Timelog->Timelogcategory->find('all', array(

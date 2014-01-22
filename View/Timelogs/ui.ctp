@@ -7,18 +7,14 @@ echo $this->Html->script('timelogui', array('inline' => false));
 	<?php echo __( 'Timelog'); ?>
 </h3>
 
-<div class="row">
-	<div class="col-sm-5">
-		<div id="calendar"></div>
-	</div>
-	<div class="col-sm-6">
-		<div id="summaryOfMonth"></div>
-	</div>
-</div>
+<div id="calendar" class="pull-left"></div>
 
-<!--<div class="clearfix"></div>-->
+<div id="summaryOfMonth" class="col-sm-7"></div>
+
+<div class="clearfix"></div>
 
 <div id="timelogui"></div>
 
 <div id="timeloglist">
+
 </div>

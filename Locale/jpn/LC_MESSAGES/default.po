@@ -482,7 +482,7 @@ msgstr "Calendar分類"
 msgid ""
 "Page {:page} of {:pages}, showing {:current} records out of {:count} total, "
 "starting on record {:start}, ending on {:end}"
-msgstr "{:start} - {:end} / total {:count} records, Page : {:page} / {:pages}"
+msgstr "{:start} - {:end} / {:count} 件,   {:page} / {:pages} ページ"
 
 #: View/Calendarcategories/index.ctp:28 View/Calendars/index.ctp:60
 #: View/Helper/IconHelper.php:20;24 View/Holidays/index.ctp:33

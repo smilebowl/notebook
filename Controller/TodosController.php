@@ -145,7 +145,7 @@ class TodosController extends AppController {
 //		$this->set('todos', $this->Todo->find('all'));
 		$this->set('todos',
 			$this->Todo->Todocategory->find('all', array(
-				'order' => 'position'
+//				'order' => 'position'
 			))
 		);
 //		$this->set('todos', $this->Todo->Todocategory->find('all', array('order'=>'todo.position')));
