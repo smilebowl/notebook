@@ -287,7 +287,7 @@ $(document).ready(function () {
 		// escape
 		if (e.which === 27) {
 			e.preventDefault();
-			$(this).text($(this).data('before'));
+			$(this).html($(this).data('before'));
 		}
 		// up arrow
 //		if (e.which === 38) {

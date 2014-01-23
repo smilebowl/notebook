@@ -145,6 +145,16 @@ $(document).ready(function () {
 		$(this).removeData('before');
 	});
 
+	// keyboard
+
+	$('#memoui').on('keydown', 'div.text', function (e) {
+		// escape
+		if (e.which === 27) {
+			e.preventDefault();
+			$(this).html($(this).data('before'));
+		}
+	});
+
 	// reset format
 
 	$('#memoui').on('click', 'i.formatreset', function () {
@@ -161,16 +171,6 @@ $(document).ready(function () {
 				'text': memotext.text()
 			}
 		);
-	});
-
-	// keyboard
-
-	$('#memoui').on('keydown', 'div.text', function (e) {
-		// escape
-		if (e.which === 27) {
-			e.preventDefault();
-			$(this).html($(this).data('before'));
-		}
 	});
 
 	// focus title

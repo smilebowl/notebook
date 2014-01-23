@@ -24,7 +24,6 @@
 		echo $this->Form->input('recordcategory_id');
 		echo $this->Form->input('eventdate', array('type' => 'text', 'class' => 'form-control input_date'));
 		echo $this->Form->input('title');
-		echo $this->Form->input('priority');
 	?>
 	</fieldset>
 <?php echo $this->Form->submit(__('Submit'), array('class'=>'btn btn-primary')); ?>
